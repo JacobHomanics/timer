@@ -13,6 +13,8 @@ namespace JacobHomanics.Core.Timer.UI
 
         public DisplayType displayType;
 
+        public TimerBase timerBase;
+
         public Timer timer;
         public Image image;
 
@@ -20,6 +22,8 @@ namespace JacobHomanics.Core.Timer.UI
         {
             if (displayType == DisplayType.Elapsed)
             {
+                Debug.Log(timerBase.GetReference().elapsedTime);
+
                 image.fillAmount = timer.elapsedTime / timer.duration;
             }
 

@@ -4,6 +4,15 @@ namespace JacobHomanics.Core.Timer
 {
     public class TimerTest : MonoBehaviour
     {
-        [SerializeReference] public ITimer timer;
+        // [RequireInterface(typeof(ITimer))]
+        // public MonoBehaviour timer2;
+        // public InterfaceReference<ITimer> timer;
+
+        public TimerBase timer;
+
+        void Start()
+        {
+            timer.GetReference().duration = 10f;
+        }
     }
 }

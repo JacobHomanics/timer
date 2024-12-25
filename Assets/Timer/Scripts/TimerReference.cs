@@ -2,10 +2,13 @@ using UnityEngine;
 
 namespace JacobHomanics.Core.Timer
 {
-    public class TimerReference : MonoBehaviour, ITimer
+    public class TimerReference : TimerBase
     {
         public Timer timer;
 
-        public Timer TimerInstance => timer;
+        public override Timer GetReference()
+        {
+            return timer;
+        }
     }
 }

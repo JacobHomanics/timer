@@ -1,8 +1,8 @@
-namespace JacobHomanics.Core.Timer
-{
+// namespace JacobHomanics.Core.Timer
+// {
 
-    public interface ITimer
-    {
-        Timer TimerInstance { get; }
-    }
-}
+//     public interface ITimer
+//     {
+//         Timer TimerInstance { get; }
+//     }
+// }
