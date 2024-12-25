@@ -10,8 +10,10 @@ namespace JacobHomanics.Core.Timer.UI
             return timer.GetReference();
         }
 
+        [Header("Configuration")]
         public DisplayType displayType;
 
+        [Header("References")]
         public TimerSource timer;
         public Image image;
 

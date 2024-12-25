@@ -14,9 +14,9 @@ namespace JacobHomanics.Core.Timer.UI
         public bool changeColorOnDurationReached;
         private Color originalColor;
         public Color colorOnDurationReached;
+        public DisplayType displayType;
 
         [Header("References")]
-        public DisplayType displayType;
         public TimerSource timer;
 
         protected abstract Color GetOriginalColor();
