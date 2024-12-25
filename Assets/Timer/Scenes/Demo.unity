@@ -229,7 +229,7 @@ PrefabInstance:
     - target: {fileID: 5525124214448881034, guid: 7f13be2d193c74c31a6d81f04a53b6ad, type: 3}
       propertyPath: timer
       value: 
-      objectReference: {fileID: 45672705}
+      objectReference: {fileID: 647938759}
     - target: {fileID: 6113301280276119410, guid: 7f13be2d193c74c31a6d81f04a53b6ad, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
