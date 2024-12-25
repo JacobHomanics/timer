@@ -26,6 +26,7 @@ namespace JacobHomanics.Core.Timer.UI
         public string textFormat = "F0";
 
         public bool clampTextToBounds = true;
+        public float minTextBounds = 0f;
 
         void Update()
         {
@@ -65,7 +66,7 @@ namespace JacobHomanics.Core.Timer.UI
             }
 
             if (clampTextToBounds)
-                value = Mathf.Clamp(value, 0f, timer.duration);
+                value = Mathf.Clamp(value, minTextBounds, timer.duration);
 
             SetText(text, value, format);
         }
