@@ -80,7 +80,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: 1.0
 --- !u!114 &5798446687163994151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -95,7 +95,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: {fileID: 0}
   text: {fileID: 3044346296701968136}
-  format: F3
+  format: F1
   displayType: 0
   clampTextToBounds: 0
   minTextBounds: 0

@@ -9,7 +9,7 @@ namespace JacobHomanics.Core.Timer.UI
 
         public Text text;
 
-        public string format = "F3";
+        public string format = "0.##";
 
         public enum DisplayType { Duration, ElapsedTime, TimeLeft }
 
