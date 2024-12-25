@@ -14,12 +14,12 @@ namespace JacobHomanics.Core.Timer.UI
 
         void Start()
         {
-            if (timerSlider.displayType == TimerSlider.DisplayType.Elapsed)
+            if (timerSlider.displayType == DisplayType.Elapsed)
             {
                 originalColor = timerSlider.slider.fillRect.GetComponent<Image>().color;
             }
 
-            if (timerSlider.displayType == TimerSlider.DisplayType.TimeLeft)
+            if (timerSlider.displayType == DisplayType.TimeLeft)
             {
                 originalColor = timerSlider.slider.transform.Find("Background").GetComponent<Image>().color;
             }
@@ -29,24 +29,24 @@ namespace JacobHomanics.Core.Timer.UI
         {
             if (changeColorOnDurationReached && timerSlider.timer.GetReference().IsDurationReached())
             {
-                if (timerSlider.displayType == TimerSlider.DisplayType.Elapsed)
+                if (timerSlider.displayType == DisplayType.Elapsed)
                 {
                     timerSlider.slider.fillRect.GetComponent<Image>().color = colorOnDurationReached;
                 }
 
-                if (timerSlider.displayType == TimerSlider.DisplayType.TimeLeft)
+                if (timerSlider.displayType == DisplayType.TimeLeft)
                 {
                     timerSlider.slider.transform.Find("Background").GetComponent<Image>().color = colorOnDurationReached;
                 }
             }
             else
             {
-                if (timerSlider.displayType == TimerSlider.DisplayType.Elapsed)
+                if (timerSlider.displayType == DisplayType.Elapsed)
                 {
                     timerSlider.slider.fillRect.GetComponent<Image>().color = originalColor;
                 }
 
-                if (timerSlider.displayType == TimerSlider.DisplayType.TimeLeft)
+                if (timerSlider.displayType == DisplayType.TimeLeft)
                 {
                     timerSlider.slider.transform.Find("Background").GetComponent<Image>().color = originalColor;
                 }

@@ -24,12 +24,12 @@ namespace JacobHomanics.Core.Timer.UI
 
         void Start()
         {
-            if (timerImage.displayType == TimerImage.DisplayType.Elapsed)
+            if (timerImage.displayType == DisplayType.Elapsed)
             {
                 originalColor = timerImage.image.color;
             }
 
-            if (timerImage.displayType == TimerImage.DisplayType.TimeLeft)
+            if (timerImage.displayType == DisplayType.TimeLeft)
             {
                 originalColor = timerImage.image.color;
             }
@@ -39,24 +39,24 @@ namespace JacobHomanics.Core.Timer.UI
         {
             if (changeColorOnDurationReached && timerImage.timer.GetReference().IsDurationReached())
             {
-                if (timerImage.displayType == TimerImage.DisplayType.Elapsed)
+                if (timerImage.displayType == DisplayType.Elapsed)
                 {
                     timerImage.image.color = colorOnDurationReached;
                 }
 
-                if (timerImage.displayType == TimerImage.DisplayType.TimeLeft)
+                if (timerImage.displayType == DisplayType.TimeLeft)
                 {
                     timerImage.image.color = colorOnDurationReached;
                 }
             }
             else
             {
-                if (timerImage.displayType == TimerImage.DisplayType.Elapsed)
+                if (timerImage.displayType == DisplayType.Elapsed)
                 {
                     timerImage.image.color = originalColor;
                 }
 
-                if (timerImage.displayType == TimerImage.DisplayType.TimeLeft)
+                if (timerImage.displayType == DisplayType.TimeLeft)
                 {
                     timerImage.image.color = originalColor;
                 }

@@ -5,12 +5,6 @@ namespace JacobHomanics.Core.Timer.UI
 {
     public class TimerImage : MonoBehaviour
     {
-        public enum DisplayType
-        {
-            Elapsed,
-            TimeLeft
-        }
-
         public DisplayType displayType;
 
         public TimerSource timer;
