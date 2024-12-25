@@ -1718,17 +1718,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7039eccb336b44e95a6f2f7b9f8153b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1173539559 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2381346255131888338, guid: 1048b0c60481648a79874a0239796d1b, type: 3}
-  m_PrefabInstance: {fileID: 104335808}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1173539557}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59fde0ffa325840fca4b6a9adc12ee57, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1173539560 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 761956089017820696, guid: 1048b0c60481648a79874a0239796d1b, type: 3}
@@ -1754,10 +1743,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   changeColorOnDurationReached: 1
   colorOnDurationReached: {r: 0, g: 1, b: 0, a: 1}
-  slider: {fileID: 1173539560}
-  timerSlider: {fileID: 1173539559}
-  timer: {fileID: 1173539558}
   displayType: {fileID: 1173539562}
+  timer: {fileID: 1173539558}
+  slider: {fileID: 1173539560}
 --- !u!114 &1173539562 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2708429560485315798, guid: 1048b0c60481648a79874a0239796d1b, type: 3}
@@ -2147,17 +2135,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7039eccb336b44e95a6f2f7b9f8153b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1412459607 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2381346255131888338, guid: 1048b0c60481648a79874a0239796d1b, type: 3}
-  m_PrefabInstance: {fileID: 1326284014}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1412459605}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59fde0ffa325840fca4b6a9adc12ee57, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1412459608 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 761956089017820696, guid: 1048b0c60481648a79874a0239796d1b, type: 3}
@@ -2183,10 +2160,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   changeColorOnDurationReached: 1
   colorOnDurationReached: {r: 0, g: 1, b: 0, a: 1}
-  slider: {fileID: 1412459608}
-  timerSlider: {fileID: 1412459607}
-  timer: {fileID: 1412459606}
   displayType: {fileID: 1412459610}
+  timer: {fileID: 1412459606}
+  slider: {fileID: 1412459608}
 --- !u!114 &1412459610 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2708429560485315798, guid: 1048b0c60481648a79874a0239796d1b, type: 3}
@@ -3149,9 +3125,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   changeColorOnDurationReached: 1
   colorOnDurationReached: {r: 0, g: 1, b: 0, a: 1}
-  image: {fileID: 1899436403}
-  timer: {fileID: 1899436402}
   displayType: {fileID: 1899436407}
+  timer: {fileID: 1899436402}
+  image: {fileID: 1899436403}
 --- !u!114 &1899436407 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6057289557784899831, guid: d0e58568f3bf8448da23685d25b3c3ea, type: 3}

@@ -26,12 +26,15 @@ namespace JacobHomanics.Core.Timer.UI
             originalColor = GetOriginalColor();
         }
 
+        // public TMPro.TMP_Text text;
+
         protected void SetColor(Image image, TimerSource timer, DisplayType.Options displayType)
         {
             if (changeColorOnDurationReached && timer.GetReference().IsDurationReached())
             {
                 if (displayType == DisplayType.Options.Elapsed)
                 {
+                    // text.color = colorOnDurationReached;
                     image.color = colorOnDurationReached;
                 }
 
