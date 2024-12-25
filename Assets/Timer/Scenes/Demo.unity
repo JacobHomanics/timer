@@ -2879,6 +2879,18 @@ PrefabInstance:
       propertyPath: timer
       value: 
       objectReference: {fileID: 647938759}
+    - target: {fileID: 7971088553274736652, guid: d0e58568f3bf8448da23685d25b3c3ea, type: 3}
+      propertyPath: colorOnDurationReached.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7971088553274736652, guid: d0e58568f3bf8448da23685d25b3c3ea, type: 3}
+      propertyPath: colorOnDurationReached.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7971088553274736652, guid: d0e58568f3bf8448da23685d25b3c3ea, type: 3}
+      propertyPath: changeColorOnDurationReached
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8271919499447064566, guid: d0e58568f3bf8448da23685d25b3c3ea, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
