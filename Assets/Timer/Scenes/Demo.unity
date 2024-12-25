@@ -3337,6 +3337,7 @@ MonoBehaviour:
   imageDisplayType: 1
   textDisplayType: 2
   textFormat: F0
+  clampTextToBounds: 1
 --- !u!114 &1791552708
 MonoBehaviour:
   m_ObjectHideFlags: 0
