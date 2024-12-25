@@ -25,7 +25,9 @@ namespace JacobHomanics.Core.Timer.UI
         [Header("Configuration")]
         public SliderDisplayType sliderDisplayType;
         public TextDisplayType leftTextDisplayType;
+        public string leftTextFormat = "F3";
         public TextDisplayType rightTextDisplayType;
+        public string rightTextFormat = "F3";
 
         void Update()
         {
@@ -46,26 +48,26 @@ namespace JacobHomanics.Core.Timer.UI
             }
 
             if (leftText != null)
-                SetText(leftText, leftTextDisplayType);
+                SetText(leftText, leftTextDisplayType, leftTextFormat);
             if (rightText != null)
-                SetText(rightText, rightTextDisplayType);
+                SetText(rightText, rightTextDisplayType, rightTextFormat);
         }
 
-        void SetText(TMP_Text text, TextDisplayType displayType)
+        void SetText(TMP_Text text, TextDisplayType displayType, string format)
         {
             if (displayType == TextDisplayType.Duration)
             {
-                text.text = timer.duration.ToString();
+                text.text = timer.duration.ToString(format);
             }
 
             if (displayType == TextDisplayType.ElapsedTime)
             {
-                text.text = timer.elapsedTime.ToString();
+                text.text = timer.elapsedTime.ToString(format);
             }
 
             if (displayType == TextDisplayType.TimeLeft)
             {
-                text.text = timer.GetTimeLeft().ToString();
+                text.text = timer.GetTimeLeft().ToString(format);
             }
         }
     }
