@@ -5,7 +5,7 @@ namespace JacobHomanics.Core.Timer.UI
 {
     public class TimerText : MonoBehaviour
     {
-        public TimerBase timer;
+        public TimerSource timer;
 
         public Text text;
 

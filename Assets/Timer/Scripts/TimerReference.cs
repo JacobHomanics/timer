@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace JacobHomanics.Core.Timer
 {
-    public class TimerReference : TimerBase
+    public class TimerReference : TimerSource
     {
         public Timer timer;
 

@@ -3,7 +3,7 @@ using UnityEngine.Events;
 
 namespace JacobHomanics.Core.Timer
 {
-    public class Timer : TimerBase
+    public class Timer : TimerSource
     {
         public override Timer GetReference()
         {

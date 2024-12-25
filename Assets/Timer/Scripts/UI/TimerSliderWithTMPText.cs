@@ -15,7 +15,7 @@ namespace JacobHomanics.Core.Timer.UI
         public enum TextDisplayType { Duration, ElapsedTime, TimeLeft }
 
         [Header("References")]
-        public TimerBase timer;
+        public TimerSource timer;
         public Slider slider;
 
         public TMP_Text leftText;

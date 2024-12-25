@@ -13,7 +13,7 @@ namespace JacobHomanics.Core.Timer.UI
 
         public DisplayType displayType;
 
-        public TimerBase timer;
+        public TimerSource timer;
         public Image image;
 
         void Update()

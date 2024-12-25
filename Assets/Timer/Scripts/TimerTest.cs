@@ -4,7 +4,7 @@ namespace JacobHomanics.Core.Timer
 {
     public class TimerTest : MonoBehaviour
     {
-        public TimerBase timer;
+        public TimerSource timer;
 
         void Start()
         {
