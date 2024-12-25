@@ -1,14 +1,13 @@
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 namespace JacobHomanics.Core.Timer.UI
 {
-    public class TimerTMPText : MonoBehaviour
+    public class TimerText : MonoBehaviour
     {
         public Timer timer;
 
-        public TMP_Text text;
+        public Text text;
 
         public string format = "F3";
 
@@ -24,7 +23,7 @@ namespace JacobHomanics.Core.Timer.UI
             SetText(text, displayType, format, clampTextToBounds, minTextBounds);
         }
 
-        void SetText(TMP_Text text, DisplayType displayType, string format, bool clampTextToBounds, float minTextBounds)
+        void SetText(Text text, DisplayType displayType, string format, bool clampTextToBounds, float minTextBounds)
         {
             var value = 0f;
 
@@ -49,7 +48,7 @@ namespace JacobHomanics.Core.Timer.UI
             SetText(text, value, format);
         }
 
-        void SetText(TMP_Text text, float value, string format)
+        void SetText(Text text, float value, string format)
         {
             text.text = value.ToString(format);
         }
