@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 102177375856673519}
   - component: {fileID: 5548891858293757117}
   - component: {fileID: 2243829201033115622}
+  - component: {fileID: 1617415424216212153}
   m_Layer: 5
   m_Name: TMPText
   m_TagString: Untagged
@@ -150,11 +151,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d41a1c359e72242cdaffa92695497e46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: {fileID: 2243829201033115622}
   format: F1
-  displayType: 0
   clampTextToBounds: 1
   minTextBounds: 0
+  hideTextOnDurationReached: 0
+  displayType: {fileID: 1617415424216212153}
+  timer: {fileID: 2243829201033115622}
   text: {fileID: 102177375856673519}
 --- !u!114 &2243829201033115622
 MonoBehaviour:
@@ -169,3 +171,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: {fileID: 0}
+--- !u!114 &1617415424216212153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2494112521580067796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49531107818bd4ea58902a47d68cafb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: 0

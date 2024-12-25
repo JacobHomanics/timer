@@ -12,31 +12,30 @@ namespace JacobHomanics.Core.Timer.UI
         [Header("Configuration")]
         public string format = "0.##";
 
-        public enum DisplayType { Duration, ElapsedTime, TimeLeft }
 
-        public DisplayType displayType;
 
         public bool clampTextToBounds = false;
         public float minTextBounds = 0f;
 
         public bool hideTextOnDurationReached;
+        public DisplayType2 displayType;
 
         [Header("References")]
 
         public TimerSource timer;
 
-        protected void SetText(ref string text, DisplayType displayType, string format, bool clampTextToBounds, float minTextBounds)
+        protected void SetText(ref string text, DisplayType2 displayType, string format, bool clampTextToBounds, float minTextBounds)
         {
             var value = 0f;
 
             bool isShowingNumber = true;
 
-            if (displayType == DisplayType.Duration)
+            if (displayType.value == DisplayType2.Options.Duration)
             {
                 value = timer.GetReference().data.duration;
             }
 
-            if (displayType == DisplayType.ElapsedTime)
+            if (displayType.value == DisplayType2.Options.ElapsedTime)
             {
                 value = timer.GetReference().data.elapsedTime;
                 if (hideTextOnDurationReached && value >= timer.GetReference().data.duration)
@@ -45,7 +44,7 @@ namespace JacobHomanics.Core.Timer.UI
                 }
             }
 
-            if (displayType == DisplayType.TimeLeft)
+            if (displayType.value == DisplayType2.Options.TimeLeft)
             {
                 value = timer.GetReference().GetTimeLeft();
                 if (hideTextOnDurationReached && value <= 0)
