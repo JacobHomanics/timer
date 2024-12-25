@@ -14,7 +14,6 @@ namespace JacobHomanics.Core.Timer.UI
             TimeLeft
         }
 
-
         [Header("References")]
         public Timer timer;
         public Slider slider;

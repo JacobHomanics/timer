@@ -216,13 +216,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99fe70e0a27dc42eb95c61678c133708, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sliderDisplayType: 0
-  leftTextDisplayType: 1
-  rightTextDisplayType: 0
-  leftText: {fileID: 4353222935460219532}
-  rightText: {fileID: 440418130719028346}
   timer: {fileID: 0}
   slider: {fileID: 8352201010786126585}
+  leftText: {fileID: 4353222935460219532}
+  rightText: {fileID: 440418130719028346}
+  sliderDisplayType: 0
+  leftTextDisplayType: 1
+  leftTextFormat: F3
+  rightTextDisplayType: 0
+  rightTextFormat: F3
 --- !u!1 &3074323216977616899
 GameObject:
   m_ObjectHideFlags: 0
