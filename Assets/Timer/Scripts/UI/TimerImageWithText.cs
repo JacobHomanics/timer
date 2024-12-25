@@ -23,7 +23,7 @@ namespace JacobHomanics.Core.Timer.UI
         public TextDisplayType textDisplayType;
 
         public string textFormat = "F0";
-        public bool clampTextToBounds = true;
+        public bool clampTextToBounds = false;
         public float minTextBounds = 0f;
 
         void Update()
@@ -40,11 +40,11 @@ namespace JacobHomanics.Core.Timer.UI
 
             if (text != null)
             {
-                SetText(text, textDisplayType, textFormat);
+                SetText(text, textDisplayType, textFormat, clampTextToBounds, minTextBounds);
             }
         }
 
-        void SetText(Text text, TextDisplayType displayType, string format)
+        void SetText(Text text, TextDisplayType displayType, string format, bool clampTextToBounds, float minTextBounds)
         {
             var value = 0f;
 
