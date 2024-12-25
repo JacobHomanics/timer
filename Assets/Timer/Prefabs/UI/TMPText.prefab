@@ -151,11 +151,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: {fileID: 2243829201033115622}
-  text: {fileID: 102177375856673519}
   format: F1
   displayType: 0
-  clampTextToBounds: 0
+  clampTextToBounds: 1
   minTextBounds: 0
+  text: {fileID: 102177375856673519}
 --- !u!114 &2243829201033115622
 MonoBehaviour:
   m_ObjectHideFlags: 0

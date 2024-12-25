@@ -4,8 +4,7 @@ namespace JacobHomanics.Core.Timer.UI
 {
     public class TimerTextBase : MonoBehaviour
     {
-        public TimerSource timer;
-
+        [Header("Configuration")]
         public string format = "0.##";
 
         public enum DisplayType { Duration, ElapsedTime, TimeLeft }
@@ -14,6 +13,11 @@ namespace JacobHomanics.Core.Timer.UI
 
         public bool clampTextToBounds = false;
         public float minTextBounds = 0f;
+
+        [Header("References")]
+
+        public TimerSource timer;
+
 
         protected void SetText(ref string text, DisplayType displayType, string format, bool clampTextToBounds, float minTextBounds)
         {

@@ -96,7 +96,7 @@ MonoBehaviour:
   timer: {fileID: 979002397369195797}
   format: F1
   displayType: 0
-  clampTextToBounds: 0
+  clampTextToBounds: 1
   minTextBounds: 0
   text: {fileID: 3044346296701968136}
 --- !u!114 &979002397369195797
