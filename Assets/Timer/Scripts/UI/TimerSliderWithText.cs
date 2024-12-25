@@ -29,7 +29,6 @@ namespace JacobHomanics.Core.Timer.UI
         public float minLeftTextBounds = 0f;
         public TextDisplayType rightTextDisplayType;
         public string rightTextFormat = "F3";
-
         public bool clampRightTextToBounds = false;
         public float minRightTextBounds = 0f;
 
