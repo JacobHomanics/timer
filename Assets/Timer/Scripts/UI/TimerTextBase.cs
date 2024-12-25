@@ -14,14 +14,17 @@ namespace JacobHomanics.Core.Timer.UI
         public bool clampTextToBounds = false;
         public float minTextBounds = 0f;
 
+        public bool hideTextOnDurationReached;
+
         [Header("References")]
 
         public TimerSource timer;
 
-
         protected void SetText(ref string text, DisplayType displayType, string format, bool clampTextToBounds, float minTextBounds)
         {
             var value = 0f;
+
+            bool isShowingNumber = true;
 
             if (displayType == DisplayType.Duration)
             {
@@ -30,23 +33,31 @@ namespace JacobHomanics.Core.Timer.UI
 
             if (displayType == DisplayType.ElapsedTime)
             {
+
                 value = timer.GetReference().data.elapsedTime;
+                if (hideTextOnDurationReached && value >= timer.GetReference().data.duration)
+                {
+                    isShowingNumber = false;
+                }
+
             }
 
             if (displayType == DisplayType.TimeLeft)
             {
                 value = timer.GetReference().GetTimeLeft();
+                if (hideTextOnDurationReached && value <= 0)
+                {
+                    isShowingNumber = false;
+                }
             }
 
             if (clampTextToBounds)
                 value = Mathf.Clamp(value, minTextBounds, timer.GetReference().data.duration);
 
-            SetText(ref text, value, format);
-        }
-
-        protected void SetText(ref string text, float value, string format)
-        {
-            text = value.ToString(format);
+            if (isShowingNumber)
+                text = value.ToString(format);
+            else
+                text = "";
         }
     }
 }
