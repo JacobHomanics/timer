@@ -22,7 +22,7 @@ namespace JacobHomanics.Core.Timer.UI
         public ImageDisplayType imageDisplayType;
         public TextDisplayType textDisplayType;
 
-        public string textFormat;
+        public string textFormat = "F0";
 
         void Update()
         {
