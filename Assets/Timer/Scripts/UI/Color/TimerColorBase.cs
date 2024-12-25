@@ -11,12 +11,13 @@ namespace JacobHomanics.Core.Timer.UI
         }
 
         [Header("Configuration")]
-        private Color originalColor;
         public Color colorOnDurationReached;
         public DisplayType displayType;
 
         [Header("References")]
         public TimerSource timer;
+
+        private Color originalColor;
 
         protected abstract Color GetOriginalColor();
 
