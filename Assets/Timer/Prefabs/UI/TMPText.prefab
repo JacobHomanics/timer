@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4340416011048034709}
   - component: {fileID: 102177375856673519}
   - component: {fileID: 5548891858293757117}
+  - component: {fileID: 2243829201033115622}
   m_Layer: 5
   m_Name: TMPText
   m_TagString: Untagged
@@ -66,7 +67,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: 1.0000000
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -149,9 +150,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d41a1c359e72242cdaffa92695497e46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: {fileID: 0}
+  timer: {fileID: 2243829201033115622}
   text: {fileID: 102177375856673519}
   format: F3
   displayType: 0
   clampTextToBounds: 0
   minTextBounds: 0
+--- !u!114 &2243829201033115622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2494112521580067796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7039eccb336b44e95a6f2f7b9f8153b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: {fileID: 0}
