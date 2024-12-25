@@ -6,13 +6,13 @@ namespace JacobHomanics.Core.Timer.UI
 {
     public class TimerSliderWithText : MonoBehaviour
     {
-        public enum TextDisplayType { Duration, ElapsedTime, TimeLeft }
-
         public enum SliderDisplayType
         {
             Elapsed,
             TimeLeft
         }
+
+        public enum TextDisplayType { Duration, ElapsedTime, TimeLeft }
 
         [Header("References")]
         public Timer timer;

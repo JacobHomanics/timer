@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 namespace JacobHomanics.Core.Timer.UI
 {
-    public class TimerImage : MonoBehaviour
+    public class TimerImageWithText : MonoBehaviour
     {
         public enum DisplayType
         {
