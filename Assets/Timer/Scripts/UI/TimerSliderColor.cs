@@ -26,12 +26,14 @@ namespace JacobHomanics.Core.Timer.UI
         {
             if (displayType.value == DisplayType.Options.Elapsed)
             {
-                SetColor(slider.fillRect.GetComponent<Image>(), timer.GetReference(), displayType.value);
+                SetColor(out Color color, timer.GetReference(), displayType.value);
+                slider.fillRect.GetComponent<Image>().color = color;
             }
 
             if (displayType.value == DisplayType.Options.TimeLeft)
             {
-                SetColor(slider.transform.Find("Background").GetComponent<Image>(), timer.GetReference(), displayType.value);
+                SetColor(out Color color, timer.GetReference(), displayType.value);
+                slider.transform.Find("Background").GetComponent<Image>().color = color;
             }
         }
     }

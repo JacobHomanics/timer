@@ -26,35 +26,35 @@ namespace JacobHomanics.Core.Timer.UI
             originalColor = GetOriginalColor();
         }
 
-        // public TMPro.TMP_Text text;
-
-        protected void SetColor(Image image, TimerSource timer, DisplayType.Options displayType)
+        protected void SetColor(out Color color, TimerSource timer, DisplayType.Options displayType)
         {
+            color = Color.white;
+
             if (changeColorOnDurationReached && timer.GetReference().IsDurationReached())
             {
                 if (displayType == DisplayType.Options.Elapsed)
                 {
-                    // text.color = colorOnDurationReached;
-                    image.color = colorOnDurationReached;
+                    color = colorOnDurationReached;
                 }
 
                 if (displayType == DisplayType.Options.TimeLeft)
                 {
-                    image.color = colorOnDurationReached;
+                    color = colorOnDurationReached;
                 }
             }
             else
             {
                 if (displayType == DisplayType.Options.Elapsed)
                 {
-                    image.color = originalColor;
+                    color = originalColor;
                 }
 
                 if (displayType == DisplayType.Options.TimeLeft)
                 {
-                    image.color = originalColor;
+                    color = originalColor;
                 }
             }
+
         }
     }
 }
