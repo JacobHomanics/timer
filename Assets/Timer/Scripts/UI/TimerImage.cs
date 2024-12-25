@@ -12,12 +12,12 @@ namespace JacobHomanics.Core.Timer.UI
 
         void Update()
         {
-            if (displayType == DisplayType.Elapsed)
+            if (displayType.value == DisplayType.Options.Elapsed)
             {
                 image.fillAmount = timer.GetReference().data.elapsedTime / timer.GetReference().data.duration;
             }
 
-            if (displayType == DisplayType.TimeLeft)
+            if (displayType.value == DisplayType.Options.TimeLeft)
             {
                 image.fillAmount = timer.GetReference().GetTimeLeft() / timer.GetReference().data.duration;
             }

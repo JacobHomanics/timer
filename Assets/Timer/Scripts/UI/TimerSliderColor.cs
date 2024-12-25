@@ -5,7 +5,12 @@ namespace JacobHomanics.Core.Timer.UI
 {
     public class TimerSliderColor : TimerImageColorBase
     {
+        public Slider slider;
         public TimerSlider timerSlider;
+        public TimerSource timer;
+
+        public DisplayType displayType;
+
 
         public override Timer GetReference()
         {
@@ -14,14 +19,14 @@ namespace JacobHomanics.Core.Timer.UI
 
         protected override Color GetOriginalColor()
         {
-            if (timerSlider.displayType == DisplayType.Elapsed)
+            if (displayType.value == DisplayType.Options.Elapsed)
             {
-                return timerSlider.slider.fillRect.GetComponent<Image>().color;
+                return slider.fillRect.GetComponent<Image>().color;
             }
 
-            if (timerSlider.displayType == DisplayType.TimeLeft)
+            if (displayType.value == DisplayType.Options.TimeLeft)
             {
-                return timerSlider.slider.transform.Find("Background").GetComponent<Image>().color;
+                return slider.transform.Find("Background").GetComponent<Image>().color;
             }
 
             return Color.white;
@@ -29,14 +34,14 @@ namespace JacobHomanics.Core.Timer.UI
 
         void Update()
         {
-            if (timerSlider.displayType == DisplayType.Elapsed)
+            if (displayType.value == DisplayType.Options.Elapsed)
             {
-                SetColor(timerSlider.slider.fillRect.GetComponent<Image>(), GetReference(), timerSlider.displayType);
+                SetColor(slider.fillRect.GetComponent<Image>(), timer.GetReference(), displayType.value);
             }
 
-            if (timerSlider.displayType == DisplayType.TimeLeft)
+            if (displayType.value == DisplayType.Options.TimeLeft)
             {
-                SetColor(timerSlider.slider.transform.Find("Background").GetComponent<Image>(), GetReference(), timerSlider.displayType);
+                SetColor(slider.transform.Find("Background").GetComponent<Image>(), timer.GetReference(), displayType.value);
             }
         }
     }

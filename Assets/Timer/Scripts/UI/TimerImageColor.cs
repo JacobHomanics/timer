@@ -5,21 +5,24 @@ namespace JacobHomanics.Core.Timer.UI
 {
     public class TimerImageColor : TimerImageColorBase
     {
-        public TimerImage timerImage;
+        public Image image;
+        public TimerSource timer;
+
+        public DisplayType displayType;
 
         public override Timer GetReference()
         {
-            return timerImage.timer.GetReference();
+            return timer.GetReference();
         }
 
         protected override Color GetOriginalColor()
         {
-            return timerImage.image.color;
+            return image.color;
         }
 
         void Update()
         {
-            SetColor(timerImage.image, GetReference(), timerImage.displayType);
+            SetColor(image, GetReference(), displayType.value);
         }
     }
 }

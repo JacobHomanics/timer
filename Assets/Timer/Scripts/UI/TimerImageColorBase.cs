@@ -5,8 +5,6 @@ namespace JacobHomanics.Core.Timer.UI
 {
     public abstract class TimerImageColorBase : TimerSource
     {
-        // public TimerImage timerImage;
-
         public bool changeColorOnDurationReached;
         private Color originalColor;
         public Color colorOnDurationReached;
@@ -18,29 +16,28 @@ namespace JacobHomanics.Core.Timer.UI
             originalColor = GetOriginalColor();
         }
 
-
-        protected void SetColor(Image image, TimerSource timer, DisplayType displayType)
+        protected void SetColor(Image image, TimerSource timer, DisplayType.Options displayType)
         {
             if (changeColorOnDurationReached && timer.GetReference().IsDurationReached())
             {
-                if (displayType == DisplayType.Elapsed)
+                if (displayType == DisplayType.Options.Elapsed)
                 {
                     image.color = colorOnDurationReached;
                 }
 
-                if (displayType == DisplayType.TimeLeft)
+                if (displayType == DisplayType.Options.TimeLeft)
                 {
                     image.color = colorOnDurationReached;
                 }
             }
             else
             {
-                if (displayType == DisplayType.Elapsed)
+                if (displayType == DisplayType.Options.Elapsed)
                 {
                     image.color = originalColor;
                 }
 
-                if (displayType == DisplayType.TimeLeft)
+                if (displayType == DisplayType.Options.TimeLeft)
                 {
                     image.color = originalColor;
                 }
