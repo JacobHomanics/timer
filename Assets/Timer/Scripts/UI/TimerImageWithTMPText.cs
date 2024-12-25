@@ -15,7 +15,7 @@ namespace JacobHomanics.Core.Timer.UI
         public enum TextDisplayType { Duration, ElapsedTime, TimeLeft }
 
         [Header("References")]
-        public Timer timer;
+        public TimerBase timer;
         public Image image;
         public TMP_Text text;
 
@@ -32,12 +32,12 @@ namespace JacobHomanics.Core.Timer.UI
         {
             if (imageDisplayType == ImageDisplayType.Elapsed)
             {
-                image.fillAmount = timer.data.elapsedTime / timer.data.duration;
+                image.fillAmount = timer.GetReference().data.elapsedTime / timer.GetReference().data.duration;
             }
 
             if (imageDisplayType == ImageDisplayType.TimeLeft)
             {
-                image.fillAmount = timer.GetTimeLeft() / timer.data.duration;
+                image.fillAmount = timer.GetReference().GetTimeLeft() / timer.GetReference().data.duration;
             }
 
             if (text != null)
@@ -52,21 +52,21 @@ namespace JacobHomanics.Core.Timer.UI
 
             if (displayType == TextDisplayType.Duration)
             {
-                value = timer.data.duration;
+                value = timer.GetReference().data.duration;
             }
 
             if (displayType == TextDisplayType.ElapsedTime)
             {
-                value = timer.data.elapsedTime;
+                value = timer.GetReference().data.elapsedTime;
             }
 
             if (displayType == TextDisplayType.TimeLeft)
             {
-                value = timer.GetTimeLeft();
+                value = timer.GetReference().GetTimeLeft();
             }
 
             if (clampTextToBounds)
-                value = Mathf.Clamp(value, minTextBounds, timer.data.duration);
+                value = Mathf.Clamp(value, minTextBounds, timer.GetReference().data.duration);
 
             SetText(text, value, format);
         }

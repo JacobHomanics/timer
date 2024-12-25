@@ -15,7 +15,7 @@ namespace JacobHomanics.Core.Timer.UI
         public enum TextDisplayType { Duration, ElapsedTime, TimeLeft }
 
         [Header("References")]
-        public Timer timer;
+        public TimerBase timer;
         public Slider slider;
 
         public Text leftText;
@@ -39,14 +39,14 @@ namespace JacobHomanics.Core.Timer.UI
 
                 if (sliderDisplayType == SliderDisplayType.Elapsed)
                 {
-                    slider.value = timer.data.elapsedTime;
-                    slider.maxValue = timer.data.duration;
+                    slider.value = timer.GetReference().data.elapsedTime;
+                    slider.maxValue = timer.GetReference().data.duration;
                 }
 
                 if (sliderDisplayType == SliderDisplayType.TimeLeft)
                 {
-                    slider.value = timer.GetTimeLeft();
-                    slider.maxValue = timer.data.duration;
+                    slider.value = timer.GetReference().GetTimeLeft();
+                    slider.maxValue = timer.GetReference().data.duration;
                 }
             }
 
@@ -62,21 +62,21 @@ namespace JacobHomanics.Core.Timer.UI
 
             if (displayType == TextDisplayType.Duration)
             {
-                value = timer.data.duration;
+                value = timer.GetReference().data.duration;
             }
 
             if (displayType == TextDisplayType.ElapsedTime)
             {
-                value = timer.data.elapsedTime;
+                value = timer.GetReference().data.elapsedTime;
             }
 
             if (displayType == TextDisplayType.TimeLeft)
             {
-                value = timer.GetTimeLeft();
+                value = timer.GetReference().GetTimeLeft();
             }
 
             if (clampTextToBounds)
-                value = Mathf.Clamp(value, minTextBounds, timer.data.duration);
+                value = Mathf.Clamp(value, minTextBounds, timer.GetReference().data.duration);
 
             SetText(text, value, format);
         }

@@ -5,7 +5,7 @@ namespace JacobHomanics.Core.Timer.UI
 {
     public class TimerText : MonoBehaviour
     {
-        public Timer timer;
+        public TimerBase timer;
 
         public Text text;
 
@@ -29,21 +29,21 @@ namespace JacobHomanics.Core.Timer.UI
 
             if (displayType == DisplayType.Duration)
             {
-                value = timer.data.duration;
+                value = timer.GetReference().data.duration;
             }
 
             if (displayType == DisplayType.ElapsedTime)
             {
-                value = timer.data.elapsedTime;
+                value = timer.GetReference().data.elapsedTime;
             }
 
             if (displayType == DisplayType.TimeLeft)
             {
-                value = timer.GetTimeLeft();
+                value = timer.GetReference().GetTimeLeft();
             }
 
             if (clampTextToBounds)
-                value = Mathf.Clamp(value, minTextBounds, timer.data.duration);
+                value = Mathf.Clamp(value, minTextBounds, timer.GetReference().data.duration);
 
             SetText(text, value, format);
         }

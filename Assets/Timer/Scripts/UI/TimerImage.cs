@@ -13,7 +13,7 @@ namespace JacobHomanics.Core.Timer.UI
 
         public DisplayType displayType;
 
-        public Timer timer;
+        public TimerBase timer;
         public Image image;
 
         void Update()
@@ -25,7 +25,7 @@ namespace JacobHomanics.Core.Timer.UI
 
             if (displayType == DisplayType.TimeLeft)
             {
-                image.fillAmount = timer.GetTimeLeft() / timer.GetReference().data.duration;
+                image.fillAmount = timer.GetReference().GetTimeLeft() / timer.GetReference().data.duration;
             }
         }
     }
