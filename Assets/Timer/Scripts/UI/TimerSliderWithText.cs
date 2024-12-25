@@ -12,33 +12,39 @@ namespace JacobHomanics.Core.Timer.UI
             Elapsed,
             TimeLeft
         }
-
-        public SliderDisplayType sliderDisplayType;
-        public TextDisplayType leftTextDisplayType;
-        public TextDisplayType rightTextDisplayType;
+        [Header("References")]
+        public Timer timer;
+        public Slider slider;
 
         public Text leftText;
         public Text rightText;
 
-        public Timer timer;
-        public Slider slider;
-
+        [Header("Configuration")]
+        public SliderDisplayType sliderDisplayType;
+        public TextDisplayType leftTextDisplayType;
+        public TextDisplayType rightTextDisplayType;
         void Update()
         {
-            if (sliderDisplayType == SliderDisplayType.Elapsed)
+            if (slider != null)
             {
-                slider.value = timer.elapsedTime;
-                slider.maxValue = timer.duration;
+
+                if (sliderDisplayType == SliderDisplayType.Elapsed)
+                {
+                    slider.value = timer.elapsedTime;
+                    slider.maxValue = timer.duration;
+                }
+
+                if (sliderDisplayType == SliderDisplayType.TimeLeft)
+                {
+                    slider.value = timer.GetTimeLeft();
+                    slider.maxValue = timer.duration;
+                }
             }
 
-            if (sliderDisplayType == SliderDisplayType.TimeLeft)
-            {
-                slider.value = timer.GetTimeLeft();
-                slider.maxValue = timer.duration;
-            }
-
-            SetText(leftText, leftTextDisplayType);
-            SetText(rightText, rightTextDisplayType);
+            if (leftText != null)
+                SetText(leftText, leftTextDisplayType);
+            if (rightText != null)
+                SetText(rightText, rightTextDisplayType);
         }
 
         void SetText(Text text, TextDisplayType displayType)
