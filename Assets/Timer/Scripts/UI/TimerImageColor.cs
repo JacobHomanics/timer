@@ -5,17 +5,6 @@ namespace JacobHomanics.Core.Timer.UI
 {
     public class TimerImageColor : MonoBehaviour
     {
-        // public enum DisplayType
-        // {
-        //     Elapsed,
-        //     TimeLeft
-        // }
-
-        // public DisplayType displayType;
-
-        // public TimerSource timer;
-        // public Image image;
-
         public TimerImage timerImage;
 
         public bool changeColorOnDurationReached;
@@ -24,41 +13,38 @@ namespace JacobHomanics.Core.Timer.UI
 
         void Start()
         {
-            if (timerImage.displayType == DisplayType.Elapsed)
-            {
-                originalColor = timerImage.image.color;
-            }
-
-            if (timerImage.displayType == DisplayType.TimeLeft)
-            {
-                originalColor = timerImage.image.color;
-            }
+            originalColor = timerImage.image.color;
         }
 
         void Update()
         {
+            SetColor(timerImage.image, timerImage.timer, timerImage.displayType);
+        }
+
+        private void SetColor(Image image, TimerSource timer, DisplayType displayType)
+        {
             if (changeColorOnDurationReached && timerImage.timer.GetReference().IsDurationReached())
             {
-                if (timerImage.displayType == DisplayType.Elapsed)
+                if (displayType == DisplayType.Elapsed)
                 {
-                    timerImage.image.color = colorOnDurationReached;
+                    image.color = colorOnDurationReached;
                 }
 
-                if (timerImage.displayType == DisplayType.TimeLeft)
+                if (displayType == DisplayType.TimeLeft)
                 {
-                    timerImage.image.color = colorOnDurationReached;
+                    image.color = colorOnDurationReached;
                 }
             }
             else
             {
-                if (timerImage.displayType == DisplayType.Elapsed)
+                if (displayType == DisplayType.Elapsed)
                 {
-                    timerImage.image.color = originalColor;
+                    image.color = originalColor;
                 }
 
-                if (timerImage.displayType == DisplayType.TimeLeft)
+                if (displayType == DisplayType.TimeLeft)
                 {
-                    timerImage.image.color = originalColor;
+                    image.color = originalColor;
                 }
             }
         }

@@ -27,28 +27,42 @@ namespace JacobHomanics.Core.Timer.UI
 
         void Update()
         {
-            if (changeColorOnDurationReached && timerSlider.timer.GetReference().IsDurationReached())
+            if (timerSlider.displayType == DisplayType.Elapsed)
             {
-                if (timerSlider.displayType == DisplayType.Elapsed)
+                SetColor(timerSlider.slider.fillRect.GetComponent<Image>(), timerSlider.timer, timerSlider.displayType);
+            }
+
+            if (timerSlider.displayType == DisplayType.TimeLeft)
+            {
+                SetColor(timerSlider.slider.transform.Find("Background").GetComponent<Image>(), timerSlider.timer, timerSlider.displayType);
+            }
+        }
+
+
+        private void SetColor(Image image, TimerSource timer, DisplayType displayType)
+        {
+            if (changeColorOnDurationReached && timer.GetReference().IsDurationReached())
+            {
+                if (displayType == DisplayType.Elapsed)
                 {
-                    timerSlider.slider.fillRect.GetComponent<Image>().color = colorOnDurationReached;
+                    image.color = colorOnDurationReached;
                 }
 
-                if (timerSlider.displayType == DisplayType.TimeLeft)
+                if (displayType == DisplayType.TimeLeft)
                 {
-                    timerSlider.slider.transform.Find("Background").GetComponent<Image>().color = colorOnDurationReached;
+                    image.color = colorOnDurationReached;
                 }
             }
             else
             {
-                if (timerSlider.displayType == DisplayType.Elapsed)
+                if (displayType == DisplayType.Elapsed)
                 {
-                    timerSlider.slider.fillRect.GetComponent<Image>().color = originalColor;
+                    image.color = originalColor;
                 }
 
-                if (timerSlider.displayType == DisplayType.TimeLeft)
+                if (displayType == DisplayType.TimeLeft)
                 {
-                    timerSlider.slider.transform.Find("Background").GetComponent<Image>().color = originalColor;
+                    image.color = originalColor;
                 }
             }
         }
