@@ -1,0 +1,56 @@
+using UnityEngine;
+using UnityEngine.UI;
+
+namespace JacobHomanics.Core.Timer.UI
+{
+    public class TimerSliderColor : MonoBehaviour
+    {
+        public TimerSlider timerSlider;
+
+        public bool changeColorOnDurationReached;
+        public Color colorOnDurationReached;
+
+        private Color originalColor;
+
+        void Start()
+        {
+            if (timerSlider.displayType == TimerSlider.DisplayType.Elapsed)
+            {
+                originalColor = timerSlider.slider.fillRect.GetComponent<Image>().color;
+            }
+
+            if (timerSlider.displayType == TimerSlider.DisplayType.TimeLeft)
+            {
+                originalColor = timerSlider.slider.transform.Find("Background").GetComponent<Image>().color;
+            }
+        }
+
+        void Update()
+        {
+            if (changeColorOnDurationReached && timerSlider.timer.GetReference().IsDurationReached())
+            {
+                if (timerSlider.displayType == TimerSlider.DisplayType.Elapsed)
+                {
+                    timerSlider.slider.fillRect.GetComponent<Image>().color = colorOnDurationReached;
+                }
+
+                if (timerSlider.displayType == TimerSlider.DisplayType.TimeLeft)
+                {
+                    timerSlider.slider.transform.Find("Background").GetComponent<Image>().color = colorOnDurationReached;
+                }
+            }
+            else
+            {
+                if (timerSlider.displayType == TimerSlider.DisplayType.Elapsed)
+                {
+                    timerSlider.slider.fillRect.GetComponent<Image>().color = originalColor;
+                }
+
+                if (timerSlider.displayType == TimerSlider.DisplayType.TimeLeft)
+                {
+                    timerSlider.slider.transform.Find("Background").GetComponent<Image>().color = originalColor;
+                }
+            }
+        }
+    }
+}
