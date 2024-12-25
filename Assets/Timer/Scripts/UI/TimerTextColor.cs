@@ -3,8 +3,7 @@ using UnityEngine.UI;
 
 namespace JacobHomanics.Core.Timer.UI
 {
-
-    public class TimerTextColorBase : TimerImageColorBase
+    public class TimerTextColor : TimerColorBase
     {
         public Text text;
 

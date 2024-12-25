@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 namespace JacobHomanics.Core.Timer.UI
 {
-    public class TimerSliderColor : TimerImageColorBase
+    public class TimerSliderColor : TimerColorBase
     {
         public Slider slider;
 

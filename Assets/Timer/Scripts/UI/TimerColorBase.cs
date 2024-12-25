@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 namespace JacobHomanics.Core.Timer.UI
 {
-    public abstract class TimerImageColorBase : TimerSource
+    public abstract class TimerColorBase : TimerSource
     {
         public override Timer GetReference()
         {
