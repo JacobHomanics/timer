@@ -3,8 +3,13 @@ using UnityEngine.UI;
 
 namespace JacobHomanics.Core.Timer.UI
 {
-    public class TimerImage : MonoBehaviour
+    public class TimerImage : TimerSource
     {
+        public override Timer GetReference()
+        {
+            return timer.GetReference();
+        }
+
         public DisplayType displayType;
 
         public TimerSource timer;

@@ -2,8 +2,13 @@ using UnityEngine;
 
 namespace JacobHomanics.Core.Timer.UI
 {
-    public class TimerTextBase : MonoBehaviour
+    public class TimerTextBase : TimerSource
     {
+        public override Timer GetReference()
+        {
+            return timer.GetReference();
+        }
+
         [Header("Configuration")]
         public string format = "0.##";
 
