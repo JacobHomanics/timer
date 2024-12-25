@@ -135,6 +135,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4671940272806675736}
     m_Modifications:
+    - target: {fileID: 2251815259804430643, guid: 665ac6864b73c499c85b807e0c86d4ec, type: 3}
+      propertyPath: value
+      value: Duration
+      objectReference: {fileID: 0}
     - target: {fileID: 2494112521580067796, guid: 665ac6864b73c499c85b807e0c86d4ec, type: 3}
       propertyPath: m_Name
       value: Text (1)
@@ -262,6 +266,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2708429560485315798, guid: 1048b0c60481648a79874a0239796d1b, type: 3}
+      propertyPath: value
+      value: ElapsedTime
+      objectReference: {fileID: 0}
     - target: {fileID: 3005463091533949423, guid: 1048b0c60481648a79874a0239796d1b, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

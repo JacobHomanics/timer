@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3044346296701968136}
   - component: {fileID: 5798446687163994151}
   - component: {fileID: 979002397369195797}
-  - component: {fileID: 1473242261278418728}
+  - component: {fileID: 2251815259804430643}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -98,7 +98,7 @@ MonoBehaviour:
   clampTextToBounds: 1
   minTextBounds: 0
   hideTextOnDurationReached: 0
-  displayType: {fileID: 1473242261278418728}
+  displayType: {fileID: 2251815259804430643}
   timer: {fileID: 979002397369195797}
   text: {fileID: 3044346296701968136}
 --- !u!114 &979002397369195797
@@ -114,7 +114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: {fileID: 0}
---- !u!114 &1473242261278418728
+--- !u!114 &2251815259804430643
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -123,7 +123,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2494112521580067796}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49531107818bd4ea58902a47d68cafb4, type: 3}
+  m_Script: {fileID: 11500000, guid: 7f0f9135be2eb4e1792aa414161289f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 0
+  value: ElapsedTime

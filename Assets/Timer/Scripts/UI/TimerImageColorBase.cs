@@ -26,30 +26,30 @@ namespace JacobHomanics.Core.Timer.UI
             originalColor = GetOriginalColor();
         }
 
-        protected void SetColor(out Color color, TimerSource timer, DisplayType.Options displayType)
+        protected void SetColor(out Color color, TimerSource timer, string displayType)
         {
             color = Color.white;
 
             if (changeColorOnDurationReached && timer.GetReference().IsDurationReached())
             {
-                if (displayType == DisplayType.Options.Elapsed)
+                if (displayType == "ElapsedTime")
                 {
                     color = colorOnDurationReached;
                 }
 
-                if (displayType == DisplayType.Options.TimeLeft)
+                if (displayType == "TimeLeft")
                 {
                     color = colorOnDurationReached;
                 }
             }
             else
             {
-                if (displayType == DisplayType.Options.Elapsed)
+                if (displayType == "ElapsedTime")
                 {
                     color = originalColor;
                 }
 
-                if (displayType == DisplayType.Options.TimeLeft)
+                if (displayType == "TimeLeft")
                 {
                     color = originalColor;
                 }

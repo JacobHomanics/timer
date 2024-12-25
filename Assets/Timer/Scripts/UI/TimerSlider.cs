@@ -20,13 +20,13 @@ namespace JacobHomanics.Core.Timer.UI
 
         void Update()
         {
-            if (displayType.value == DisplayType.Options.Elapsed)
+            if (displayType.value == "ElapsedTime")
             {
                 slider.value = timer.GetReference().data.elapsedTime;
                 slider.maxValue = timer.GetReference().data.duration;
             }
 
-            if (displayType.value == DisplayType.Options.TimeLeft)
+            if (displayType.value == "TimeLeft")
             {
                 slider.value = timer.GetReference().GetTimeLeft();
                 slider.maxValue = timer.GetReference().data.duration;

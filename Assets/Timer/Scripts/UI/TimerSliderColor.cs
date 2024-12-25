@@ -9,12 +9,12 @@ namespace JacobHomanics.Core.Timer.UI
 
         protected override Color GetOriginalColor()
         {
-            if (displayType.value == DisplayType.Options.Elapsed)
+            if (displayType.value == "ElapsedTime")
             {
                 return slider.fillRect.GetComponent<Image>().color;
             }
 
-            if (displayType.value == DisplayType.Options.TimeLeft)
+            if (displayType.value == "TimeLeft")
             {
                 return slider.transform.Find("Background").GetComponent<Image>().color;
             }
@@ -24,13 +24,13 @@ namespace JacobHomanics.Core.Timer.UI
 
         void Update()
         {
-            if (displayType.value == DisplayType.Options.Elapsed)
+            if (displayType.value == "ElapsedTime")
             {
                 SetColor(out Color color, timer.GetReference(), displayType.value);
                 slider.fillRect.GetComponent<Image>().color = color;
             }
 
-            if (displayType.value == DisplayType.Options.TimeLeft)
+            if (displayType.value == "TimeLeft")
             {
                 SetColor(out Color color, timer.GetReference(), displayType.value);
                 slider.transform.Find("Background").GetComponent<Image>().color = color;

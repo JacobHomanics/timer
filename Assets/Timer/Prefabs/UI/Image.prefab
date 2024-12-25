@@ -118,4 +118,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f0f9135be2eb4e1792aa414161289f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 0
+  value: ElapsedTime
