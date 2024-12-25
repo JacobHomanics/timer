@@ -3,8 +3,10 @@ using UnityEngine.Events;
 
 namespace JacobHomanics.Core.Timer
 {
-    public class Timer : MonoBehaviour
+    public class Timer : MonoBehaviour, ITimer
     {
+        public Timer TimerInstance => this;
+
         public enum TickType
         {
             DeltaTime, UnscaledDeltaTime, SmoothDeltaTime, FixedDeltaTime, FixedUnscaledDeltaTime
