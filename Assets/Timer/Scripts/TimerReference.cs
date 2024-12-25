@@ -1,5 +1,3 @@
-using UnityEngine;
-
 namespace JacobHomanics.Core.Timer
 {
     public class TimerReference : TimerSource
