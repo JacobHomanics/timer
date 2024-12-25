@@ -25,8 +25,13 @@ namespace JacobHomanics.Core.Timer.UI
         public SliderDisplayType sliderDisplayType;
         public TextDisplayType leftTextDisplayType;
         public string leftTextFormat = "F3";
+        public bool clampLeftTextToBounds = false;
+        public float minLeftTextBounds = 0f;
         public TextDisplayType rightTextDisplayType;
         public string rightTextFormat = "F3";
+
+        public bool clampRightTextToBounds = false;
+        public float minRightTextBounds = 0f;
 
         void Update()
         {
@@ -47,27 +52,40 @@ namespace JacobHomanics.Core.Timer.UI
             }
 
             if (leftText != null)
-                SetText(leftText, leftTextDisplayType, leftTextFormat);
+                SetText(leftText, leftTextDisplayType, leftTextFormat, clampLeftTextToBounds, minLeftTextBounds);
             if (rightText != null)
-                SetText(rightText, rightTextDisplayType, rightTextFormat);
+                SetText(rightText, rightTextDisplayType, rightTextFormat, clampRightTextToBounds, minRightTextBounds);
         }
 
-        void SetText(Text text, TextDisplayType displayType, string format)
+        void SetText(Text text, TextDisplayType displayType, string format, bool clampTextToBounds, float minTextBounds)
         {
+            var value = 0f;
+
             if (displayType == TextDisplayType.Duration)
             {
-                text.text = timer.duration.ToString(format);
+                value = timer.duration;
             }
 
             if (displayType == TextDisplayType.ElapsedTime)
             {
-                text.text = timer.elapsedTime.ToString(format);
+                value = timer.elapsedTime;
             }
 
             if (displayType == TextDisplayType.TimeLeft)
             {
-                text.text = timer.GetTimeLeft().ToString(format);
+                value = timer.GetTimeLeft();
             }
+
+            if (clampTextToBounds)
+                value = Mathf.Clamp(value, minTextBounds, timer.duration);
+
+            SetText(text, value, format);
+        }
+
+        void SetText(Text text, float value, string format)
+        {
+            text.text = value.ToString(format);
         }
     }
+
 }
