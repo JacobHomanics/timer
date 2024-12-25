@@ -33,13 +33,11 @@ namespace JacobHomanics.Core.Timer.UI
 
             if (displayType == DisplayType.ElapsedTime)
             {
-
                 value = timer.GetReference().data.elapsedTime;
                 if (hideTextOnDurationReached && value >= timer.GetReference().data.duration)
                 {
                     isShowingNumber = false;
                 }
-
             }
 
             if (displayType == DisplayType.TimeLeft)
@@ -51,11 +49,13 @@ namespace JacobHomanics.Core.Timer.UI
                 }
             }
 
-            if (clampTextToBounds)
-                value = Mathf.Clamp(value, minTextBounds, timer.GetReference().data.duration);
-
             if (isShowingNumber)
+            {
+                if (clampTextToBounds)
+                    value = Mathf.Clamp(value, minTextBounds, timer.GetReference().data.duration);
+
                 text = value.ToString(format);
+            }
             else
                 text = "";
         }
