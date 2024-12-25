@@ -9,17 +9,30 @@ namespace JacobHomanics.Core.Timer
         {
             return this;
         }
+
         public enum TickType
         {
             DeltaTime, UnscaledDeltaTime, SmoothDeltaTime, FixedDeltaTime, FixedUnscaledDeltaTime
         }
 
-        [Header("Configuration")]
-        public TickType tickType = TickType.DeltaTime;
+        [System.Serializable]
+        public struct TimerData
+        {
+            public TimerData(TickType tickType, float duration, float elapsedTime)
+            {
+                this.tickType = tickType;
+                this.duration = duration;
+                this.elapsedTime = elapsedTime;
+            }
 
-        [Header("Properties")]
-        public float duration = 5f;
-        public float elapsedTime = 0f;
+            public TickType tickType;
+
+            public float duration;
+            public float elapsedTime;
+        }
+
+        [Header("Configuration")]
+        public TimerData data = new(TickType.DeltaTime, 5.0f, 0f);
 
         [Header("Events")]
         public UnityEvent OnTick;
@@ -31,7 +44,7 @@ namespace JacobHomanics.Core.Timer
 
         public void Tick(float delta)
         {
-            elapsedTime += delta;
+            data.elapsedTime += delta;
             OnTick?.Invoke();
         }
 
@@ -39,40 +52,40 @@ namespace JacobHomanics.Core.Timer
         //Monobehaviour
         ////////////////////////////
 
-        void FixedUpdate()
-        {
-            if (tickType == TickType.FixedDeltaTime)
-            {
-                Tick(Time.fixedDeltaTime);
-            }
-
-            if (tickType == TickType.FixedUnscaledDeltaTime)
-            {
-                Tick(Time.fixedUnscaledDeltaTime);
-            }
-        }
-
         void Update()
         {
-            if (tickType == TickType.DeltaTime)
+            if (data.tickType == TickType.DeltaTime)
             {
                 Tick(Time.deltaTime);
             }
 
-            if (tickType == TickType.SmoothDeltaTime)
+            if (data.tickType == TickType.SmoothDeltaTime)
             {
                 Tick(Time.smoothDeltaTime);
             }
 
-            if (tickType == TickType.UnscaledDeltaTime)
+            if (data.tickType == TickType.UnscaledDeltaTime)
             {
                 Tick(Time.unscaledDeltaTime);
             }
 
 
-            if (elapsedTime >= duration)
+            if (data.elapsedTime >= data.duration)
             {
                 OnDurationElapsed?.Invoke();
+            }
+        }
+
+        void FixedUpdate()
+        {
+            if (data.tickType == TickType.FixedDeltaTime)
+            {
+                Tick(Time.fixedDeltaTime);
+            }
+
+            if (data.tickType == TickType.FixedUnscaledDeltaTime)
+            {
+                Tick(Time.fixedUnscaledDeltaTime);
             }
         }
 
@@ -81,12 +94,12 @@ namespace JacobHomanics.Core.Timer
         ////////////////////////////
         public float GetTimeLeft()
         {
-            return duration - elapsedTime;
+            return data.duration - data.elapsedTime;
         }
 
         public void SetElapsedTime(float value)
         {
-            elapsedTime = value;
+            data.elapsedTime = value;
         }
     }
 }

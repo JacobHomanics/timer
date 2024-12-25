@@ -29,12 +29,12 @@ namespace JacobHomanics.Core.Timer.UI
 
             if (displayType == DisplayType.Duration)
             {
-                value = timer.duration;
+                value = timer.data.duration;
             }
 
             if (displayType == DisplayType.ElapsedTime)
             {
-                value = timer.elapsedTime;
+                value = timer.data.elapsedTime;
             }
 
             if (displayType == DisplayType.TimeLeft)
@@ -43,7 +43,7 @@ namespace JacobHomanics.Core.Timer.UI
             }
 
             if (clampTextToBounds)
-                value = Mathf.Clamp(value, minTextBounds, timer.duration);
+                value = Mathf.Clamp(value, minTextBounds, timer.data.duration);
 
             SetText(text, value, format);
         }

@@ -44,9 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf67c0ee1eaa464da063c4ec423479b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tickType: 0
-  duration: 5
-  elapsedTime: 0
+  data:
+    tickType: 0
+    duration: 5
+    elapsedTime: 0
   OnTick:
     m_PersistentCalls:
       m_Calls: []

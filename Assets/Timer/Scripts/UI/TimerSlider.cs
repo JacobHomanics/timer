@@ -20,14 +20,14 @@ namespace JacobHomanics.Core.Timer.UI
         {
             if (displayType == DisplayType.Elapsed)
             {
-                slider.value = timer.elapsedTime;
-                slider.maxValue = timer.duration;
+                slider.value = timer.data.elapsedTime;
+                slider.maxValue = timer.data.duration;
             }
 
             if (displayType == DisplayType.TimeLeft)
             {
                 slider.value = timer.GetTimeLeft();
-                slider.maxValue = timer.duration;
+                slider.maxValue = timer.data.duration;
             }
         }
     }

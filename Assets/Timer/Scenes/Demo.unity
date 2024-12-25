@@ -2048,9 +2048,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf67c0ee1eaa464da063c4ec423479b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tickType: 0
-  duration: 5
-  elapsedTime: 0
+  data:
+    tickType: 0
+    duration: 5
+    elapsedTime: 0
   OnTick:
     m_PersistentCalls:
       m_Calls: []
@@ -2296,6 +2297,60 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8271919499447064566, guid: d0e58568f3bf8448da23685d25b3c3ea, type: 3}
   m_PrefabInstance: {fileID: 1210958306}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1331687148
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1331687150}
+  - component: {fileID: 1331687149}
+  m_Layer: 0
+  m_Name: GameObject (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1331687149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1331687148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: daf67c0ee1eaa464da063c4ec423479b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data:
+    tickType: 0
+    duration: 5
+    elapsedTime: 0
+  OnTick:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDurationElapsed:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!4 &1331687150
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1331687148}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 568.5, y: 59, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &1353753464 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8271919499447064566, guid: d0e58568f3bf8448da23685d25b3c3ea, type: 3}
@@ -4002,6 +4057,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8866147862994849170, guid: adf2a4f5d7c004b4094315df6bc5b19b, type: 3}
+      propertyPath: data.tickType
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4020,3 +4079,4 @@ SceneRoots:
   - {fileID: 1088336361}
   - {fileID: 1155969879}
   - {fileID: 724541414}
+  - {fileID: 1331687150}

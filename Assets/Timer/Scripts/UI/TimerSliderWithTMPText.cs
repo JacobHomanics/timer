@@ -39,14 +39,14 @@ namespace JacobHomanics.Core.Timer.UI
 
                 if (sliderDisplayType == SliderDisplayType.Elapsed)
                 {
-                    slider.value = timer.elapsedTime;
-                    slider.maxValue = timer.duration;
+                    slider.value = timer.data.elapsedTime;
+                    slider.maxValue = timer.data.duration;
                 }
 
                 if (sliderDisplayType == SliderDisplayType.TimeLeft)
                 {
                     slider.value = timer.GetTimeLeft();
-                    slider.maxValue = timer.duration;
+                    slider.maxValue = timer.data.duration;
                 }
             }
 
@@ -62,12 +62,12 @@ namespace JacobHomanics.Core.Timer.UI
 
             if (displayType == TextDisplayType.Duration)
             {
-                value = timer.duration;
+                value = timer.data.duration;
             }
 
             if (displayType == TextDisplayType.ElapsedTime)
             {
-                value = timer.elapsedTime;
+                value = timer.data.elapsedTime;
             }
 
             if (displayType == TextDisplayType.TimeLeft)
@@ -76,7 +76,7 @@ namespace JacobHomanics.Core.Timer.UI
             }
 
             if (clampTextToBounds)
-                value = Mathf.Clamp(value, minTextBounds, timer.duration);
+                value = Mathf.Clamp(value, minTextBounds, timer.data.duration);
 
             SetText(text, value, format);
         }

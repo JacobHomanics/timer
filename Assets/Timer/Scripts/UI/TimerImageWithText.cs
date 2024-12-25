@@ -30,12 +30,12 @@ namespace JacobHomanics.Core.Timer.UI
         {
             if (imageDisplayType == ImageDisplayType.Elapsed)
             {
-                image.fillAmount = timer.elapsedTime / timer.duration;
+                image.fillAmount = timer.data.elapsedTime / timer.data.duration;
             }
 
             if (imageDisplayType == ImageDisplayType.TimeLeft)
             {
-                image.fillAmount = timer.GetTimeLeft() / timer.duration;
+                image.fillAmount = timer.GetTimeLeft() / timer.data.duration;
             }
 
             if (text != null)
@@ -50,12 +50,12 @@ namespace JacobHomanics.Core.Timer.UI
 
             if (displayType == TextDisplayType.Duration)
             {
-                value = timer.duration;
+                value = timer.data.duration;
             }
 
             if (displayType == TextDisplayType.ElapsedTime)
             {
-                value = timer.elapsedTime;
+                value = timer.data.elapsedTime;
             }
 
             if (displayType == TextDisplayType.TimeLeft)
@@ -64,7 +64,7 @@ namespace JacobHomanics.Core.Timer.UI
             }
 
             if (clampTextToBounds)
-                value = Mathf.Clamp(value, minTextBounds, timer.duration);
+                value = Mathf.Clamp(value, minTextBounds, timer.data.duration);
 
             SetText(text, value, format);
         }
