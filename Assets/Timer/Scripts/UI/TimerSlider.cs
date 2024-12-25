@@ -5,26 +5,26 @@ namespace JacobHomanics.Core.Timer.UI
 {
     public class TimerSlider : MonoBehaviour
     {
-        public enum Configuration
+        public enum DisplayType
         {
             Elapsed,
             TimeLeft
         }
 
-        public Configuration configuration;
+        public DisplayType displayType;
 
         public Timer timer;
         public Slider slider;
 
         void Update()
         {
-            if (configuration == Configuration.Elapsed)
+            if (displayType == DisplayType.Elapsed)
             {
                 slider.value = timer.elapsedTime;
                 slider.maxValue = timer.duration;
             }
 
-            if (configuration == Configuration.TimeLeft)
+            if (displayType == DisplayType.TimeLeft)
             {
                 slider.value = timer.GetTimeLeft();
                 slider.maxValue = timer.duration;
