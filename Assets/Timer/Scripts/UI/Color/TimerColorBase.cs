@@ -11,7 +11,6 @@ namespace JacobHomanics.Core.Timer.UI
         }
 
         [Header("Configuration")]
-        public bool changeColorOnDurationReached;
         private Color originalColor;
         public Color colorOnDurationReached;
         public DisplayType displayType;
@@ -30,7 +29,7 @@ namespace JacobHomanics.Core.Timer.UI
         {
             color = Color.white;
 
-            if (changeColorOnDurationReached && timer.GetReference().IsDurationReached())
+            if (timer.GetReference().IsDurationReached())
             {
                 if (displayType == "ElapsedTime")
                 {
