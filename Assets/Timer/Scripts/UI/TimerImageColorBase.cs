@@ -5,9 +5,19 @@ namespace JacobHomanics.Core.Timer.UI
 {
     public abstract class TimerImageColorBase : TimerSource
     {
+        public override Timer GetReference()
+        {
+            return timer.GetReference();
+        }
+
+        [Header("Configuration")]
         public bool changeColorOnDurationReached;
         private Color originalColor;
         public Color colorOnDurationReached;
+
+        [Header("References")]
+        public DisplayType displayType;
+        public TimerSource timer;
 
         protected abstract Color GetOriginalColor();
 

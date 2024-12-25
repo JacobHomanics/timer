@@ -6,14 +6,6 @@ namespace JacobHomanics.Core.Timer.UI
     public class TimerImageColor : TimerImageColorBase
     {
         public Image image;
-        public TimerSource timer;
-
-        public DisplayType displayType;
-
-        public override Timer GetReference()
-        {
-            return timer.GetReference();
-        }
 
         protected override Color GetOriginalColor()
         {
