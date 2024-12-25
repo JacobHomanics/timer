@@ -97,9 +97,20 @@ namespace JacobHomanics.Core.Timer
             return data.duration - data.elapsedTime;
         }
 
+        public bool IsDurationReached()
+        {
+            return data.elapsedTime >= data.duration;
+        }
+
         public void SetElapsedTime(float value)
         {
             data.elapsedTime = value;
+        }
+
+        [ContextMenu("Set Elapsed To Zero")]
+        public void SetElapsedToZero()
+        {
+            data.elapsedTime = 0;
         }
     }
 }

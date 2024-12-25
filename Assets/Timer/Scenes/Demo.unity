@@ -143,7 +143,23 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 647938759}
     - target: {fileID: 2381346255131888338, guid: 1048b0c60481648a79874a0239796d1b, type: 3}
+      propertyPath: isSpecial
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2381346255131888338, guid: 1048b0c60481648a79874a0239796d1b, type: 3}
       propertyPath: displayType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2381346255131888338, guid: 1048b0c60481648a79874a0239796d1b, type: 3}
+      propertyPath: colorOnDurationReached.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2381346255131888338, guid: 1048b0c60481648a79874a0239796d1b, type: 3}
+      propertyPath: colorOnDurationReached.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2381346255131888338, guid: 1048b0c60481648a79874a0239796d1b, type: 3}
+      propertyPath: changeColorOnDurationReached
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3005463091533949423, guid: 1048b0c60481648a79874a0239796d1b, type: 3}
@@ -1821,6 +1837,18 @@ PrefabInstance:
       propertyPath: timer
       value: 
       objectReference: {fileID: 647938759}
+    - target: {fileID: 2381346255131888338, guid: 1048b0c60481648a79874a0239796d1b, type: 3}
+      propertyPath: colorOnDurationReached.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2381346255131888338, guid: 1048b0c60481648a79874a0239796d1b, type: 3}
+      propertyPath: colorOnDurationReached.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2381346255131888338, guid: 1048b0c60481648a79874a0239796d1b, type: 3}
+      propertyPath: changeColorOnDurationReached
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3005463091533949423, guid: 1048b0c60481648a79874a0239796d1b, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

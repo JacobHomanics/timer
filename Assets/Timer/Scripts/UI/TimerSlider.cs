@@ -16,8 +16,51 @@ namespace JacobHomanics.Core.Timer.UI
         public TimerSource timer;
         public Slider slider;
 
+        public bool changeColorOnDurationReached;
+        public Color colorOnDurationReached;
+
+        private Color originalColor;
+
+        void Start()
+        {
+            if (displayType == DisplayType.Elapsed)
+            {
+                originalColor = slider.fillRect.GetComponent<Image>().color;
+            }
+
+            if (displayType == DisplayType.TimeLeft)
+            {
+                originalColor = slider.transform.Find("Background").GetComponent<Image>().color;
+            }
+        }
+
         void Update()
         {
+            if (changeColorOnDurationReached && timer.GetReference().IsDurationReached())
+            {
+                if (displayType == DisplayType.Elapsed)
+                {
+                    slider.fillRect.GetComponent<Image>().color = colorOnDurationReached;
+                }
+
+                if (displayType == DisplayType.TimeLeft)
+                {
+                    slider.transform.Find("Background").GetComponent<Image>().color = colorOnDurationReached;
+                }
+            }
+            else
+            {
+                if (displayType == DisplayType.Elapsed)
+                {
+                    slider.fillRect.GetComponent<Image>().color = originalColor;
+                }
+
+                if (displayType == DisplayType.TimeLeft)
+                {
+                    slider.transform.Find("Background").GetComponent<Image>().color = originalColor;
+                }
+            }
+
             if (displayType == DisplayType.Elapsed)
             {
                 slider.value = timer.GetReference().data.elapsedTime;
