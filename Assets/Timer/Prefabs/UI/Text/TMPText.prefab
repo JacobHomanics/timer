@@ -71,7 +71,7 @@ MonoBehaviour:
   m_text: 12345.67890
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -154,6 +154,7 @@ MonoBehaviour:
   format: '#,##0.####################'
   clampMinToZero: 0
   clampMaxToY: 0
+  roundUp: 0
   displayType: {fileID: 2404781623570436067}
   vector2: {fileID: 2243829201033115622}
   text: {fileID: 102177375856673519}
