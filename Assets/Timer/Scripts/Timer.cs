@@ -3,6 +3,7 @@ using UnityEngine.Events;
 
 namespace JacobHomanics.Core.Timer
 {
+    [RequireComponent(typeof(Vector2))]
     public class Timer : TimerSource
     {
         public override Timer GetReference()
@@ -10,43 +11,52 @@ namespace JacobHomanics.Core.Timer
             return this;
         }
 
+        void Reset()
+        {
+            vector2 = GetComponent<Vector2>();
+        }
+
         public enum TickType
         {
             DeltaTime, UnscaledDeltaTime, SmoothDeltaTime, FixedDeltaTime, FixedUnscaledDeltaTime
         }
 
-        [System.Serializable]
-        public struct TimerData
-        {
-            public TimerData(TickType tickType, Vector2 value)
-            {
-                this.value = value;
-                this.tickType = tickType;
-                // this.b = duration;
-                // this.a = elapsedTime;
-            }
+        // [System.Serializable]
+        // public struct TimerData
+        // {
+        //     public TimerData(TickType tickType, UnityEngine.Vector2 value)
+        //     {
+        //         this.value = value;
+        //         this.tickType = tickType;
+        //         // this.b = duration;
+        //         // this.a = elapsedTime;
+        //     }
 
-            public TickType tickType;
+        //     public TickType tickType;
 
-            // public float a;
-            // public float b;
+        //     // public float a;
+        //     // public float b;
 
-            public Vector2 value;
-        }
+        //     public UnityEngine.Vector2 value;
+        // }
 
         [Header("Configuration")]
-        public TimerData data = new(TickType.DeltaTime, new Vector2(0f, 5f));
+        // public TimerData data = new(TickType.DeltaTime, new UnityEngine.Vector2(0f, 5f));
+
+        public TickType tickType;
+
+        public Vector2 vector2;
 
         public float ElapsedTime
         {
-            get => data.value.x;
-            set => data.value.x = value;
+            get => vector2.value.x;
+            set => vector2.value.x = value;
         }
 
         public float Duration
         {
-            get => data.value.y;
-            set => data.value.y = value;
+            get => vector2.value.y;
+            set => vector2.value.y = value;
         }
 
         [Header("Events")]
@@ -69,17 +79,17 @@ namespace JacobHomanics.Core.Timer
 
         void Update()
         {
-            if (data.tickType == TickType.DeltaTime)
+            if (tickType == TickType.DeltaTime)
             {
                 Tick(Time.deltaTime);
             }
 
-            if (data.tickType == TickType.SmoothDeltaTime)
+            if (tickType == TickType.SmoothDeltaTime)
             {
                 Tick(Time.smoothDeltaTime);
             }
 
-            if (data.tickType == TickType.UnscaledDeltaTime)
+            if (tickType == TickType.UnscaledDeltaTime)
             {
                 Tick(Time.unscaledDeltaTime);
             }
@@ -93,12 +103,12 @@ namespace JacobHomanics.Core.Timer
 
         void FixedUpdate()
         {
-            if (data.tickType == TickType.FixedDeltaTime)
+            if (tickType == TickType.FixedDeltaTime)
             {
                 Tick(Time.fixedDeltaTime);
             }
 
-            if (data.tickType == TickType.FixedUnscaledDeltaTime)
+            if (tickType == TickType.FixedUnscaledDeltaTime)
             {
                 Tick(Time.fixedUnscaledDeltaTime);
             }

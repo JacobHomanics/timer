@@ -1100,7 +1100,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c93f22ad36374e52a233f225392510d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  changeColorOnDurationReached: 1
   colorOnDurationReached: {r: 0, g: 1, b: 0, a: 1}
   displayType: {fileID: 545907888}
   timer: {fileID: 545907890}
@@ -2439,7 +2438,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8884ca87989694834a8ca274bbcc300d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  changeColorOnDurationReached: 1
   colorOnDurationReached: {r: 0, g: 1, b: 0, a: 1}
   displayType: {fileID: 1224778015}
   timer: {fileID: 1224778017}
@@ -2708,7 +2706,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 327c8cc00887d4f5692d0ad48f7c9998, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  changeColorOnDurationReached: 1
   colorOnDurationReached: {r: 0, g: 1, b: 0, a: 1}
   displayType: {fileID: 1343306250}
   timer: {fileID: 1343306253}
@@ -2888,7 +2885,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06e50bc3e9e0f4933a8faf54954b4140, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  changeColorOnDurationReached: 1
   colorOnDurationReached: {r: 0, g: 1, b: 0, a: 1}
   displayType: {fileID: 1428566407}
   timer: {fileID: 1428566409}
@@ -3283,7 +3279,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8884ca87989694834a8ca274bbcc300d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  changeColorOnDurationReached: 1
   colorOnDurationReached: {r: 0, g: 1, b: 0, a: 1}
   displayType: {fileID: 1671055978}
   timer: {fileID: 1671055980}
@@ -3460,7 +3455,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06e50bc3e9e0f4933a8faf54954b4140, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  changeColorOnDurationReached: 1
   colorOnDurationReached: {r: 0, g: 1, b: 0, a: 1}
   displayType: {fileID: 1973042456}
   timer: {fileID: 1973042458}
@@ -3636,7 +3630,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c93f22ad36374e52a233f225392510d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  changeColorOnDurationReached: 1
   colorOnDurationReached: {r: 0, g: 1, b: 0, a: 1}
   displayType: {fileID: 2039562480}
   timer: {fileID: 2039562482}
@@ -4143,6 +4136,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4146992751661857447, guid: b3976bbac7c0f40fabfa2997ff6f9cc3, type: 3}
+      propertyPath: value.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7304624512339234846, guid: b3976bbac7c0f40fabfa2997ff6f9cc3, type: 3}
+      propertyPath: vector2
+      value: 
+      objectReference: {fileID: 7967711023697285666}
     - target: {fileID: 8782560524962977768, guid: b3976bbac7c0f40fabfa2997ff6f9cc3, type: 3}
       propertyPath: m_Name
       value: Timer
@@ -4152,6 +4153,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3976bbac7c0f40fabfa2997ff6f9cc3, type: 3}
+--- !u!114 &7967711023697285666 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4146992751661857447, guid: b3976bbac7c0f40fabfa2997ff6f9cc3, type: 3}
+  m_PrefabInstance: {fileID: 7967711023697285665}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7175ce7ac5ac248d497f46b391e2f87e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8166596470326675579
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4312,6 +4324,10 @@ PrefabInstance:
     - target: {fileID: 2993930410361799963, guid: adf2a4f5d7c004b4094315df6bc5b19b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4295992648969623566, guid: adf2a4f5d7c004b4094315df6bc5b19b, type: 3}
+      propertyPath: value.y
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8866147862994849170, guid: adf2a4f5d7c004b4094315df6bc5b19b, type: 3}
       propertyPath: data.tickType
