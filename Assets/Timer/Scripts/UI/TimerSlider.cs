@@ -22,14 +22,14 @@ namespace JacobHomanics.Core.Timer.UI
         {
             if (displayType.value == "ElapsedTime")
             {
-                slider.value = timer.GetReference().data.elapsedTime;
-                slider.maxValue = timer.GetReference().data.duration;
+                slider.value = timer.GetReference().ElapsedTime;
+                slider.maxValue = timer.GetReference().Duration;
             }
 
             if (displayType.value == "TimeLeft")
             {
                 slider.value = timer.GetReference().GetTimeLeft();
-                slider.maxValue = timer.GetReference().data.duration;
+                slider.maxValue = timer.GetReference().Duration;
             }
         }
     }

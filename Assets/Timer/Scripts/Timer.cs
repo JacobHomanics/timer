@@ -18,21 +18,36 @@ namespace JacobHomanics.Core.Timer
         [System.Serializable]
         public struct TimerData
         {
-            public TimerData(TickType tickType, float duration, float elapsedTime)
+            public TimerData(TickType tickType, Vector2 value)
             {
+                this.value = value;
                 this.tickType = tickType;
-                this.duration = duration;
-                this.elapsedTime = elapsedTime;
+                // this.b = duration;
+                // this.a = elapsedTime;
             }
 
             public TickType tickType;
 
-            public float duration;
-            public float elapsedTime;
+            // public float a;
+            // public float b;
+
+            public Vector2 value;
         }
 
         [Header("Configuration")]
-        public TimerData data = new(TickType.DeltaTime, 5.0f, 0f);
+        public TimerData data = new(TickType.DeltaTime, new Vector2(0f, 5f));
+
+        public float ElapsedTime
+        {
+            get => data.value.x;
+            set => data.value.x = value;
+        }
+
+        public float Duration
+        {
+            get => data.value.y;
+            set => data.value.y = value;
+        }
 
         [Header("Events")]
         public UnityEvent OnTick;
@@ -44,7 +59,7 @@ namespace JacobHomanics.Core.Timer
 
         public void Tick(float delta)
         {
-            data.elapsedTime += delta;
+            ElapsedTime += delta;
             OnTick?.Invoke();
         }
 
@@ -70,7 +85,7 @@ namespace JacobHomanics.Core.Timer
             }
 
 
-            if (data.elapsedTime >= data.duration)
+            if (IsDurationReached())
             {
                 OnDurationElapsed?.Invoke();
             }
@@ -94,23 +109,23 @@ namespace JacobHomanics.Core.Timer
         ////////////////////////////
         public float GetTimeLeft()
         {
-            return data.duration - data.elapsedTime;
+            return Duration - ElapsedTime;
         }
 
         public bool IsDurationReached()
         {
-            return data.elapsedTime >= data.duration;
+            return ElapsedTime >= Duration;
         }
 
         public void SetElapsedTime(float value)
         {
-            data.elapsedTime = value;
+            ElapsedTime = value;
         }
 
         [ContextMenu("Set Elapsed To Zero")]
         public void SetElapsedToZero()
         {
-            data.elapsedTime = 0;
+            ElapsedTime = 0;
         }
     }
 }

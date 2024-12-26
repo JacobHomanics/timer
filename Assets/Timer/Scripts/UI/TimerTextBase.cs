@@ -32,13 +32,13 @@ namespace JacobHomanics.Core.Timer.UI
 
             if (displayType.value == "Duration")
             {
-                value = timer.GetReference().data.duration;
+                value = timer.GetReference().Duration;
             }
 
             if (displayType.value == "ElapsedTime")
             {
-                value = timer.GetReference().data.elapsedTime;
-                if (hideTextOnDurationReached && value >= timer.GetReference().data.duration)
+                value = timer.GetReference().ElapsedTime;
+                if (hideTextOnDurationReached && value >= timer.GetReference().Duration)
                 {
                     isShowingNumber = false;
                 }
@@ -56,7 +56,7 @@ namespace JacobHomanics.Core.Timer.UI
             if (isShowingNumber)
             {
                 if (clampTextToBounds)
-                    value = Mathf.Clamp(value, minTextBounds, timer.GetReference().data.duration);
+                    value = Mathf.Clamp(value, minTextBounds, timer.GetReference().Duration);
 
                 text = value.ToString(format);
             }
