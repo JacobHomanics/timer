@@ -3,9 +3,9 @@ using UnityEngine.UI;
 
 namespace JacobHomanics.Core.Timer.UI
 {
-    public abstract class TimerColorBase : TimerSource
+    public abstract class TimerColorBase : Vector2Source
     {
-        public override Timer GetReference()
+        public override Vector2 GetReference()
         {
             return timer.GetReference();
         }
@@ -15,7 +15,7 @@ namespace JacobHomanics.Core.Timer.UI
         public DisplayType displayType;
 
         [Header("References")]
-        public TimerSource timer;
+        public Vector2Source timer;
 
         private Color originalColor;
 
@@ -26,11 +26,11 @@ namespace JacobHomanics.Core.Timer.UI
             originalColor = GetOriginalColor();
         }
 
-        protected void SetColor(out Color color, TimerSource timer, string displayType)
+        protected void SetColor(out Color color, Vector2Source timer, string displayType)
         {
             color = Color.white;
 
-            if (timer.GetReference().IsDurationReached())
+            if (timer.GetReference().IsXGreatherThanOrEqualToY())
             {
                 if (displayType == "ElapsedTime")
                 {

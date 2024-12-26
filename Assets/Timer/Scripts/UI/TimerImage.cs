@@ -3,9 +3,9 @@ using UnityEngine.UI;
 
 namespace JacobHomanics.Core.Timer.UI
 {
-    public class TimerImage : TimerSource
+    public class TimerImage : Vector2Source
     {
-        public override Timer GetReference()
+        public override Vector2 GetReference()
         {
             return timer.GetReference();
         }
@@ -14,19 +14,19 @@ namespace JacobHomanics.Core.Timer.UI
         public DisplayType displayType;
 
         [Header("References")]
-        public TimerSource timer;
+        public Vector2Source timer;
         public Image image;
 
         void Update()
         {
             if (displayType.value == "ElapsedTime")
             {
-                image.fillAmount = timer.GetReference().ElapsedTime / timer.GetReference().Duration;
+                image.fillAmount = timer.GetReference().X / timer.GetReference().Y;
             }
 
             if (displayType.value == "TimeLeft")
             {
-                image.fillAmount = timer.GetReference().GetTimeLeft() / timer.GetReference().Duration;
+                image.fillAmount = timer.GetReference().GetDifferenceYX() / timer.GetReference().Y;
             }
         }
     }

@@ -3,9 +3,9 @@ using UnityEngine.UI;
 
 namespace JacobHomanics.Core.Timer.UI
 {
-    public class TimerSlider : TimerSource
+    public class TimerSlider : Vector2Source
     {
-        public override Timer GetReference()
+        public override Vector2 GetReference()
         {
             return timer.GetReference();
         }
@@ -15,21 +15,21 @@ namespace JacobHomanics.Core.Timer.UI
 
         [Header("References")]
 
-        public TimerSource timer;
+        public Vector2Source timer;
         public Slider slider;
 
         void Update()
         {
             if (displayType.value == "ElapsedTime")
             {
-                slider.value = timer.GetReference().ElapsedTime;
-                slider.maxValue = timer.GetReference().Duration;
+                slider.value = timer.GetReference().X;
+                slider.maxValue = timer.GetReference().Y;
             }
 
             if (displayType.value == "TimeLeft")
             {
-                slider.value = timer.GetReference().GetTimeLeft();
-                slider.maxValue = timer.GetReference().Duration;
+                slider.value = timer.GetReference().GetDifferenceYX();
+                slider.maxValue = timer.GetReference().Y;
             }
         }
     }

@@ -2,9 +2,9 @@ using UnityEngine;
 
 namespace JacobHomanics.Core.Timer.UI
 {
-    public class TimerTextBase : TimerSource
+    public class TimerTextBase : Vector2Source
     {
-        public override Timer GetReference()
+        public override Vector2 GetReference()
         {
             return timer.GetReference();
         }
@@ -20,7 +20,7 @@ namespace JacobHomanics.Core.Timer.UI
 
         [Header("References")]
 
-        public TimerSource timer;
+        public Vector2Source timer;
 
         protected void SetText(ref string text, DisplayType displayType, string format, bool clampTextToBounds, float minTextBounds)
         {
@@ -30,13 +30,13 @@ namespace JacobHomanics.Core.Timer.UI
 
             if (displayType.value == "Duration")
             {
-                value = timer.GetReference().Duration;
+                value = timer.GetReference().Y;
             }
 
             if (displayType.value == "ElapsedTime")
             {
-                value = timer.GetReference().ElapsedTime;
-                if (hideTextOnDurationReached && value >= timer.GetReference().Duration)
+                value = timer.GetReference().X;
+                if (hideTextOnDurationReached && value >= timer.GetReference().Y)
                 {
                     isShowingNumber = false;
                 }
@@ -44,7 +44,7 @@ namespace JacobHomanics.Core.Timer.UI
 
             if (displayType.value == "TimeLeft")
             {
-                value = timer.GetReference().GetTimeLeft();
+                value = timer.GetReference().GetDifferenceYX();
                 if (hideTextOnDurationReached && value <= 0)
                 {
                     isShowingNumber = false;
@@ -54,7 +54,7 @@ namespace JacobHomanics.Core.Timer.UI
             if (isShowingNumber)
             {
                 if (clampTextToBounds)
-                    value = Mathf.Clamp(value, minTextBounds, timer.GetReference().Duration);
+                    value = Mathf.Clamp(value, minTextBounds, timer.GetReference().Y);
 
                 text = value.ToString(format);
             }
