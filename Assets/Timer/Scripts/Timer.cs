@@ -111,6 +111,18 @@ namespace JacobHomanics.Core.Timer
             return vector2.IsXGreatherThanOrEqualToY();
         }
 
+        // public float GetTimeLeft()
+        // {
+        //     return Duration - ElapsedTime;
+        // }
+
+        // public bool IsDurationReached()
+        // {
+        //     return ElapsedTime >= Duration;
+        // }
+
+
+
         public void AddElapsedTime(float value)
         {
             ElapsedTime += value;
