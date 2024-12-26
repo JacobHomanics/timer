@@ -2,7 +2,7 @@ using TMPro;
 
 namespace JacobHomanics.Core.Timer.UI
 {
-    public class TimerTMPText : Vector2TextBase
+    public class Vector2TMPText : Vector2TextBase
     {
         public TMP_Text text;
 
