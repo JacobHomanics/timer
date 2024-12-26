@@ -1,6 +1,6 @@
 using UnityEngine.UI;
 
-namespace JacobHomanics.Core.Timer.UI
+namespace JacobHomanics.Core.SuperchargedVector2.UI
 {
     public class Vector2Text : Vector2TextBase
     {

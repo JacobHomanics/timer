@@ -1,7 +1,7 @@
 using UnityEngine;
 using TMPro;
 
-namespace JacobHomanics.Core.Timer.UI
+namespace JacobHomanics.Core.SuperchargedVector2.UI
 {
     public class Vector2TMPTextColor : Vector2ColorBase
     {

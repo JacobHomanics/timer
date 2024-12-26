@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace JacobHomanics.Core.Timer
+namespace JacobHomanics.Core.SuperchargedVector2
 {
     [RequireComponent(typeof(Vector2))]
     public class Health : MonoBehaviour

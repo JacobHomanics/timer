@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace JacobHomanics.Core.Timer
+namespace JacobHomanics.Core.SuperchargedVector2
 {
     public abstract class Vector2Source : MonoBehaviour
     {

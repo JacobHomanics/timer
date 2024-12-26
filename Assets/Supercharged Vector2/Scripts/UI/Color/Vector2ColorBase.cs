@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace JacobHomanics.Core.Timer.UI
+namespace JacobHomanics.Core.SuperchargedVector2.UI
 {
     public abstract class Vector2ColorBase : Vector2Source
     {

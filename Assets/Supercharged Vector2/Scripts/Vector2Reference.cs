@@ -1,6 +1,6 @@
 using UnityEngine.Serialization;
 
-namespace JacobHomanics.Core.Timer
+namespace JacobHomanics.Core.SuperchargedVector2
 {
     public class Vector2Reference : Vector2Source
     {
