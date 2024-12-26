@@ -12,6 +12,8 @@ namespace JacobHomanics.Core.Timer.UI
 
         [Header("Configuration")]
         public string format = "";
+        public bool clampMinToZero;
+        public bool clampMaxToY;
 
         public DisplayType displayType;
 
@@ -31,16 +33,29 @@ namespace JacobHomanics.Core.Timer.UI
             if (displayType.value == "X")
             {
                 value = vector2.GetReference().X;
-
             }
 
             if (displayType.value == "DifferenceYX")
             {
                 value = vector2.GetReference().GetDifferenceYX();
-
             }
 
-            text = value.ToString(format);
+            var min = Mathf.NegativeInfinity;
+            var max = Mathf.Infinity;
+
+            if (clampMinToZero)
+            {
+                min = 0;
+            }
+
+            if (clampMaxToY)
+            {
+                max = vector2.GetReference().Y;
+            }
+
+            var clampedValue = Mathf.Clamp(value, min, max);
+
+            text = clampedValue.ToString(format);
         }
     }
 }
