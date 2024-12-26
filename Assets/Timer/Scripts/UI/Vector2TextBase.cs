@@ -15,6 +15,8 @@ namespace JacobHomanics.Core.Timer.UI
         public bool clampMinToZero;
         public bool clampMaxToY;
 
+        public bool roundUp;
+
         public DisplayType displayType;
 
         [Header("References")]
@@ -53,9 +55,12 @@ namespace JacobHomanics.Core.Timer.UI
                 max = vector2.GetReference().Y;
             }
 
-            var clampedValue = Mathf.Clamp(value, min, max);
+            value = Mathf.Clamp(value, min, max);
 
-            text = clampedValue.ToString(format);
+            if (roundUp)
+                value = Mathf.Ceil(value);
+
+            text = value.ToString(format);
         }
     }
 }
