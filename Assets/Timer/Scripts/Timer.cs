@@ -4,13 +4,8 @@ using UnityEngine.Events;
 namespace JacobHomanics.Core.Timer
 {
     [RequireComponent(typeof(Vector2))]
-    public class Timer : Vector2Source
+    public class Timer : MonoBehaviour
     {
-        public override Vector2 GetReference()
-        {
-            return vector2;
-        }
-
         void Reset()
         {
             vector2 = GetComponent<Vector2>();
