@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2993930410361799963}
   - component: {fileID: 8866147862994849170}
+  - component: {fileID: 4295992648969623566}
   m_Layer: 0
   m_Name: Timer - Looped
   m_TagString: Untagged
@@ -44,25 +45,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf67c0ee1eaa464da063c4ec423479b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data:
-    tickType: 0
-    duration: 5
-    elapsedTime: 0
+  tickType: 0
+  vector2: {fileID: 4295992648969623566}
   OnTick:
     m_PersistentCalls:
       m_Calls: []
   OnDurationElapsed:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8866147862994849170}
-        m_TargetAssemblyTypeName: Timer, Assembly-CSharp
-        m_MethodName: SetElapsedTime
-        m_Mode: 4
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+--- !u!114 &4295992648969623566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2374685756905105341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7175ce7ac5ac248d497f46b391e2f87e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: {x: 0, y: 5}

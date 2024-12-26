@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 996811508290308232}
   - component: {fileID: 7304624512339234846}
+  - component: {fileID: 4146992751661857447}
   m_Layer: 0
   m_Name: Timer
   m_TagString: Untagged
@@ -44,13 +45,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf67c0ee1eaa464da063c4ec423479b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data:
-    tickType: 0
-    duration: 5
-    elapsedTime: 0
+  tickType: 0
+  vector2: {fileID: 4146992751661857447}
   OnTick:
     m_PersistentCalls:
       m_Calls: []
   OnDurationElapsed:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &4146992751661857447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8782560524962977768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7175ce7ac5ac248d497f46b391e2f87e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: {x: 0, y: 5}

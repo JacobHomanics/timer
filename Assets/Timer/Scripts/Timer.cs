@@ -21,28 +21,7 @@ namespace JacobHomanics.Core.Timer
             DeltaTime, UnscaledDeltaTime, SmoothDeltaTime, FixedDeltaTime, FixedUnscaledDeltaTime
         }
 
-        // [System.Serializable]
-        // public struct TimerData
-        // {
-        //     public TimerData(TickType tickType, UnityEngine.Vector2 value)
-        //     {
-        //         this.value = value;
-        //         this.tickType = tickType;
-        //         // this.b = duration;
-        //         // this.a = elapsedTime;
-        //     }
-
-        //     public TickType tickType;
-
-        //     // public float a;
-        //     // public float b;
-
-        //     public UnityEngine.Vector2 value;
-        // }
-
         [Header("Configuration")]
-        // public TimerData data = new(TickType.DeltaTime, new UnityEngine.Vector2(0f, 5f));
-
         public TickType tickType;
 
         public Vector2 vector2;
