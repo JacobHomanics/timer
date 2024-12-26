@@ -30,6 +30,11 @@ namespace JacobHomanics.Core.Timer
                     OnXSetGreaterThanOrEqualToY?.Invoke();
                 }
 
+                if (_value.x == Y)
+                {
+                    OnXSetToY?.Invoke();
+                }
+
                 if (_value.x > previousValue)
                 {
                     OnXIncrease?.Invoke();
@@ -68,6 +73,11 @@ namespace JacobHomanics.Core.Timer
                     OnYSetGreaterThanOrEqualToX?.Invoke();
                 }
 
+                if (_value.y == X)
+                {
+                    OnYSetToX?.Invoke();
+                }
+
                 if (_value.y > previousValue)
                 {
                     OnYIncrease?.Invoke();
@@ -87,6 +97,8 @@ namespace JacobHomanics.Core.Timer
         public UnityEvent OnXSetLessThanOrEqualToZero = new();
         public UnityEvent OnXSetToZero = new();
         public UnityEvent OnXSetGreaterThanOrEqualToY = new();
+
+        public UnityEvent OnXSetToY = new();
         public UnityEvent OnXChangedByOffset = new();
         public UnityEvent OnXIncrease;
         public UnityEvent OnXDecrease;
@@ -95,6 +107,7 @@ namespace JacobHomanics.Core.Timer
         public UnityEvent OnYSetToZero = new();
         public UnityEvent OnYSetLessThanOrEqualToZero = new();
         public UnityEvent OnYSetGreaterThanOrEqualToX = new();
+        public UnityEvent OnYSetToX = new();
         public UnityEvent OnYChangedByOffset = new();
         public UnityEvent OnYIncrease;
         public UnityEvent OnYDecrease;
@@ -118,6 +131,16 @@ namespace JacobHomanics.Core.Timer
         public float GetDifferenceYX()
         {
             return Y - X;
+        }
+
+        public bool IsXEqualToY()
+        {
+            return X == Y;
+        }
+
+        public bool IsYEqualToX()
+        {
+            return Y == X;
         }
 
         public bool IsXGreatherThanOrEqualToY()
