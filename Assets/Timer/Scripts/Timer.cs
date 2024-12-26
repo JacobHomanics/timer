@@ -98,23 +98,23 @@ namespace JacobHomanics.Core.Timer
         ////////////////////////////
         public float GetTimeLeft()
         {
-            return Duration - ElapsedTime;
+            return vector2.GetDifferenceYX();
         }
 
         public bool IsDurationReached()
         {
-            return ElapsedTime >= Duration;
+            return vector2.IsXGreatherThanOrEqualToY();
         }
 
         public void SetElapsedTime(float value)
         {
-            ElapsedTime = value;
+            vector2.SetX(value);
         }
 
         [ContextMenu("Set Elapsed To Zero")]
         public void SetElapsedToZero()
         {
-            ElapsedTime = 0;
+            vector2.SetXToZero();
         }
     }
 }
