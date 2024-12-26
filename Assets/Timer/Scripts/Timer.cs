@@ -39,9 +39,11 @@ namespace JacobHomanics.Core.Timer
         }
 
         [Header("Events")]
-        public UnityEvent OnTick;
-
+        public UnityEvent OnTick = new();
         public UnityEvent OnDurationElapsed = new();
+        public UnityEvent OnElapsedTimeReset = new();
+        public UnityEvent OnElapsedTimeChangedByOffset = new();
+        public UnityEvent OnDurationChangedByOffset = new();
 
         ////////////////////////////
         //Monobehaviour
@@ -50,11 +52,17 @@ namespace JacobHomanics.Core.Timer
         void OnEnable()
         {
             vector2.OnXSetGreaterThanOrEqualToY.AddListener(OnXGreaterThanOrEqualToY);
+            vector2.OnXChangedByOffset.AddListener(OnXChangedByOffset);
+            vector2.OnYChangedByOffset.AddListener(OnYChangedByOffset);
+            vector2.OnXSetToZero.AddListener(OnXSetToZero);
         }
 
         void OnDisable()
         {
             vector2.OnXSetGreaterThanOrEqualToY.RemoveListener(OnXGreaterThanOrEqualToY);
+            vector2.OnXChangedByOffset.RemoveListener(OnXChangedByOffset);
+            vector2.OnYChangedByOffset.RemoveListener(OnYChangedByOffset);
+            vector2.OnXSetToZero.RemoveListener(OnXSetToZero);
         }
 
         void Update()
@@ -101,6 +109,21 @@ namespace JacobHomanics.Core.Timer
         private void OnXGreaterThanOrEqualToY()
         {
             OnDurationElapsed?.Invoke();
+        }
+
+        private void OnXChangedByOffset()
+        {
+            OnElapsedTimeChangedByOffset?.Invoke();
+        }
+
+        private void OnYChangedByOffset()
+        {
+            OnDurationChangedByOffset?.Invoke();
+        }
+
+        private void OnXSetToZero()
+        {
+            OnElapsedTimeReset?.Invoke();
         }
 
         ////////////////////////////
