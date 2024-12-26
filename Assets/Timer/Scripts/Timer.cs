@@ -43,6 +43,13 @@ namespace JacobHomanics.Core.Timer
 
         public UnityEvent OnDurationElapsed;
 
+
+
+
+        ////////////////////////////
+        //Monobehaviour
+        ////////////////////////////
+
         void OnEnable()
         {
             vector2.OnXSetGreaterThanOrEqualToY.AddListener(() => { OnDurationElapsed?.Invoke(); });
@@ -52,20 +59,6 @@ namespace JacobHomanics.Core.Timer
         {
             vector2.OnXSetGreaterThanOrEqualToY.RemoveListener(() => { OnDurationElapsed?.Invoke(); });
         }
-
-        ////////////////////////////
-        // Core
-        ////////////////////////////
-
-        public void Tick(float delta)
-        {
-            AddElapsedTime(delta);
-            OnTick?.Invoke();
-        }
-
-        ////////////////////////////
-        //Monobehaviour
-        ////////////////////////////
 
         void Update()
         {
@@ -99,17 +92,18 @@ namespace JacobHomanics.Core.Timer
         }
 
         ////////////////////////////
+        // Core
+        ////////////////////////////
+
+        public void Tick(float delta)
+        {
+            AddElapsedTime(delta);
+            OnTick?.Invoke();
+        }
+
+        ////////////////////////////
         //Helper Methods
         ////////////////////////////
-        // public float GetTimeLeft()
-        // {
-        //     return vector2.GetDifferenceYX();
-        // }
-
-        // public bool IsDurationReached()
-        // {
-        //     return vector2.IsXGreatherThanOrEqualToY();
-        // }
 
         public float GetTimeLeft()
         {
@@ -121,7 +115,15 @@ namespace JacobHomanics.Core.Timer
             return ElapsedTime >= Duration;
         }
 
+        // public float GetTimeLeft()
+        // {
+        //     return vector2.GetDifferenceYX();
+        // }
 
+        // public bool IsDurationReached()
+        // {
+        //     return vector2.IsXGreatherThanOrEqualToY();
+        // }
 
         public void AddElapsedTime(float value)
         {

@@ -4374,6 +4374,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4295992648969623566, guid: adf2a4f5d7c004b4094315df6bc5b19b, type: 3}
+      propertyPath: OnXSetGreaterThanOrEqualToY.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4295992648969623566, guid: adf2a4f5d7c004b4094315df6bc5b19b, type: 3}
+      propertyPath: OnXSetGreaterThanOrEqualToY.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4295992648969623566, guid: adf2a4f5d7c004b4094315df6bc5b19b, type: 3}
+      propertyPath: OnXSetGreaterThanOrEqualToY.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 45672705}
+    - target: {fileID: 4295992648969623566, guid: adf2a4f5d7c004b4094315df6bc5b19b, type: 3}
+      propertyPath: OnXSetGreaterThanOrEqualToY.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4295992648969623566, guid: adf2a4f5d7c004b4094315df6bc5b19b, type: 3}
+      propertyPath: OnXSetGreaterThanOrEqualToY.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: set_ElapsedTime
+      objectReference: {fileID: 0}
+    - target: {fileID: 4295992648969623566, guid: adf2a4f5d7c004b4094315df6bc5b19b, type: 3}
+      propertyPath: OnXSetGreaterThanOrEqualToY.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: JacobHomanics.Core.Timer.Timer, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4295992648969623566, guid: adf2a4f5d7c004b4094315df6bc5b19b, type: 3}
+      propertyPath: OnXSetGreaterThanOrEqualToY.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
