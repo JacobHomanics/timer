@@ -32,24 +32,24 @@ namespace JacobHomanics.Core.Timer.UI
 
             if (timer.GetReference().IsXGreatherThanOrEqualToY())
             {
-                if (displayType == "ElapsedTime")
+                if (displayType == "X")
                 {
                     color = colorOnDurationReached;
                 }
 
-                if (displayType == "TimeLeft")
+                if (displayType == "DifferenceYX")
                 {
                     color = colorOnDurationReached;
                 }
             }
             else
             {
-                if (displayType == "ElapsedTime")
+                if (displayType == "X")
                 {
                     color = originalColor;
                 }
 
-                if (displayType == "TimeLeft")
+                if (displayType == "DifferenceYX")
                 {
                     color = originalColor;
                 }

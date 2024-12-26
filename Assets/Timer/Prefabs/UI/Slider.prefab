@@ -292,7 +292,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   displayType: {fileID: 2708429560485315798}
-  timer: {fileID: 1085947130998407219}
+  vector2: {fileID: 1085947130998407219}
   slider: {fileID: 761956089017820696}
 --- !u!114 &1085947130998407219
 MonoBehaviour:
@@ -306,7 +306,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7039eccb336b44e95a6f2f7b9f8153b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: {fileID: 0}
+  vector2: {fileID: 0}
 --- !u!114 &2708429560485315798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -319,7 +319,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f0f9135be2eb4e1792aa414161289f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: ElapsedTime
+  value: X
 --- !u!1 &5390379863860558858
 GameObject:
   m_ObjectHideFlags: 0

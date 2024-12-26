@@ -151,10 +151,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Image - Text
       objectReference: {fileID: 0}
-    - target: {fileID: 6057289557784899831, guid: d0e58568f3bf8448da23685d25b3c3ea, type: 3}
-      propertyPath: value
-      value: ElapsedTime
-      objectReference: {fileID: 0}
     - target: {fileID: 8271919499447064566, guid: d0e58568f3bf8448da23685d25b3c3ea, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

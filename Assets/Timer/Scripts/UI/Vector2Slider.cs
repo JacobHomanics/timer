@@ -7,7 +7,7 @@ namespace JacobHomanics.Core.Timer.UI
     {
         public override Vector2 GetReference()
         {
-            return timer.GetReference();
+            return vector2.GetReference();
         }
 
         [Header("Configuration")]
@@ -15,21 +15,21 @@ namespace JacobHomanics.Core.Timer.UI
 
         [Header("References")]
 
-        public Vector2Source timer;
+        public Vector2Source vector2;
         public Slider slider;
 
         void Update()
         {
-            if (displayType.value == "ElapsedTime")
+            if (displayType.value == "X")
             {
-                slider.value = timer.GetReference().X;
-                slider.maxValue = timer.GetReference().Y;
+                slider.value = vector2.GetReference().X;
+                slider.maxValue = vector2.GetReference().Y;
             }
 
-            if (displayType.value == "TimeLeft")
+            if (displayType.value == "DifferenceYX")
             {
-                slider.value = timer.GetReference().GetDifferenceYX();
-                slider.maxValue = timer.GetReference().Y;
+                slider.value = vector2.GetReference().GetDifferenceYX();
+                slider.maxValue = vector2.GetReference().Y;
             }
         }
     }

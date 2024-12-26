@@ -3633,7 +3633,7 @@ PrefabInstance:
       objectReference: {fileID: 1936644778}
     - target: {fileID: 2708429560485315798, guid: 1048b0c60481648a79874a0239796d1b, type: 3}
       propertyPath: value
-      value: TimeLeft
+      value: DifferenceYX
       objectReference: {fileID: 0}
     - target: {fileID: 3005463091533949423, guid: 1048b0c60481648a79874a0239796d1b, type: 3}
       propertyPath: m_Pivot.x
@@ -3941,7 +3941,7 @@ PrefabInstance:
       objectReference: {fileID: 1178703239}
     - target: {fileID: 2708429560485315798, guid: 1048b0c60481648a79874a0239796d1b, type: 3}
       propertyPath: value
-      value: TimeLeft
+      value: DifferenceYX
       objectReference: {fileID: 0}
     - target: {fileID: 3005463091533949423, guid: 1048b0c60481648a79874a0239796d1b, type: 3}
       propertyPath: m_Pivot.x
