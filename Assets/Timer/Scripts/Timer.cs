@@ -101,25 +101,25 @@ namespace JacobHomanics.Core.Timer
         ////////////////////////////
         //Helper Methods
         ////////////////////////////
-        public float GetTimeLeft()
-        {
-            return vector2.GetDifferenceYX();
-        }
-
-        public bool IsDurationReached()
-        {
-            return vector2.IsXGreatherThanOrEqualToY();
-        }
-
         // public float GetTimeLeft()
         // {
-        //     return Duration - ElapsedTime;
+        //     return vector2.GetDifferenceYX();
         // }
 
         // public bool IsDurationReached()
         // {
-        //     return ElapsedTime >= Duration;
+        //     return vector2.IsXGreatherThanOrEqualToY();
         // }
+
+        public float GetTimeLeft()
+        {
+            return Duration - ElapsedTime;
+        }
+
+        public bool IsDurationReached()
+        {
+            return ElapsedTime >= Duration;
+        }
 
 
 
