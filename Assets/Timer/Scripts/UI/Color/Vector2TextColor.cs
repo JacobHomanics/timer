@@ -3,19 +3,20 @@ using UnityEngine.UI;
 
 namespace JacobHomanics.Core.Timer.UI
 {
-    public class TimerImageColor : TimerColorBase
+    public class Vector2TextColor : Vector2ColorBase
     {
-        public Image image;
+        public Text text;
 
         protected override Color GetOriginalColor()
         {
-            return image.color;
+            return text.color;
         }
 
         void Update()
         {
             SetColor(out Color color, GetReference(), displayType.value);
-            image.color = color;
+            text.color = color;
         }
     }
+
 }
