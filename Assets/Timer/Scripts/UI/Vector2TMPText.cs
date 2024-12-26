@@ -9,7 +9,7 @@ namespace JacobHomanics.Core.Timer.UI
         public void Update()
         {
             var theString = text.text;
-            SetText(ref theString, displayType, format, clampTextToBounds, minTextBounds);
+            SetText(ref theString, displayType, format);
             text.text = theString;
         }
     }

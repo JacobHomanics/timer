@@ -11,10 +11,7 @@ namespace JacobHomanics.Core.Timer.UI
         }
 
         [Header("Configuration")]
-        public string format = "0.##";
-
-        public bool clampTextToBounds = false;
-        public float minTextBounds = 0f;
+        public string format = "";
 
         public DisplayType displayType;
 
@@ -22,7 +19,7 @@ namespace JacobHomanics.Core.Timer.UI
 
         public Vector2Source vector2;
 
-        protected void SetText(ref string text, DisplayType displayType, string format, bool clampTextToBounds, float minTextBounds)
+        protected void SetText(ref string text, DisplayType displayType, string format)
         {
             var value = 0f;
 
