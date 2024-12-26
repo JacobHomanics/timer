@@ -52,7 +52,19 @@ MonoBehaviour:
       m_Calls: []
   OnDurationElapsed:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8866147862994849170}
+        m_TargetAssemblyTypeName: JacobHomanics.Core.Timer.Timer, Assembly-CSharp
+        m_MethodName: ResetElapsedTime
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &4295992648969623566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65,4 +77,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7175ce7ac5ac248d497f46b391e2f87e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: {x: 0, y: 5}
+  _value: {x: 0, y: 0}
+  OnXSetLessThanOrEqualToZero:
+    m_PersistentCalls:
+      m_Calls: []
+  OnXSetGreaterThanOrEqualToY:
+    m_PersistentCalls:
+      m_Calls: []

@@ -28,19 +28,30 @@ namespace JacobHomanics.Core.Timer
 
         public float ElapsedTime
         {
-            get => vector2.value.x;
-            set => vector2.value.x = value;
+            get => vector2.X;
+            set => vector2.X = value;
         }
 
         public float Duration
         {
-            get => vector2.value.y;
-            set => vector2.value.y = value;
+            get => vector2.Y;
+            set => vector2.Y = value;
         }
 
         [Header("Events")]
         public UnityEvent OnTick;
+
         public UnityEvent OnDurationElapsed;
+
+        void OnEnable()
+        {
+            vector2.OnXSetGreaterThanOrEqualToY.AddListener(() => { OnDurationElapsed?.Invoke(); });
+        }
+
+        void OnDisable()
+        {
+            vector2.OnXSetGreaterThanOrEqualToY.RemoveListener(() => { OnDurationElapsed?.Invoke(); });
+        }
 
         ////////////////////////////
         // Core
@@ -49,13 +60,7 @@ namespace JacobHomanics.Core.Timer
         public void Tick(float delta)
         {
             AddElapsedTime(delta);
-            // ElapsedTime += delta;
             OnTick?.Invoke();
-
-            if (IsDurationReached())
-            {
-                OnDurationElapsed?.Invoke();
-            }
         }
 
         ////////////////////////////
@@ -108,18 +113,17 @@ namespace JacobHomanics.Core.Timer
 
         public void AddElapsedTime(float value)
         {
-            vector2.AddX(value);
+            ElapsedTime += value;
         }
 
         public void SetElapsedTime(float value)
         {
-            vector2.SetX(value);
+            ElapsedTime = value;
         }
 
-        [ContextMenu("Set Elapsed To Zero")]
-        public void SetElapsedToZero()
+        public void ResetElapsedTime()
         {
-            vector2.SetXToZero();
+            ElapsedTime = 0;
         }
     }
 }

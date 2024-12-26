@@ -160,6 +160,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Text
       objectReference: {fileID: 0}
+    - target: {fileID: 2494112521580067796, guid: 665ac6864b73c499c85b807e0c86d4ec, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3186357660288496061, guid: 665ac6864b73c499c85b807e0c86d4ec, type: 3}
       propertyPath: timer
       value: 
@@ -827,6 +831,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Slider - Text
       objectReference: {fileID: 0}
+    - target: {fileID: 6504944445365880616, guid: 0c770866e6e1543238612be1fe1238d8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7381842925666544836, guid: 0c770866e6e1543238612be1fe1238d8, type: 3}
       propertyPath: timer
       value: 
@@ -1038,6 +1046,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Slider
       objectReference: {fileID: 0}
+    - target: {fileID: 3685537330614594527, guid: 1048b0c60481648a79874a0239796d1b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7969189268257118416, guid: 1048b0c60481648a79874a0239796d1b, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1146,6 +1158,10 @@ PrefabInstance:
     - target: {fileID: 2494112521580067796, guid: cf5a5e980cfcd4e1b88b6de53c4756c6, type: 3}
       propertyPath: m_Name
       value: TMPText
+      objectReference: {fileID: 0}
+    - target: {fileID: 2494112521580067796, guid: cf5a5e980cfcd4e1b88b6de53c4756c6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7136952431997617254, guid: cf5a5e980cfcd4e1b88b6de53c4756c6, type: 3}
       propertyPath: m_Pivot.x
@@ -1282,6 +1298,10 @@ PrefabInstance:
     - target: {fileID: 2494112521580067796, guid: cf5a5e980cfcd4e1b88b6de53c4756c6, type: 3}
       propertyPath: m_Name
       value: TMPText
+      objectReference: {fileID: 0}
+    - target: {fileID: 2494112521580067796, guid: cf5a5e980cfcd4e1b88b6de53c4756c6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7136952431997617254, guid: cf5a5e980cfcd4e1b88b6de53c4756c6, type: 3}
       propertyPath: m_Pivot.x
@@ -1722,6 +1742,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Image - TMP Text
       objectReference: {fileID: 0}
+    - target: {fileID: 6398099324703960432, guid: e8d38848a2e8540eb803f794e1c4f962, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6413362208532004583, guid: e8d38848a2e8540eb803f794e1c4f962, type: 3}
       propertyPath: timer
       value: 
@@ -2042,6 +2066,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Slider - TMP Text
       objectReference: {fileID: 0}
+    - target: {fileID: 8829583107943244310, guid: 20ad3150bffd24f7aad6b5802f3d97d0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8855380103116485622, guid: 20ad3150bffd24f7aad6b5802f3d97d0, type: 3}
       propertyPath: displayType
       value: 1
@@ -2151,6 +2179,10 @@ PrefabInstance:
     - target: {fileID: 6797768522977806269, guid: 5029dea5b90ca4f7cae30be718a7680e, type: 3}
       propertyPath: m_Name
       value: Image - Text
+      objectReference: {fileID: 0}
+    - target: {fileID: 6797768522977806269, guid: 5029dea5b90ca4f7cae30be718a7680e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6889607932942423082, guid: 5029dea5b90ca4f7cae30be718a7680e, type: 3}
       propertyPath: timer
@@ -2299,6 +2331,10 @@ PrefabInstance:
     - target: {fileID: 2494112521580067796, guid: 665ac6864b73c499c85b807e0c86d4ec, type: 3}
       propertyPath: m_Name
       value: Text
+      objectReference: {fileID: 0}
+    - target: {fileID: 2494112521580067796, guid: 665ac6864b73c499c85b807e0c86d4ec, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7136952431997617254, guid: 665ac6864b73c499c85b807e0c86d4ec, type: 3}
       propertyPath: m_Pivot.x
@@ -2454,6 +2490,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Image
       objectReference: {fileID: 0}
+    - target: {fileID: 1159561046622393473, guid: d0e58568f3bf8448da23685d25b3c3ea, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1287428325892769558, guid: d0e58568f3bf8448da23685d25b3c3ea, type: 3}
       propertyPath: timer
       value: 
@@ -2563,6 +2603,10 @@ PrefabInstance:
     - target: {fileID: 1159561046622393473, guid: d0e58568f3bf8448da23685d25b3c3ea, type: 3}
       propertyPath: m_Name
       value: Image
+      objectReference: {fileID: 0}
+    - target: {fileID: 1159561046622393473, guid: d0e58568f3bf8448da23685d25b3c3ea, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1287428325892769558, guid: d0e58568f3bf8448da23685d25b3c3ea, type: 3}
       propertyPath: timer
@@ -2746,6 +2790,10 @@ PrefabInstance:
     - target: {fileID: 2494112521580067796, guid: cf5a5e980cfcd4e1b88b6de53c4756c6, type: 3}
       propertyPath: m_Name
       value: TMPText
+      objectReference: {fileID: 0}
+    - target: {fileID: 2494112521580067796, guid: cf5a5e980cfcd4e1b88b6de53c4756c6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7136952431997617254, guid: cf5a5e980cfcd4e1b88b6de53c4756c6, type: 3}
       propertyPath: m_Pivot.x
@@ -3140,6 +3188,10 @@ PrefabInstance:
     - target: {fileID: 2494112521580067796, guid: 665ac6864b73c499c85b807e0c86d4ec, type: 3}
       propertyPath: m_Name
       value: Text
+      objectReference: {fileID: 0}
+    - target: {fileID: 2494112521580067796, guid: 665ac6864b73c499c85b807e0c86d4ec, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7136952431997617254, guid: 665ac6864b73c499c85b807e0c86d4ec, type: 3}
       propertyPath: m_Pivot.x
@@ -3567,6 +3619,10 @@ PrefabInstance:
     - target: {fileID: 3685537330614594527, guid: 1048b0c60481648a79874a0239796d1b, type: 3}
       propertyPath: m_Name
       value: Slider
+      objectReference: {fileID: 0}
+    - target: {fileID: 3685537330614594527, guid: 1048b0c60481648a79874a0239796d1b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7969189268257118416, guid: 1048b0c60481648a79874a0239796d1b, type: 3}
       propertyPath: m_AnchorMax.y
@@ -4140,6 +4196,10 @@ PrefabInstance:
       propertyPath: value.y
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 4146992751661857447, guid: b3976bbac7c0f40fabfa2997ff6f9cc3, type: 3}
+      propertyPath: _value.y
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8782560524962977768, guid: b3976bbac7c0f40fabfa2997ff6f9cc3, type: 3}
       propertyPath: m_Name
       value: Timer
@@ -4270,6 +4330,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Timer - Looped
       objectReference: {fileID: 0}
+    - target: {fileID: 2374685756905105341, guid: adf2a4f5d7c004b4094315df6bc5b19b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2993930410361799963, guid: adf2a4f5d7c004b4094315df6bc5b19b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -4308,14 +4372,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2993930410361799963, guid: adf2a4f5d7c004b4094315df6bc5b19b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4295992648969623566, guid: adf2a4f5d7c004b4094315df6bc5b19b, type: 3}
-      propertyPath: value.y
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8866147862994849170, guid: adf2a4f5d7c004b4094315df6bc5b19b, type: 3}
-      propertyPath: data.tickType
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
