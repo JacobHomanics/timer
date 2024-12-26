@@ -94,7 +94,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3ad9f351638b4f41a9d8661127f9f75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  format: F1
+  format: 
   clampMinToZero: 1
   clampMaxToY: 1
   displayType: {fileID: 2251815259804430643}

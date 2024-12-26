@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d41a1c359e72242cdaffa92695497e46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  format: F1
+  format: 
   clampMinToZero: 1
   clampMaxToY: 1
   displayType: {fileID: 2404781623570436067}
