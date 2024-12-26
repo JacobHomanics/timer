@@ -22,6 +22,7 @@ namespace JacobHomanics.Core.Timer
         }
 
         public Vector2 vector2;
+
         [Header("Configuration")]
         public TickType tickType;
 
