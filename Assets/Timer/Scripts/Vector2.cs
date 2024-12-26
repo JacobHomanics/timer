@@ -3,8 +3,13 @@ using UnityEngine.Events;
 
 namespace JacobHomanics.Core.Timer
 {
-    public class Vector2 : MonoBehaviour
+    public class Vector2 : Vector2Source
     {
+        public override Vector2 GetReference()
+        {
+            return this;
+        }
+
         [SerializeField] private UnityEngine.Vector2 _value = new();
 
         public float X
