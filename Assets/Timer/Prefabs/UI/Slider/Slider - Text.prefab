@@ -25,12 +25,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3044346296701968136, guid: 665ac6864b73c499c85b807e0c86d4ec, type: 3}
+      propertyPath: m_FontData.m_BestFit
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3044346296701968136, guid: 665ac6864b73c499c85b807e0c86d4ec, type: 3}
       propertyPath: m_FontData.m_MinSize
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3044346296701968136, guid: 665ac6864b73c499c85b807e0c86d4ec, type: 3}
       propertyPath: m_FontData.m_FontSize
       value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3044346296701968136, guid: 665ac6864b73c499c85b807e0c86d4ec, type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5798446687163994151, guid: 665ac6864b73c499c85b807e0c86d4ec, type: 3}
       propertyPath: timer
@@ -160,12 +168,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3044346296701968136, guid: 665ac6864b73c499c85b807e0c86d4ec, type: 3}
+      propertyPath: m_FontData.m_BestFit
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3044346296701968136, guid: 665ac6864b73c499c85b807e0c86d4ec, type: 3}
       propertyPath: m_FontData.m_MinSize
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3044346296701968136, guid: 665ac6864b73c499c85b807e0c86d4ec, type: 3}
       propertyPath: m_FontData.m_FontSize
       value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3044346296701968136, guid: 665ac6864b73c499c85b807e0c86d4ec, type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5798446687163994151, guid: 665ac6864b73c499c85b807e0c86d4ec, type: 3}
       propertyPath: timer
