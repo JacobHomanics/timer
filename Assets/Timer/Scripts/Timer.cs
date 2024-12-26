@@ -43,9 +43,6 @@ namespace JacobHomanics.Core.Timer
 
         public UnityEvent OnDurationElapsed;
 
-
-
-
         ////////////////////////////
         //Monobehaviour
         ////////////////////////////
@@ -97,7 +94,7 @@ namespace JacobHomanics.Core.Timer
 
         public void Tick(float delta)
         {
-            AddElapsedTime(delta);
+            OffsetElapsedTime(delta);
             OnTick?.Invoke();
         }
 
@@ -125,14 +122,9 @@ namespace JacobHomanics.Core.Timer
         //     return vector2.IsXGreatherThanOrEqualToY();
         // }
 
-        public void AddElapsedTime(float value)
+        public void OffsetElapsedTime(float value)
         {
             ElapsedTime += value;
-        }
-
-        public void SetElapsedTime(float value)
-        {
-            ElapsedTime = value;
         }
 
         public void ResetElapsedTime()
