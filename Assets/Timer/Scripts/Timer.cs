@@ -21,10 +21,9 @@ namespace JacobHomanics.Core.Timer
             DeltaTime, UnscaledDeltaTime, SmoothDeltaTime, FixedDeltaTime, FixedUnscaledDeltaTime
         }
 
+        public Vector2 vector2;
         [Header("Configuration")]
         public TickType tickType;
-
-        public Vector2 vector2;
 
         public float ElapsedTime
         {
@@ -41,7 +40,7 @@ namespace JacobHomanics.Core.Timer
         [Header("Events")]
         public UnityEvent OnTick;
 
-        public UnityEvent OnDurationElapsed;
+        public UnityEvent OnDurationElapsed = new();
 
         ////////////////////////////
         //Monobehaviour
@@ -49,12 +48,12 @@ namespace JacobHomanics.Core.Timer
 
         void OnEnable()
         {
-            vector2.OnXSetGreaterThanOrEqualToY.AddListener(() => { OnDurationElapsed?.Invoke(); });
+            vector2.OnXSetGreaterThanOrEqualToY.AddListener(OnXGreaterThanOrEqualToY);
         }
 
         void OnDisable()
         {
-            vector2.OnXSetGreaterThanOrEqualToY.RemoveListener(() => { OnDurationElapsed?.Invoke(); });
+            vector2.OnXSetGreaterThanOrEqualToY.RemoveListener(OnXGreaterThanOrEqualToY);
         }
 
         void Update()
@@ -96,6 +95,11 @@ namespace JacobHomanics.Core.Timer
         {
             OffsetElapsedTime(delta);
             OnTick?.Invoke();
+        }
+
+        private void OnXGreaterThanOrEqualToY()
+        {
+            OnDurationElapsed?.Invoke();
         }
 
         ////////////////////////////

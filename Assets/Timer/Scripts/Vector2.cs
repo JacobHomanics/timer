@@ -5,7 +5,7 @@ namespace JacobHomanics.Core.Timer
 {
     public class Vector2 : MonoBehaviour
     {
-        [SerializeField] private UnityEngine.Vector2 _value;
+        [SerializeField] private UnityEngine.Vector2 _value = new();
         public float X
         {
             get => _value.x;
@@ -45,11 +45,11 @@ namespace JacobHomanics.Core.Timer
         }
 
         [Header("Events")]
-        public UnityEvent OnXSetLessThanOrEqualToZero;
-        public UnityEvent OnXSetGreaterThanOrEqualToY;
+        public UnityEvent OnXSetLessThanOrEqualToZero = new();
+        public UnityEvent OnXSetGreaterThanOrEqualToY = new();
 
-        public UnityEvent OnYSetLessThanOrEqualToZero;
-        public UnityEvent OnYSetGreaterThanOrEqualToX;
+        public UnityEvent OnYSetLessThanOrEqualToZero = new();
+        public UnityEvent OnYSetGreaterThanOrEqualToX = new();
 
         public float GetDifferenceXY()
         {
