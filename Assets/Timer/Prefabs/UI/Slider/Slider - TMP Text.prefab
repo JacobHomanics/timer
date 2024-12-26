@@ -10,11 +10,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 102177375856673519, guid: cf5a5e980cfcd4e1b88b6de53c4756c6, type: 3}
       propertyPath: m_text
-      value: 1
+      value: 12345.67890
       objectReference: {fileID: 0}
     - target: {fileID: 102177375856673519, guid: cf5a5e980cfcd4e1b88b6de53c4756c6, type: 3}
       propertyPath: m_fontSize
-      value: 17.9
+      value: 12.6
       objectReference: {fileID: 0}
     - target: {fileID: 102177375856673519, guid: cf5a5e980cfcd4e1b88b6de53c4756c6, type: 3}
       propertyPath: m_fontColor.b
@@ -319,11 +319,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 102177375856673519, guid: cf5a5e980cfcd4e1b88b6de53c4756c6, type: 3}
       propertyPath: m_text
-      value: 1
+      value: 12345.67890
       objectReference: {fileID: 0}
     - target: {fileID: 102177375856673519, guid: cf5a5e980cfcd4e1b88b6de53c4756c6, type: 3}
       propertyPath: m_fontSize
-      value: 17.9
+      value: 12.6
       objectReference: {fileID: 0}
     - target: {fileID: 102177375856673519, guid: cf5a5e980cfcd4e1b88b6de53c4756c6, type: 3}
       propertyPath: m_fontColor.b
