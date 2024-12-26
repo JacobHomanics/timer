@@ -13,12 +13,12 @@ namespace JacobHomanics.Core.Timer
             {
                 _value.x = value;
 
-                if (X <= 0)
+                if (_value.x <= 0)
                 {
                     OnXSetLessThanOrEqualToZero?.Invoke();
                 }
 
-                if (X >= Y)
+                if (_value.x >= Y)
                 {
                     OnXSetGreaterThanOrEqualToY?.Invoke();
                 }
@@ -28,8 +28,28 @@ namespace JacobHomanics.Core.Timer
         public float Y
         {
             get => _value.y;
-            set => _value.y = value;
+            set
+            {
+                _value.y = value;
+
+                if (_value.y <= 0)
+                {
+                    OnXSetLessThanOrEqualToZero?.Invoke();
+                }
+
+                if (_value.y >= X)
+                {
+                    OnYSetGreaterThanOrEqualToX?.Invoke();
+                }
+            }
         }
+
+        [Header("Events")]
+        public UnityEvent OnXSetLessThanOrEqualToZero;
+        public UnityEvent OnXSetGreaterThanOrEqualToY;
+
+        public UnityEvent OnYSetLessThanOrEqualToZero;
+        public UnityEvent OnYSetGreaterThanOrEqualToX;
 
         public float GetDifferenceXY()
         {
@@ -45,9 +65,6 @@ namespace JacobHomanics.Core.Timer
         {
             return X >= Y;
         }
-
-        public UnityEvent OnXSetLessThanOrEqualToZero;
-        public UnityEvent OnXSetGreaterThanOrEqualToY;
 
         public void OffsetX(float value)
         {
