@@ -12,8 +12,6 @@ namespace JacobHomanics.Core.Timer.UI
         [Header("Configuration")]
         public string format = "0.##";
 
-
-
         public bool clampTextToBounds = false;
         public float minTextBounds = 0f;
 

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace JacobHomanics.Core.Timer
 {
@@ -27,9 +28,27 @@ namespace JacobHomanics.Core.Timer
             SetX(0);
         }
 
+        public UnityEvent OnXSetLessThanOrEqualToZero;
+        public UnityEvent OnXSetGreaterThanOrEqualToY;
+
+        public void AddX(float value)
+        {
+            SetX(this.value.x + value);
+        }
+
         public void SetX(float value)
         {
             this.value.x = value;
+
+            if (this.value.x <= 0)
+            {
+                OnXSetLessThanOrEqualToZero?.Invoke();
+            }
+
+            if (this.value.x >= this.value.y)
+            {
+                OnXSetGreaterThanOrEqualToY?.Invoke();
+            }
         }
 
         [ContextMenu("Set Y to Zero")]

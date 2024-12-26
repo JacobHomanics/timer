@@ -48,8 +48,14 @@ namespace JacobHomanics.Core.Timer
 
         public void Tick(float delta)
         {
-            ElapsedTime += delta;
+            AddElapsedTime(delta);
+            // ElapsedTime += delta;
             OnTick?.Invoke();
+
+            if (IsDurationReached())
+            {
+                OnDurationElapsed?.Invoke();
+            }
         }
 
         ////////////////////////////
@@ -71,12 +77,6 @@ namespace JacobHomanics.Core.Timer
             if (tickType == TickType.UnscaledDeltaTime)
             {
                 Tick(Time.unscaledDeltaTime);
-            }
-
-
-            if (IsDurationReached())
-            {
-                OnDurationElapsed?.Invoke();
             }
         }
 
@@ -104,6 +104,11 @@ namespace JacobHomanics.Core.Timer
         public bool IsDurationReached()
         {
             return vector2.IsXGreatherThanOrEqualToY();
+        }
+
+        public void AddElapsedTime(float value)
+        {
+            vector2.AddX(value);
         }
 
         public void SetElapsedTime(float value)
