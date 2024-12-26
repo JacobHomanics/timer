@@ -152,8 +152,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   format: '#,##0.####################'
-  clampMinToZero: 0
-  clampMaxToY: 0
+  clampMinToZero: 1
+  clampMaxToY: 1
   roundUp: 0
   displayType: {fileID: 2404781623570436067}
   vector2: {fileID: 2243829201033115622}

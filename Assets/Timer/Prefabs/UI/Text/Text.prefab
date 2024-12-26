@@ -95,8 +95,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   format: '#,##0.####################'
-  clampMinToZero: 0
-  clampMaxToY: 0
+  clampMinToZero: 1
+  clampMaxToY: 1
+  roundUp: 0
   displayType: {fileID: 2251815259804430643}
   vector2: {fileID: 979002397369195797}
   text: {fileID: 3044346296701968136}
