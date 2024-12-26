@@ -154,7 +154,6 @@ MonoBehaviour:
   format: F1
   clampTextToBounds: 1
   minTextBounds: 0
-  hideTextOnDurationReached: 0
   displayType: {fileID: 2404781623570436067}
   timer: {fileID: 2243829201033115622}
   text: {fileID: 102177375856673519}
@@ -170,7 +169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7039eccb336b44e95a6f2f7b9f8153b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: {fileID: 0}
+  vector2: {fileID: 0}
 --- !u!114 &2404781623570436067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,4 +182,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f0f9135be2eb4e1792aa414161289f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: ElapsedTime
+  value: X

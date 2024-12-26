@@ -152,9 +152,13 @@ PrefabInstance:
       propertyPath: timer
       value: 
       objectReference: {fileID: 1936644778}
+    - target: {fileID: 979002397369195797, guid: 665ac6864b73c499c85b807e0c86d4ec, type: 3}
+      propertyPath: vector2
+      value: 
+      objectReference: {fileID: 1936644778}
     - target: {fileID: 2251815259804430643, guid: 665ac6864b73c499c85b807e0c86d4ec, type: 3}
       propertyPath: value
-      value: Duration
+      value: Y
       objectReference: {fileID: 0}
     - target: {fileID: 2494112521580067796, guid: 665ac6864b73c499c85b807e0c86d4ec, type: 3}
       propertyPath: m_Name
@@ -473,6 +477,10 @@ PrefabInstance:
       propertyPath: timer
       value: 
       objectReference: {fileID: 1178703239}
+    - target: {fileID: 6889607932942423082, guid: 5029dea5b90ca4f7cae30be718a7680e, type: 3}
+      propertyPath: vector2
+      value: 
+      objectReference: {fileID: 1178703239}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -507,9 +515,13 @@ PrefabInstance:
       propertyPath: timer
       value: 
       objectReference: {fileID: 1178703239}
+    - target: {fileID: 2243829201033115622, guid: cf5a5e980cfcd4e1b88b6de53c4756c6, type: 3}
+      propertyPath: vector2
+      value: 
+      objectReference: {fileID: 1178703239}
     - target: {fileID: 2404781623570436067, guid: cf5a5e980cfcd4e1b88b6de53c4756c6, type: 3}
       propertyPath: value
-      value: Duration
+      value: Y
       objectReference: {fileID: 0}
     - target: {fileID: 2494112521580067796, guid: cf5a5e980cfcd4e1b88b6de53c4756c6, type: 3}
       propertyPath: m_Name
@@ -631,6 +643,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2243829201033115622, guid: cf5a5e980cfcd4e1b88b6de53c4756c6, type: 3}
       propertyPath: timer
+      value: 
+      objectReference: {fileID: 1178703239}
+    - target: {fileID: 2243829201033115622, guid: cf5a5e980cfcd4e1b88b6de53c4756c6, type: 3}
+      propertyPath: vector2
       value: 
       objectReference: {fileID: 1178703239}
     - target: {fileID: 2494112521580067796, guid: cf5a5e980cfcd4e1b88b6de53c4756c6, type: 3}
@@ -839,6 +855,10 @@ PrefabInstance:
       propertyPath: timer
       value: 
       objectReference: {fileID: 1936644778}
+    - target: {fileID: 7381842925666544836, guid: 0c770866e6e1543238612be1fe1238d8, type: 3}
+      propertyPath: vector2
+      value: 
+      objectReference: {fileID: 1936644778}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -956,6 +976,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1085947130998407219, guid: 1048b0c60481648a79874a0239796d1b, type: 3}
       propertyPath: timer
+      value: 
+      objectReference: {fileID: 1936644778}
+    - target: {fileID: 1085947130998407219, guid: 1048b0c60481648a79874a0239796d1b, type: 3}
+      propertyPath: vector2
       value: 
       objectReference: {fileID: 1936644778}
     - target: {fileID: 3005463091533949423, guid: 1048b0c60481648a79874a0239796d1b, type: 3}
@@ -1140,9 +1164,13 @@ PrefabInstance:
       propertyPath: timer
       value: 
       objectReference: {fileID: 1936644778}
+    - target: {fileID: 2243829201033115622, guid: cf5a5e980cfcd4e1b88b6de53c4756c6, type: 3}
+      propertyPath: vector2
+      value: 
+      objectReference: {fileID: 1936644778}
     - target: {fileID: 2404781623570436067, guid: cf5a5e980cfcd4e1b88b6de53c4756c6, type: 3}
       propertyPath: value
-      value: Duration
+      value: Y
       objectReference: {fileID: 0}
     - target: {fileID: 2494112521580067796, guid: cf5a5e980cfcd4e1b88b6de53c4756c6, type: 3}
       propertyPath: m_Name
@@ -1280,9 +1308,13 @@ PrefabInstance:
       propertyPath: timer
       value: 
       objectReference: {fileID: 1936644778}
+    - target: {fileID: 2243829201033115622, guid: cf5a5e980cfcd4e1b88b6de53c4756c6, type: 3}
+      propertyPath: vector2
+      value: 
+      objectReference: {fileID: 1936644778}
     - target: {fileID: 2404781623570436067, guid: cf5a5e980cfcd4e1b88b6de53c4756c6, type: 3}
       propertyPath: value
-      value: TimeLeft
+      value: DifferenceYX
       objectReference: {fileID: 0}
     - target: {fileID: 2494112521580067796, guid: cf5a5e980cfcd4e1b88b6de53c4756c6, type: 3}
       propertyPath: m_Name
@@ -1395,7 +1427,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 895868869212282696, guid: e8d38848a2e8540eb803f794e1c4f962, type: 3}
       propertyPath: value
-      value: TimeLeft
+      value: DifferenceYX
       objectReference: {fileID: 0}
     - target: {fileID: 2076963230015031558, guid: e8d38848a2e8540eb803f794e1c4f962, type: 3}
       propertyPath: value
@@ -1493,6 +1525,10 @@ PrefabInstance:
       propertyPath: timer
       value: 
       objectReference: {fileID: 1178703239}
+    - target: {fileID: 6413362208532004583, guid: e8d38848a2e8540eb803f794e1c4f962, type: 3}
+      propertyPath: vector2
+      value: 
+      objectReference: {fileID: 1178703239}
     - target: {fileID: 7679437741031591136, guid: e8d38848a2e8540eb803f794e1c4f962, type: 3}
       propertyPath: displayType
       value: 2
@@ -1527,6 +1563,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 979002397369195797, guid: 665ac6864b73c499c85b807e0c86d4ec, type: 3}
       propertyPath: timer
+      value: 
+      objectReference: {fileID: 1178703239}
+    - target: {fileID: 979002397369195797, guid: 665ac6864b73c499c85b807e0c86d4ec, type: 3}
+      propertyPath: vector2
       value: 
       objectReference: {fileID: 1178703239}
     - target: {fileID: 1473242261278418728, guid: 665ac6864b73c499c85b807e0c86d4ec, type: 3}
@@ -1637,7 +1677,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 895868869212282696, guid: e8d38848a2e8540eb803f794e1c4f962, type: 3}
       propertyPath: value
-      value: TimeLeft
+      value: DifferenceYX
       objectReference: {fileID: 0}
     - target: {fileID: 2076963230015031558, guid: e8d38848a2e8540eb803f794e1c4f962, type: 3}
       propertyPath: value
@@ -1737,6 +1777,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6413362208532004583, guid: e8d38848a2e8540eb803f794e1c4f962, type: 3}
       propertyPath: timer
+      value: 
+      objectReference: {fileID: 1936644778}
+    - target: {fileID: 6413362208532004583, guid: e8d38848a2e8540eb803f794e1c4f962, type: 3}
+      propertyPath: vector2
       value: 
       objectReference: {fileID: 1936644778}
     - target: {fileID: 7679437741031591136, guid: e8d38848a2e8540eb803f794e1c4f962, type: 3}
@@ -1967,6 +2011,10 @@ PrefabInstance:
       propertyPath: timer
       value: 
       objectReference: {fileID: 1936644778}
+    - target: {fileID: 5097895058196498938, guid: 20ad3150bffd24f7aad6b5802f3d97d0, type: 3}
+      propertyPath: vector2
+      value: 
+      objectReference: {fileID: 1936644778}
     - target: {fileID: 6924530033820950566, guid: 20ad3150bffd24f7aad6b5802f3d97d0, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2188,6 +2236,10 @@ PrefabInstance:
       propertyPath: timer
       value: 
       objectReference: {fileID: 1936644778}
+    - target: {fileID: 6889607932942423082, guid: 5029dea5b90ca4f7cae30be718a7680e, type: 3}
+      propertyPath: vector2
+      value: 
+      objectReference: {fileID: 1936644778}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2212,6 +2264,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1287428325892769558, guid: d0e58568f3bf8448da23685d25b3c3ea, type: 3}
       propertyPath: timer
+      value: 
+      objectReference: {fileID: 1178703239}
+    - target: {fileID: 1287428325892769558, guid: d0e58568f3bf8448da23685d25b3c3ea, type: 3}
+      propertyPath: vector2
       value: 
       objectReference: {fileID: 1178703239}
     - target: {fileID: 6057289557784899831, guid: d0e58568f3bf8448da23685d25b3c3ea, type: 3}
@@ -2320,13 +2376,17 @@ PrefabInstance:
       propertyPath: timer
       value: 
       objectReference: {fileID: 1936644778}
+    - target: {fileID: 979002397369195797, guid: 665ac6864b73c499c85b807e0c86d4ec, type: 3}
+      propertyPath: vector2
+      value: 
+      objectReference: {fileID: 1936644778}
     - target: {fileID: 1473242261278418728, guid: 665ac6864b73c499c85b807e0c86d4ec, type: 3}
       propertyPath: value
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2251815259804430643, guid: 665ac6864b73c499c85b807e0c86d4ec, type: 3}
       propertyPath: value
-      value: TimeLeft
+      value: DifferenceYX
       objectReference: {fileID: 0}
     - target: {fileID: 2494112521580067796, guid: 665ac6864b73c499c85b807e0c86d4ec, type: 3}
       propertyPath: m_Name
@@ -2498,6 +2558,10 @@ PrefabInstance:
       propertyPath: timer
       value: 
       objectReference: {fileID: 1936644778}
+    - target: {fileID: 1287428325892769558, guid: d0e58568f3bf8448da23685d25b3c3ea, type: 3}
+      propertyPath: vector2
+      value: 
+      objectReference: {fileID: 1936644778}
     - target: {fileID: 6057289557784899831, guid: d0e58568f3bf8448da23685d25b3c3ea, type: 3}
       propertyPath: value
       value: TimeLeft
@@ -2610,6 +2674,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1287428325892769558, guid: d0e58568f3bf8448da23685d25b3c3ea, type: 3}
       propertyPath: timer
+      value: 
+      objectReference: {fileID: 1936644778}
+    - target: {fileID: 1287428325892769558, guid: d0e58568f3bf8448da23685d25b3c3ea, type: 3}
+      propertyPath: vector2
       value: 
       objectReference: {fileID: 1936644778}
     - target: {fileID: 8271919499447064566, guid: d0e58568f3bf8448da23685d25b3c3ea, type: 3}
@@ -2785,6 +2853,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2243829201033115622, guid: cf5a5e980cfcd4e1b88b6de53c4756c6, type: 3}
       propertyPath: timer
+      value: 
+      objectReference: {fileID: 1936644778}
+    - target: {fileID: 2243829201033115622, guid: cf5a5e980cfcd4e1b88b6de53c4756c6, type: 3}
+      propertyPath: vector2
       value: 
       objectReference: {fileID: 1936644778}
     - target: {fileID: 2494112521580067796, guid: cf5a5e980cfcd4e1b88b6de53c4756c6, type: 3}
@@ -3045,6 +3117,10 @@ PrefabInstance:
       propertyPath: timer
       value: 
       objectReference: {fileID: 1178703239}
+    - target: {fileID: 7381842925666544836, guid: 0c770866e6e1543238612be1fe1238d8, type: 3}
+      propertyPath: vector2
+      value: 
+      objectReference: {fileID: 1178703239}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3067,13 +3143,17 @@ PrefabInstance:
       propertyPath: timer
       value: 
       objectReference: {fileID: 1178703239}
+    - target: {fileID: 979002397369195797, guid: 665ac6864b73c499c85b807e0c86d4ec, type: 3}
+      propertyPath: vector2
+      value: 
+      objectReference: {fileID: 1178703239}
     - target: {fileID: 1473242261278418728, guid: 665ac6864b73c499c85b807e0c86d4ec, type: 3}
       propertyPath: value
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2251815259804430643, guid: 665ac6864b73c499c85b807e0c86d4ec, type: 3}
       propertyPath: value
-      value: TimeLeft
+      value: DifferenceYX
       objectReference: {fileID: 0}
     - target: {fileID: 2494112521580067796, guid: 665ac6864b73c499c85b807e0c86d4ec, type: 3}
       propertyPath: m_Name
@@ -3179,6 +3259,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 979002397369195797, guid: 665ac6864b73c499c85b807e0c86d4ec, type: 3}
       propertyPath: timer
+      value: 
+      objectReference: {fileID: 1936644778}
+    - target: {fileID: 979002397369195797, guid: 665ac6864b73c499c85b807e0c86d4ec, type: 3}
+      propertyPath: vector2
       value: 
       objectReference: {fileID: 1936644778}
     - target: {fileID: 1473242261278418728, guid: 665ac6864b73c499c85b807e0c86d4ec, type: 3}
@@ -3353,6 +3437,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5097895058196498938, guid: 20ad3150bffd24f7aad6b5802f3d97d0, type: 3}
       propertyPath: timer
+      value: 
+      objectReference: {fileID: 1178703239}
+    - target: {fileID: 5097895058196498938, guid: 20ad3150bffd24f7aad6b5802f3d97d0, type: 3}
+      propertyPath: vector2
       value: 
       objectReference: {fileID: 1178703239}
     - target: {fileID: 6924530033820950566, guid: 20ad3150bffd24f7aad6b5802f3d97d0, type: 3}
@@ -3537,6 +3625,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1085947130998407219, guid: 1048b0c60481648a79874a0239796d1b, type: 3}
       propertyPath: timer
+      value: 
+      objectReference: {fileID: 1936644778}
+    - target: {fileID: 1085947130998407219, guid: 1048b0c60481648a79874a0239796d1b, type: 3}
+      propertyPath: vector2
       value: 
       objectReference: {fileID: 1936644778}
     - target: {fileID: 2708429560485315798, guid: 1048b0c60481648a79874a0239796d1b, type: 3}
@@ -3729,9 +3821,13 @@ PrefabInstance:
       propertyPath: timer
       value: 
       objectReference: {fileID: 1178703239}
+    - target: {fileID: 2243829201033115622, guid: cf5a5e980cfcd4e1b88b6de53c4756c6, type: 3}
+      propertyPath: vector2
+      value: 
+      objectReference: {fileID: 1178703239}
     - target: {fileID: 2404781623570436067, guid: cf5a5e980cfcd4e1b88b6de53c4756c6, type: 3}
       propertyPath: value
-      value: TimeLeft
+      value: DifferenceYX
       objectReference: {fileID: 0}
     - target: {fileID: 2494112521580067796, guid: cf5a5e980cfcd4e1b88b6de53c4756c6, type: 3}
       propertyPath: m_Name
@@ -3837,6 +3933,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1085947130998407219, guid: 1048b0c60481648a79874a0239796d1b, type: 3}
       propertyPath: timer
+      value: 
+      objectReference: {fileID: 1178703239}
+    - target: {fileID: 1085947130998407219, guid: 1048b0c60481648a79874a0239796d1b, type: 3}
+      propertyPath: vector2
       value: 
       objectReference: {fileID: 1178703239}
     - target: {fileID: 2708429560485315798, guid: 1048b0c60481648a79874a0239796d1b, type: 3}
@@ -3957,6 +4057,10 @@ PrefabInstance:
       propertyPath: timer
       value: 
       objectReference: {fileID: 1178703239}
+    - target: {fileID: 1085947130998407219, guid: 1048b0c60481648a79874a0239796d1b, type: 3}
+      propertyPath: vector2
+      value: 
+      objectReference: {fileID: 1178703239}
     - target: {fileID: 3005463091533949423, guid: 1048b0c60481648a79874a0239796d1b, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4068,6 +4172,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1287428325892769558, guid: d0e58568f3bf8448da23685d25b3c3ea, type: 3}
       propertyPath: timer
+      value: 
+      objectReference: {fileID: 1178703239}
+    - target: {fileID: 1287428325892769558, guid: d0e58568f3bf8448da23685d25b3c3ea, type: 3}
+      propertyPath: vector2
       value: 
       objectReference: {fileID: 1178703239}
     - target: {fileID: 8271919499447064566, guid: d0e58568f3bf8448da23685d25b3c3ea, type: 3}
@@ -4232,9 +4340,13 @@ PrefabInstance:
       propertyPath: timer
       value: 
       objectReference: {fileID: 1178703239}
+    - target: {fileID: 979002397369195797, guid: 665ac6864b73c499c85b807e0c86d4ec, type: 3}
+      propertyPath: vector2
+      value: 
+      objectReference: {fileID: 1178703239}
     - target: {fileID: 2251815259804430643, guid: 665ac6864b73c499c85b807e0c86d4ec, type: 3}
       propertyPath: value
-      value: Duration
+      value: Y
       objectReference: {fileID: 0}
     - target: {fileID: 2494112521580067796, guid: 665ac6864b73c499c85b807e0c86d4ec, type: 3}
       propertyPath: m_Name

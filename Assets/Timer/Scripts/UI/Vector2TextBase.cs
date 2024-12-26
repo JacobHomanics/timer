@@ -15,7 +15,6 @@ namespace JacobHomanics.Core.Timer.UI
         public bool clampTextToBounds = false;
         public float minTextBounds = 0f;
 
-        public bool hideTextOnDurationReached;
         public DisplayType displayType;
 
         [Header("References")]
@@ -26,40 +25,24 @@ namespace JacobHomanics.Core.Timer.UI
         {
             var value = 0f;
 
-            bool isShowingNumber = true;
-
-            if (displayType.value == "Duration")
+            if (displayType.value == "Y")
             {
                 value = timer.GetReference().Y;
             }
 
-            if (displayType.value == "ElapsedTime")
+            if (displayType.value == "X")
             {
                 value = timer.GetReference().X;
-                if (hideTextOnDurationReached && value >= timer.GetReference().Y)
-                {
-                    isShowingNumber = false;
-                }
+
             }
 
-            if (displayType.value == "TimeLeft")
+            if (displayType.value == "DifferenceYX")
             {
                 value = timer.GetReference().GetDifferenceYX();
-                if (hideTextOnDurationReached && value <= 0)
-                {
-                    isShowingNumber = false;
-                }
+
             }
 
-            if (isShowingNumber)
-            {
-                if (clampTextToBounds)
-                    value = Mathf.Clamp(value, minTextBounds, timer.GetReference().Y);
-
-                text = value.ToString(format);
-            }
-            else
-                text = "";
+            text = value.ToString(format);
         }
     }
 }
