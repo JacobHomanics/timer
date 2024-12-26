@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace JacobHomanics.Core.Timer.UI
 {
@@ -6,7 +7,7 @@ namespace JacobHomanics.Core.Timer.UI
     {
         public override Vector2 GetReference()
         {
-            return timer.GetReference();
+            return vector2.GetReference();
         }
 
         [Header("Configuration")]
@@ -19,7 +20,7 @@ namespace JacobHomanics.Core.Timer.UI
 
         [Header("References")]
 
-        public Vector2Source timer;
+        public Vector2Source vector2;
 
         protected void SetText(ref string text, DisplayType displayType, string format, bool clampTextToBounds, float minTextBounds)
         {
@@ -27,18 +28,18 @@ namespace JacobHomanics.Core.Timer.UI
 
             if (displayType.value == "Y")
             {
-                value = timer.GetReference().Y;
+                value = vector2.GetReference().Y;
             }
 
             if (displayType.value == "X")
             {
-                value = timer.GetReference().X;
+                value = vector2.GetReference().X;
 
             }
 
             if (displayType.value == "DifferenceYX")
             {
-                value = timer.GetReference().GetDifferenceYX();
+                value = vector2.GetReference().GetDifferenceYX();
 
             }
 

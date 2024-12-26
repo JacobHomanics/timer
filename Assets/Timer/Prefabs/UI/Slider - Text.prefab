@@ -36,6 +36,10 @@ PrefabInstance:
       propertyPath: timer
       value: 
       objectReference: {fileID: 5219568492029781541}
+    - target: {fileID: 5798446687163994151, guid: 665ac6864b73c499c85b807e0c86d4ec, type: 3}
+      propertyPath: vector2
+      value: 
+      objectReference: {fileID: 5219568492029781541}
     - target: {fileID: 7136952431997617254, guid: 665ac6864b73c499c85b807e0c86d4ec, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -167,6 +171,10 @@ PrefabInstance:
       propertyPath: timer
       value: 
       objectReference: {fileID: 7381842925666544836}
+    - target: {fileID: 5798446687163994151, guid: 665ac6864b73c499c85b807e0c86d4ec, type: 3}
+      propertyPath: vector2
+      value: 
+      objectReference: {fileID: 5219568492029781541}
     - target: {fileID: 7136952431997617254, guid: 665ac6864b73c499c85b807e0c86d4ec, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

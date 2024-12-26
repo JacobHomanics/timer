@@ -56,6 +56,10 @@ PrefabInstance:
       propertyPath: format
       value: F0
       objectReference: {fileID: 0}
+    - target: {fileID: 5548891858293757117, guid: cf5a5e980cfcd4e1b88b6de53c4756c6, type: 3}
+      propertyPath: vector2
+      value: 
+      objectReference: {fileID: 2757316782647949821}
     - target: {fileID: 7136952431997617254, guid: cf5a5e980cfcd4e1b88b6de53c4756c6, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

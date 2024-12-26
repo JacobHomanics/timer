@@ -155,7 +155,7 @@ MonoBehaviour:
   clampTextToBounds: 1
   minTextBounds: 0
   displayType: {fileID: 2404781623570436067}
-  timer: {fileID: 2243829201033115622}
+  vector2: {fileID: 2243829201033115622}
   text: {fileID: 102177375856673519}
 --- !u!114 &2243829201033115622
 MonoBehaviour:
