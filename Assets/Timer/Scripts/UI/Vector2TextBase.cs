@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace JacobHomanics.Core.Timer.UI
 {
-    public class TimerTextBase : Vector2Source
+    public class Vector2TextBase : Vector2Source
     {
         public override Vector2 GetReference()
         {

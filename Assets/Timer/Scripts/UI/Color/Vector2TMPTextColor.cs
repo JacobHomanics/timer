@@ -3,7 +3,7 @@ using TMPro;
 
 namespace JacobHomanics.Core.Timer.UI
 {
-    public class TimerTMPTextColor : TimerColorBase
+    public class Vector2TMPTextColor : TimerColorBase
     {
         public TMP_Text text;
 

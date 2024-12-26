@@ -1,10 +1,10 @@
-using UnityEngine.UI;
+using TMPro;
 
 namespace JacobHomanics.Core.Timer.UI
 {
-    public class TimerText : TimerTextBase
+    public class TimerTMPText : Vector2TextBase
     {
-        public Text text;
+        public TMP_Text text;
 
         public void Update()
         {

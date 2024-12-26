@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 namespace JacobHomanics.Core.Timer.UI
 {
-    public class TimerImage : Vector2Source
+    public class Vector2Slider : Vector2Source
     {
         public override Vector2 GetReference()
         {
@@ -14,19 +14,22 @@ namespace JacobHomanics.Core.Timer.UI
         public DisplayType displayType;
 
         [Header("References")]
+
         public Vector2Source timer;
-        public Image image;
+        public Slider slider;
 
         void Update()
         {
             if (displayType.value == "ElapsedTime")
             {
-                image.fillAmount = timer.GetReference().X / timer.GetReference().Y;
+                slider.value = timer.GetReference().X;
+                slider.maxValue = timer.GetReference().Y;
             }
 
             if (displayType.value == "TimeLeft")
             {
-                image.fillAmount = timer.GetReference().GetDifferenceYX() / timer.GetReference().Y;
+                slider.value = timer.GetReference().GetDifferenceYX();
+                slider.maxValue = timer.GetReference().Y;
             }
         }
     }
