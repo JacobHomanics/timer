@@ -1,6 +1,10 @@
 using UnityEngine;
 
-public class DisplayType : MonoBehaviour
+namespace JacobHomanics.Core.SuperchargedVector2
 {
-    public string value;
+    public class DisplayType : MonoBehaviour
+    {
+        public string value;
+    }
 }
+

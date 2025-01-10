@@ -1,127 +1,135 @@
-# Timer System
-
-This project implements a modular timer system in Unity meant to be intuitive to work with, customizable within the Editor, and versatile for many different situations.
+# Supercharged Vector2 Framework Documentation
 
 ## Table of Contents
-
-1. [Overview](#overview)
-2. [Folder Structure](#folder-structure)
-3. [Scripts](#scripts)
-   - [Core](#core)
-     - [Timer.cs](#timercs)
-   - [UI](#ui)
-     - [TimerImage.cs](#timerimagecs)
-     - [TimerSlider.cs](#timerslidercs)
-     - [TimerText.cs](#timertextcs)
-4. [Getting Started](#getting-started)
-5. [Usage](#usage)
-6. [License](#license)
-
----
+- [Overview](#overview)
+- [Components](#components)
+  - [Vector2 Class](#vector2-class)
+  - [Health Class](#health-class)
+  - [Timer Class](#timer-class)
+- [Events](#events)
+  - [Vector2 Events](#vector2-events)
+  - [Health Events](#health-events)
+  - [Timer Events](#timer-events)
+- [Usage Examples](#usage-examples)
+  - [Vector2](#vector2)
+  - [Health](#health)
+  - [Timer](#timer)
 
 ## Overview
+The Supercharged Vector2 Framework provides an advanced implementation of Unity's `Vector2` structure with added functionality, including:
+- Event-driven programming with UnityEvents.
+- Helper methods for manipulating and querying `Vector2` values.
+- Specialized components for health management and timers using `Vector2` values.
 
-The Timer system allows you to visually represent countdowns or timers using different UI components such as text, sliders, and images. It is built to be modular, extensible, and easy to integrate into any Unity project.
+## Components
 
----
+### Vector2 Class
+**Namespace:** `JacobHomanics.Core.SuperchargedVector2`
 
-## Folder Structure
+The `Vector2` class is a core component that extends Unity's `Vector2` with additional functionality.
 
+#### Properties
+- `float X` - Represents the x-component of the vector.
+- `float Y` - Represents the y-component of the vector.
+
+#### Methods
+- `void OffsetX(float value)` - Adds a value to the x-component.
+- `void OffsetY(float value)` - Adds a value to the y-component.
+- `float GetDifferenceXY()` - Returns the difference between X and Y.
+- `float GetDifferenceYX()` - Returns the difference between Y and X.
+- `bool IsXEqualToY()` - Checks if X equals Y.
+- `bool IsXZero()` - Checks if X is zero.
+- `bool IsYZero()` - Checks if Y is zero.
+
+#### Context Menu Options
+- Add/Subtract predefined values to/from X.
+
+### Health Class
+**Namespace:** `JacobHomanics.Core.SuperchargedVector2`
+
+The `Health` class provides a health management system using the `Vector2` class.
+
+#### Properties
+- `float Current` - Represents the current health (mapped to `X` in `Vector2`).
+- `float Max` - Represents the maximum health (mapped to `Y` in `Vector2`).
+
+#### Methods
+- `void Decrease(float amount)` - Decreases the current health.
+- `void Increase(float amount)` - Increases the current health.
+- `void Restore()` - Restores health to maximum.
+- `bool IsMaxHealth()` - Checks if health is at its maximum.
+- `bool IsZero()` - Checks if health is zero.
+
+#### Context Menu Options
+- Damage or heal by predefined values.
+
+### Timer Class
+**Namespace:** `JacobHomanics.Core.SuperchargedVector2`
+
+The `Timer` class provides a timing system using the `Vector2` class.
+
+#### Properties
+- `float ElapsedTime` - Represents the elapsed time (mapped to `X` in `Vector2`).
+- `float Duration` - Represents the timer duration (mapped to `Y` in `Vector2`).
+
+#### Methods
+- `void Tick(float delta)` - Updates the elapsed time.
+- `float GetTimeLeft()` - Returns the remaining time.
+- `bool IsDurationReached()` - Checks if the timer duration has been reached.
+- `void ResetElapsedTime()` - Resets the elapsed time.
+
+#### Tick Types
+- `DeltaTime`
+- `UnscaledDeltaTime`
+- `SmoothDeltaTime`
+- `FixedDeltaTime`
+- `FixedUnscaledDeltaTime`
+
+## Events
+
+### Vector2 Events
+- `UnityEvent OnXSet` - Triggered whenever `X` is set.
+- `UnityEvent OnXIncrease` - Triggered whenever `X` increases.
+- `UnityEvent OnXDecrease` - Triggered whenever `X` decreases.
+- `UnityEvent OnYSet` - Triggered whenever `Y` is set.
+- `UnityEvent OnYIncrease` - Triggered whenever `Y` increases.
+- `UnityEvent OnYDecrease` - Triggered whenever `Y` decreases.
+
+### Health Events
+- `UnityEvent OnHealthIncrease` - Triggered when health increases.
+- `UnityEvent OnHealthDecrease` - Triggered when health decreases.
+- `UnityEvent OnDeath` - Triggered when health reaches zero.
+- `UnityEvent OnHealthSetToMax` - Triggered when health is fully restored.
+
+### Timer Events
+- `UnityEvent OnTick` - Triggered every tick.
+- `UnityEvent OnDurationElapsed` - Triggered when the duration is reached.
+- `UnityEvent OnElapsedTimeReset` - Triggered when elapsed time is reset.
+
+## Usage Examples
+
+### Vector2
+```csharp
+var vector2 = new Vector2();
+vector2.X = 10;
+vector2.Y = 20;
+Debug.Log(vector2.GetDifferenceXY()); // Outputs -10
 ```
-Assets/
-├── Timer/
-    ├── Prefabs/          # Prefabs for drag-n-drop use.
-    ├── Scenes/           # Example scenes demonstrating the Timer system
-    ├── Scripts/          # Core scripts for the Timer system
-        ├── UI/           # UI-specific scripts
-            ├── TimerImage.cs
-            ├── TimerSlider.cs
-            ├── TimerText.cs
-        ├── Timer.cs       # Core Timer logic
+
+### Health
+```csharp
+var health = gameObject.AddComponent<Health>();
+health.Max = 100;
+health.Current = 50;
+health.Increase(10);
+Debug.Log(health.IsMaxHealth()); // Outputs false
 ```
 
----
+### Timer
+```csharp
+var timer = gameObject.AddComponent<Timer>();
+timer.Duration = 5f;
+timer.Tick(1f);
+Debug.Log(timer.GetTimeLeft()); // Outputs 4
+```
 
-## Scripts
-
-### Core
-
-#### Timer.cs
-
-The **Timer.cs** script is the core logic of the Timer system. It handles:
-
-- Timer countdowns and elapsed time.
-- Configurable duration and change factor.
-- Event callbacks for update, and completion.
-
-**Properties**
-
-- `TickType tickType`: Determines the frame-specific method ticking time.
-- `float duration`: The length of time (in seconds) for the timer.
-- `float timeElapsed`: The time elapsed (from 0; in seconds).
-
-**Methods:**
-
-- `Tick(float value)`: Increments the timer's elapsed time by a value.
-- `GetTimeLeft():float`: Gets the timer's time left until duration is elapsed.
-- `SetElapsedTime()`: Helper function to set the `elapsedTime` property through the Editor.
-
----
-
-### UI
-
-#### TimerImage.cs
-
-The **TimerImage.cs** script visually represents the timer using an image, typically with a circular fill.
-
-**Key Features:**
-
-- Configurable image fill types (e.g., radial or horizontal).
-- Dynamically updates based on the timer's progress.
-
-**Usage Example:**
-Attach this script to a UI Image component to display a circular countdown.
-
----
-
-#### TimerSlider.cs
-
-The **TimerSlider.cs** script uses a Unity Slider to visually represent the timer’s progress.
-
-**Key Features:**
-
-- Slider-based UI representation.
-- Automatically updates the slider's value based on the timer's progress.
-
-**Usage Example:**
-Attach this script to a Slider component to display a progress bar for the timer.
-
----
-
-#### TimerText.cs
-
-The **TimerText.cs** script displays the timer’s current value as text, formatted as seconds, minutes, or custom formats.
-
-**Key Features:**
-
-- Customizable text format (e.g., MM:SS).
-- Dynamically updates the text as the timer progresses.
-
-**Usage Example:**
-Attach this script to a Text or TextMeshPro component to display the remaining time.
-
----
-
-## Getting Started
-
-## Usage
-
-1. Drag and drop the `Timer` prefab from `Assets/Timer/Prefabs` into your scene.
-2. Customize the duration, change factor.
-3. Add any custom logic to the timer events in the Unity Editor.
-
----
-
-## License
-
-This project is licensed under the MIT License. See the `LICENSE` file for details.
