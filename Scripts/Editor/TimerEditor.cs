@@ -23,7 +23,7 @@ namespace JacobHomanics.TimerSystem.Editor
             elapsedTimeProp = serializedObject.FindProperty("elapsedTime");
             tickTypeProp = serializedObject.FindProperty("tickType");
             onTickProp = serializedObject.FindProperty("OnTick");
-            onDurationElapsedProp = serializedObject.FindProperty("OnDurationElapsed");
+            onDurationElapsedProp = serializedObject.FindProperty("OnDurationReached");
         }
 
         public override void OnInspectorGUI()
@@ -71,9 +71,15 @@ namespace JacobHomanics.TimerSystem.Editor
                 EditorUtility.SetDirty(timer);
             }
 
-            // Time Left Display
+            // Time Left (slider - read-only display)
+            EditorGUI.BeginChangeCheck();
             float timeLeft = timer.GetTimeLeft();
-            EditorGUILayout.LabelField($"Time Left: {timeLeft:F2}s", EditorStyles.centeredGreyMiniLabel);
+            float newTimeLeft = EditorGUILayout.Slider("Time Left", timeLeft, 0, timer.Duration);
+            if (EditorGUI.EndChangeCheck())
+            {
+                timer.ElapsedTime = timer.Duration - newTimeLeft;
+                EditorUtility.SetDirty(timer);
+            }
 
             // Duration Reached Status
             bool isReached = timer.IsDurationReached();
@@ -82,43 +88,6 @@ namespace JacobHomanics.TimerSystem.Editor
 
             EditorGUILayout.Space(10);
 
-            // Quick Test Actions
-            EditorGUILayout.LabelField("Quick Test Actions", EditorStyles.boldLabel);
-            EditorGUILayout.Space();
-
-            EditorGUILayout.BeginHorizontal();
-
-            if (GUILayout.Button("Add 1s", GUILayout.Height(25)))
-            {
-                timer.ElapsedTime += 1f;
-                EditorUtility.SetDirty(timer);
-            }
-
-            if (GUILayout.Button("Add 10s", GUILayout.Height(25)))
-            {
-                timer.ElapsedTime += 10f;
-                EditorUtility.SetDirty(timer);
-            }
-
-            EditorGUILayout.EndHorizontal();
-
-            EditorGUILayout.BeginHorizontal();
-
-            if (GUILayout.Button("Subtract 1s", GUILayout.Height(25)))
-            {
-                timer.ElapsedTime = Mathf.Max(0, timer.ElapsedTime - 1f);
-                EditorUtility.SetDirty(timer);
-            }
-
-            if (GUILayout.Button("Subtract 10s", GUILayout.Height(25)))
-            {
-                timer.ElapsedTime = Mathf.Max(0, timer.ElapsedTime - 10f);
-                EditorUtility.SetDirty(timer);
-            }
-
-            EditorGUILayout.EndHorizontal();
-
-            EditorGUILayout.Space(5);
             EditorGUILayout.BeginHorizontal();
 
             if (GUILayout.Button("Reset to 0", GUILayout.Height(25)))
@@ -138,13 +107,13 @@ namespace JacobHomanics.TimerSystem.Editor
             EditorGUILayout.Space(10);
 
             // Events Section
-            EditorGUILayout.LabelField("Events", EditorStyles.boldLabel);
+            // EditorGUILayout.LabelField("Events", EditorStyles.boldLabel);
             EditorGUILayout.Space();
 
-            EditorGUI.indentLevel++;
+            // EditorGUI.indentLevel++;
             EditorGUILayout.PropertyField(onTickProp);
             EditorGUILayout.PropertyField(onDurationElapsedProp);
-            EditorGUI.indentLevel--;
+            // EditorGUI.indentLevel--;
 
             serializedObject.ApplyModifiedProperties();
         }
@@ -154,39 +123,15 @@ namespace JacobHomanics.TimerSystem.Editor
             Rect rect = GUILayoutUtility.GetRect(18, 18, GUILayout.ExpandWidth(true));
 
             float timerPercent = timer.Duration > 0 ? timer.ElapsedTime / timer.Duration : 0;
-            timerPercent = Mathf.Clamp01(timerPercent);
+            float clampedPercent = Mathf.Clamp01(timerPercent);
 
             // Background
             EditorGUI.DrawRect(rect, new Color(0.2f, 0.2f, 0.2f, 1f));
 
-            // Timer bar (blue to red gradient as time progresses)
-            Rect timerRect = new Rect(rect.x, rect.y, rect.width * timerPercent, rect.height);
-
-            // Color gradient: blue (start) -> cyan -> yellow -> red (end)
-            Color timerColor;
-            // if (timerPercent > 0.66f)
-            // {
-            //     // Yellow to red
-            //     float t = (timerPercent - 0.66f) / 0.34f;
-            //     timerColor = Color.Lerp(Color.yellow, Color.red, t);
-            // }
-            // else if (timerPercent > 0.33f)
-            // {
-            //     // Cyan to yellow
-            //     float t = (timerPercent - 0.33f) / 0.33f;
-            //     timerColor = Color.Lerp(Color.cyan, Color.yellow, t);
-            // }
-            // else
-            // {
-            //     // Blue to cyan
-            //     float t = timerPercent / 0.33f;
-            //     timerColor = Color.Lerp(Color.blue, Color.cyan, t);
-            // }
-
-            // Blue to cyan
-            float t = timerPercent;// / 0.33f;
-            timerColor = Color.Lerp(Color.cyan, Color.blue, t);
-
+            // Draw normal progress bar (cyan to blue gradient)
+            Rect timerRect = new Rect(rect.x, rect.y, rect.width * clampedPercent, rect.height);
+            float t = clampedPercent;
+            Color timerColor = Color.Lerp(Color.gray, Color.green, t);
             EditorGUI.DrawRect(timerRect, timerColor);
 
             // Border

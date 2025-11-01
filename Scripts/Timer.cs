@@ -28,8 +28,8 @@ namespace JacobHomanics.TimerSystem
             set
             {
                 elapsedTime = value;
-                if (elapsedTime >= duration)
-                    OnDurationElapsed?.Invoke();
+                if (elapsedTime >= Duration)
+                    OnDurationReached?.Invoke();
             }
         }
 
@@ -43,7 +43,7 @@ namespace JacobHomanics.TimerSystem
 
         [Header("Events")]
         public UnityEvent OnTick = new();
-        public UnityEvent OnDurationElapsed = new();
+        public UnityEvent OnDurationReached = new();
         // public UnityEvent OnElapsedTimeReset = new();
         // public UnityEvent OnElapsedTimeChangedByOffset = new();
         // public UnityEvent OnDurationChangedByOffset = new();
@@ -89,7 +89,7 @@ namespace JacobHomanics.TimerSystem
 
         public void Tick(float delta)
         {
-            elapsedTime += delta;
+            ElapsedTime += delta;
             OnTick?.Invoke();
         }
 
