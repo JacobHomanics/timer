@@ -1,8 +1,8 @@
 {
-  "name": "com.jacobhomanics.rpgcontroller",
+  "name": "com.jacobhomanics.timer",
   "version": "0.0.1",
-  "displayName": "RPG Controller",
-  "description": "Out of the box RPG Controller with basic movement and animations.",
+  "displayName": "Timer",
+  "description": "Out of the box timer.",
   "unity": "6000.0",
   "unityRelease": "31f1",
   "documentationUrl": "https://example.com/",
