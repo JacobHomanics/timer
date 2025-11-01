@@ -1,0 +1,19 @@
+{
+    "name": "timer.Editor",
+    "references": [
+        "GUID:0000000000000000f000000000000000",
+        "timer"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
+

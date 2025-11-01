@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 10
-  elapsedTime: 0
+  elapsedTime: 10
   tickType: 0
   OnTick:
     m_PersistentCalls:
