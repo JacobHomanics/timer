@@ -1,6 +1,6 @@
 {
   "name": "com.jacobhomanics.timer",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "displayName": "Timer",
   "description": "Out of the box timer.",
   "unity": "6000.0",
