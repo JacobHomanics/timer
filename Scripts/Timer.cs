@@ -30,6 +30,8 @@ namespace JacobHomanics.TimerSystem
                 elapsedTime = value;
                 if (elapsedTime >= Duration)
                     OnDurationReached?.Invoke();
+                else
+                    OnNotDurationReached?.Invoke();
             }
         }
 
@@ -44,6 +46,9 @@ namespace JacobHomanics.TimerSystem
         [Header("Events")]
         public UnityEvent OnTick = new();
         public UnityEvent OnDurationReached = new();
+
+        public UnityEvent OnNotDurationReached = new();
+
         // public UnityEvent OnElapsedTimeReset = new();
         // public UnityEvent OnElapsedTimeChangedByOffset = new();
         // public UnityEvent OnDurationChangedByOffset = new();
@@ -99,9 +104,7 @@ namespace JacobHomanics.TimerSystem
             OnTick?.Invoke();
         }
 
-        private void OnXGreaterThanOrEqualToY()
-        {
-        }
+
 
         ////////////////////////////
         //Helper Methods
