@@ -53,7 +53,7 @@ namespace JacobHomanics.TimerSystem
         ////////////////////////////
         /// 
 
-        void Restart()
+        public void Restart()
         {
             ElapsedTime = 0;
         }
