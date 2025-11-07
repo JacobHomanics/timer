@@ -51,6 +51,12 @@ namespace JacobHomanics.TimerSystem
         ////////////////////////////
         //Monobehaviour
         ////////////////////////////
+        /// 
+
+        void Restart()
+        {
+            ElapsedTime = 0;
+        }
 
         void Update()
         {
