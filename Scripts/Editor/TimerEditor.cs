@@ -14,6 +14,7 @@ namespace JacobHomanics.TimerSystem.Editor
         private SerializedProperty tickTypeProp;
         private SerializedProperty onTickProp;
         private SerializedProperty onDurationElapsedProp;
+        private SerializedProperty onDurationNotElapsedProp;
 
         private void OnEnable()
         {
@@ -24,6 +25,7 @@ namespace JacobHomanics.TimerSystem.Editor
             tickTypeProp = serializedObject.FindProperty("tickType");
             onTickProp = serializedObject.FindProperty("OnTick");
             onDurationElapsedProp = serializedObject.FindProperty("OnDurationReached");
+            onDurationNotElapsedProp = serializedObject.FindProperty("OnNotDurationReached");
         }
 
         public override void OnInspectorGUI()
@@ -113,6 +115,9 @@ namespace JacobHomanics.TimerSystem.Editor
             // EditorGUI.indentLevel++;
             EditorGUILayout.PropertyField(onTickProp);
             EditorGUILayout.PropertyField(onDurationElapsedProp);
+            EditorGUILayout.PropertyField(onDurationNotElapsedProp);
+
+
             // EditorGUI.indentLevel--;
 
             serializedObject.ApplyModifiedProperties();
