@@ -939,6 +939,7 @@ MonoBehaviour:
   duration: 5
   elapsedTime: 0
   tickType: 0
+  loop: 1
   OnTick:
     m_PersistentCalls:
       m_Calls:
@@ -969,6 +970,9 @@ MonoBehaviour:
           m_StringArgument: reached
           m_BoolArgument: 0
         m_CallState: 2
+  OnNotDurationReached:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &1788890452
 Transform:
   m_ObjectHideFlags: 0

@@ -29,9 +29,17 @@ namespace JacobHomanics.TimerSystem
             {
                 elapsedTime = value;
                 if (elapsedTime >= Duration)
+                {
+                    if (loop)
+                        elapsedTime = 0;
+
                     OnDurationReached?.Invoke();
+                }
+
                 else
                     OnNotDurationReached?.Invoke();
+
+
             }
         }
 
@@ -42,6 +50,7 @@ namespace JacobHomanics.TimerSystem
 
         [Header("Configuration")]
         public TickType tickType;
+        public bool loop;
 
         [Header("Events")]
         public UnityEvent OnTick = new();
