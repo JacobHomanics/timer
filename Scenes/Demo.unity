@@ -955,6 +955,54 @@ PrefabInstance:
       propertyPath: m_Name
       value: Circular Timer Image
       objectReference: {fileID: 0}
+    - target: {fileID: 3002237711468795827, guid: ec6914bb28c9541b1879b8820721c29e, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3002237711468795827, guid: ec6914bb28c9541b1879b8820721c29e, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3002237711468795827, guid: ec6914bb28c9541b1879b8820721c29e, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3002237711468795827, guid: ec6914bb28c9541b1879b8820721c29e, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3002237711468795827, guid: ec6914bb28c9541b1879b8820721c29e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3002237711468795827, guid: ec6914bb28c9541b1879b8820721c29e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3063369183911482584, guid: ec6914bb28c9541b1879b8820721c29e, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3063369183911482584, guid: ec6914bb28c9541b1879b8820721c29e, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3063369183911482584, guid: ec6914bb28c9541b1879b8820721c29e, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3063369183911482584, guid: ec6914bb28c9541b1879b8820721c29e, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3063369183911482584, guid: ec6914bb28c9541b1879b8820721c29e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3063369183911482584, guid: ec6914bb28c9541b1879b8820721c29e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6067548855598229941, guid: ec6914bb28c9541b1879b8820721c29e, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
