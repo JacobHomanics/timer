@@ -3,6 +3,8 @@ using UnityEditor;
 using UnityEditorInternal;
 using TMPro;
 using JacobHomanics.TimerSystem;
+using JacobHomanics.UI;
+
 
 namespace JacobHomanics.TimerSystem.Editor
 {
