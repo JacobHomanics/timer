@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using JacobHomanics.TimerSystem;
+using JacobHomanics.UI;
 
 public class TimerImage : MonoBehaviour
 {

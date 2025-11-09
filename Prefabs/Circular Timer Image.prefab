@@ -86,7 +86,7 @@ GameObject:
   - component: {fileID: 6067548855598229941}
   - component: {fileID: 3854051316493096651}
   - component: {fileID: 5146668240587826470}
-  - component: {fileID: 7801421429590763203}
+  - component: {fileID: 8703358208598529934}
   m_Layer: 5
   m_Name: Circular Timer Image
   m_TagString: Untagged
@@ -154,7 +154,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &7801421429590763203
+--- !u!114 &8703358208598529934
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -169,29 +169,29 @@ MonoBehaviour:
   timer: {fileID: 0}
   image: {fileID: 8069033381364917480}
   featureToggles:
-  - rid: 4860107676027453566
-  - rid: 4860107676027453567
-  - rid: 4860107676027453568
-  - rid: 4860107676027453569
+  - rid: 4860107676027453812
+  - rid: 4860107676027453813
+  - rid: 4860107676027453814
+  - rid: 4860107676027453815
   reverseFill: 1
   references:
     version: 2
     RefIds:
-    - rid: 4860107676027453566
-      type: {class: TextDisplayFeature2, ns: , asm: timer}
+    - rid: 4860107676027453812
+      type: {class: TextDisplayFeature2, ns: JacobHomanics.UI, asm: ui-toolkit}
       data:
         text: {fileID: 4537056548526433581}
         displayType: 2
         format: '#,##0'
-    - rid: 4860107676027453567
-      type: {class: ColorGradientFeature, ns: , asm: timer}
+    - rid: 4860107676027453813
+      type: {class: ColorGradientFeature, ns: JacobHomanics.UI, asm: ui-toolkit}
       data:
         colorAtMin: {r: 1, g: 0, b: 0, a: 1}
         colorAtHalfway: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
         colorAtMax: {r: 0, g: 1, b: 0, a: 1}
         reverseFill: 1
-    - rid: 4860107676027453568
-      type: {class: BackgroundFillFeature, ns: , asm: timer}
+    - rid: 4860107676027453814
+      type: {class: BackgroundFillFeature, ns: JacobHomanics.UI, asm: ui-toolkit}
       data:
         backgroundFill: {fileID: 5146668240587826470}
         keepSizeConsistent: 1
@@ -228,8 +228,8 @@ MonoBehaviour:
         animationElapsed: 0
         animationDuration: 0
         animationDelayRemaining: 0
-    - rid: 4860107676027453569
-      type: {class: FlashingFeature, ns: , asm: timer}
+    - rid: 4860107676027453815
+      type: {class: FlashingFeature, ns: JacobHomanics.UI, asm: ui-toolkit}
       data:
         flashImage: {fileID: 3952138653447197901}
         thresholdPercent: 0.2
