@@ -1,0 +1,16 @@
+{
+    "name": "timer.editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:46bc982428dbc42418857b71c0b1ab98"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
