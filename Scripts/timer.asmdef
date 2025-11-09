@@ -3,7 +3,7 @@
     "rootNamespace": "",
     "references": [
         "Unity.TextMeshPro",
-        "uitoolkit"
+        "trickedoutui"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

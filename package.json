@@ -1,6 +1,6 @@
 {
   "name": "com.jacobhomanics.timer",
-  "version": "1.2.5",
+  "version": "1.3.0",
   "displayName": "Timer",
   "description": "Out of the box timer.",
   "unity": "6000.0",
@@ -10,7 +10,7 @@
   "licensesUrl": "https://example.com/licensing.html",
   "dependencies": {
     "com.unity.ugui": "2.0.0",
-    "com.jacobhomanics.uitoolkit": "0.0.3"
+    "com.jacobhomanics.trickedoutui": "0.0.6"
   },
   "keywords": [
     "keyword1",
