@@ -2,8 +2,8 @@
     "name": "timer",
     "rootNamespace": "",
     "references": [
-        "GUID:6055be8ebefd69e48b49212b09b47b2f",
-        "GUID:728fb7ad669a240a49de57f6ba65dbec"
+        "Unity.TextMeshPro",
+        "ui-toolkit"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
