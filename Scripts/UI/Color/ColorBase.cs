@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace JacobHomanics.TimerSystem
+namespace JacobHomanics.Timer
 {
     public abstract class ColorBase : MonoBehaviour
     {

@@ -2,7 +2,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace JacobHomanics.TimerSystem
+namespace JacobHomanics.Timer
 {
     public class TextColor : ColorBase
     {

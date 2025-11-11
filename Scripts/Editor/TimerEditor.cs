@@ -1,8 +1,7 @@
 using UnityEngine;
 using UnityEditor;
-using JacobHomanics.TimerSystem;
 
-namespace JacobHomanics.TimerSystem.Editor
+namespace JacobHomanics.Timer.Editor
 {
     [CustomEditor(typeof(Timer))]
     [CanEditMultipleObjects]

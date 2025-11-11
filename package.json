@@ -9,8 +9,7 @@
   "changelogUrl": "https://example.com/changelog.html",
   "licensesUrl": "https://example.com/licensing.html",
   "dependencies": {
-    "com.unity.ugui": "2.0.0",
-    "com.jacobhomanics.trickedoutui": "0.0.6"
+    "com.unity.ugui": "2.0.0"
   },
   "keywords": [
     "keyword1",
