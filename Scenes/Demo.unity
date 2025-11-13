@@ -211,12 +211,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -437,6 +437,87 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1723413152
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1723413154}
+  - component: {fileID: 1723413153}
+  m_Layer: 0
+  m_Name: Timer (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1723413153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1723413152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a762c1279059493b800f3d8527c2bf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 5
+  elapsedTime: 0
+  tickType: 0
+  loop: 1
+  OnTick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 112688761}
+        m_TargetAssemblyTypeName: Logger, Assembly-CSharp
+        m_MethodName: Log
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: tick
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnDurationReached:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 112688761}
+        m_TargetAssemblyTypeName: Logger, Assembly-CSharp
+        m_MethodName: Log
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: reached
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnNotDurationReached:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!4 &1723413154
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1723413152}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 412.5, y: 307, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1788890450
 GameObject:
   m_ObjectHideFlags: 0
@@ -540,6 +621,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Circular Timer (CountUp)
       objectReference: {fileID: 0}
+    - target: {fileID: 2014103368369739386, guid: fc5fe9268deb843d5830f19198d3b72e, type: 3}
+      propertyPath: backgroundFillFeature.animationSpeed
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 3702503557377556631, guid: fc5fe9268deb843d5830f19198d3b72e, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -606,7 +691,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3702503557377556631, guid: fc5fe9268deb843d5830f19198d3b72e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -78
       objectReference: {fileID: 0}
     - target: {fileID: 3702503557377556631, guid: fc5fe9268deb843d5830f19198d3b72e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -623,7 +708,7 @@ PrefabInstance:
     - target: {fileID: 8787036893433977971, guid: fc5fe9268deb843d5830f19198d3b72e, type: 3}
       propertyPath: timer
       value: 
-      objectReference: {fileID: 1788890451}
+      objectReference: {fileID: 1723413153}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -707,7 +792,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 563678342979759997, guid: 3dd853585e5124d388e05d63c466bb95, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 197
+      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 563678342979759997, guid: 3dd853585e5124d388e05d63c466bb95, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -725,6 +810,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Circular Timer (Countdown)
       objectReference: {fileID: 0}
+    - target: {fileID: 9018641998120229747, guid: 3dd853585e5124d388e05d63c466bb95, type: 3}
+      propertyPath: backgroundFillFeature.animationSpeed
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -737,5 +826,6 @@ SceneRoots:
   - {fileID: 1329748929}
   - {fileID: 112688762}
   - {fileID: 1788890452}
+  - {fileID: 1723413154}
   - {fileID: 339698171}
   - {fileID: 744251544}
