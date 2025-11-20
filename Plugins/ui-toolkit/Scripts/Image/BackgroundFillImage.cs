@@ -12,8 +12,14 @@ namespace JacobHomanics.TrickedOutUI
 
         void Update()
         {
-            image.fillAmount = HandleValueChange(Current, image.fillAmount, backgroundFillFeature.keepSizeConsistent, ref previousValue, Max, backgroundFillFeature.delay, backgroundFillFeature.speedCurve, backgroundFillFeature.animationSpeed);
+            image.fillAmount = HandleValueChange(Current, image.fillAmount, backgroundFillFeature.keepSizeConsistent, ref previousValue, Max, backgroundFillFeature.delay, backgroundFillFeature.speedMultiplierCurve, backgroundFillFeature.animationSpeed);
             image.fillAmount = UpdateBackgroundFillAnimation(image.fillAmount, Max);
+        }
+
+        public void Reset()
+        {
+            if (!image)
+                image = GetComponent<Image>();
         }
     }
 }

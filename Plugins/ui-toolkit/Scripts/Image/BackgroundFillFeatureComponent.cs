@@ -12,8 +12,9 @@ namespace JacobHomanics.TrickedOutUI
         public class BackgroundFillFeature
         {
             public bool keepSizeConsistent = true;
-            public float animationSpeed = 10;
-            public AnimationCurve speedCurve = AnimationCurve.EaseInOut(0f, 0.3f, 1f, 16f);
+            public float animationSpeed = 1;
+            [Tooltip("Maps normalized change magnitude (0-1) to speed multiplier. X-axis = change magnitude, Y-axis = speed multiplier. Higher values = faster animation for large changes.")]
+            public AnimationCurve speedMultiplierCurve = AnimationCurve.EaseInOut(0f, 0.3f, 1f, 3f);
             public float delay = 1f;
         }
 
@@ -28,7 +29,7 @@ namespace JacobHomanics.TrickedOutUI
         protected float animationDuration;
         protected float animationDelayRemaining;
 
-        public float HandleValueChange(float newValue, float fillAmount, bool keepSizeConsistent, ref float previousValue, float max, float delay, AnimationCurve speedCurve, float animationSpeed)
+        public float HandleValueChange(float newValue, float fillAmount, bool keepSizeConsistent, ref float previousValue, float max, float delay, AnimationCurve speedMultiplierCurve, float animationSpeed)
         {
             if (Mathf.Abs(newValue - previousValue) < 0.001f)
                 return fillAmount;
@@ -72,7 +73,7 @@ namespace JacobHomanics.TrickedOutUI
                 // HP goes down or stays same - animate from start position
                 // Set up animation state
                 var fa = fillAmount;
-                StartBackgroundFillAnimation(startValue, newValue, max, delay, speedCurve, animationSpeed, ref fa);
+                StartBackgroundFillAnimation(startValue, newValue, max, delay, speedMultiplierCurve, animationSpeed, ref fa);
                 fillAmount = fa;
             }
 
@@ -97,9 +98,10 @@ namespace JacobHomanics.TrickedOutUI
             animationDelayRemaining = delay;
 
             // Calculate dynamic animation speed based on difference
+            // Speed is in "normalized units per second", so we scale by max to get absolute units per second
             float normalizedDifference = valueDifference / max;
             float speedMultiplier = curve.Evaluate(normalizedDifference);
-            float dynamicSpeed = speed * speedMultiplier * Time.deltaTime;
+            float dynamicSpeed = (speed * speedMultiplier) * max;
             animationDuration = valueDifference / dynamicSpeed;
         }
 

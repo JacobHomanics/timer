@@ -106,9 +106,9 @@ MonoBehaviour:
   - color: {r: 1, g: 0, b: 0, a: 1}
     threshold: 0
   - color: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-    threshold: 0.5
+    threshold: 50
   - color: {r: 0, g: 1, b: 0, a: 1}
-    threshold: 1
+    threshold: 100
   image: {fileID: 4545777213855320359}
 --- !u!1 &2531374409544189238
 GameObject:
@@ -337,7 +337,11 @@ GameObject:
   - component: {fileID: 2384839133812473113}
   - component: {fileID: 123340247644586884}
   - component: {fileID: 6599389976425557801}
-  - component: {fileID: 844300818114980823}
+  - component: {fileID: 3555400800248230553}
+  - component: {fileID: 4898401522988105152}
+  - component: {fileID: 8303835330519886200}
+  - component: {fileID: 6585878501948298507}
+  - component: {fileID: 4040937921520719858}
   m_Layer: 5
   m_Name: Count Text
   m_TagString: Untagged
@@ -463,7 +467,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &844300818114980823
+--- !u!114 &3555400800248230553
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -472,17 +476,64 @@ MonoBehaviour:
   m_GameObject: {fileID: 4740359712009844680}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21409c21636d5426c85e134252ffc7f7, type: 3}
+  m_Script: {fileID: 11500000, guid: 5766ed0e967344a96904ba236eb952a8, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: trickedoutui::JacobHomanics.UI.TextDisplayFeatureComponent
-  properties:
-    text: {fileID: 6599389976425557801}
-    displayType: 0
-    format: '#,##0'
-    clampAtMax: 1
-    clampAtZero: 1
-    ceil: 1
-    floor: 0
+  m_EditorClassIdentifier: 
+  _valueComponent: {fileID: 4898401522988105152}
+  _featureComponents:
+  - {fileID: 8303835330519886200}
+  - {fileID: 6585878501948298507}
+  - {fileID: 4040937921520719858}
+  text: {fileID: 6599389976425557801}
+--- !u!114 &4898401522988105152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4740359712009844680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6bd90fa58ea54c9fbfac0a33c832a07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8303835330519886200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4740359712009844680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 067a4edf5f0b444288ea71cc04326605, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6585878501948298507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4740359712009844680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5286950bf5a3548859301bcbf5a18cd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4040937921520719858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4740359712009844680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19d7698b0017b439e964574b5fb6719a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  format: '#,##0.00'
 --- !u!1 &6559804938997635798
 GameObject:
   m_ObjectHideFlags: 0
@@ -573,8 +624,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   backgroundFillFeature:
     keepSizeConsistent: 1
-    animationSpeed: 10
-    speedCurve:
+    animationSpeed: 1
+    speedMultiplierCurve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -588,7 +639,7 @@ MonoBehaviour:
         outWeight: 0
       - serializedVersion: 3
         time: 1
-        value: 16
+        value: 3
         inSlope: 0
         outSlope: 0
         tangentMode: 0
