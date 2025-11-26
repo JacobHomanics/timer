@@ -6,10 +6,10 @@ namespace JacobHomanics.TrickedOutUI.Editor
     [CustomEditor(typeof(TMP_TextVector2Component))]
     public class TMP_TextVector2ComponentEditor : UnityEditor.Editor
     {
-        private static GUIStyle _headerStyle;
-        private static GUIStyle _headerStyleSubtitle;
+        protected static GUIStyle _headerStyle;
+        protected static GUIStyle _headerStyleSubtitle;
 
-        private static GUIStyle HeaderStyle
+        protected static GUIStyle HeaderStyle
         {
             get
             {
@@ -25,7 +25,7 @@ namespace JacobHomanics.TrickedOutUI.Editor
             }
         }
 
-        private static GUIStyle HeaderStyleSubtitle
+        protected static GUIStyle HeaderStyleSubtitle
         {
             get
             {
@@ -97,7 +97,7 @@ namespace JacobHomanics.TrickedOutUI.Editor
             CleanupRemovedFeatureComponents(targetComponent, previousFeatureComponents);
         }
 
-        private void DrawValueComponentSection(TMP_TextVector2Component targetComponent)
+        protected virtual void DrawValueComponentSection(TMP_TextVector2Component targetComponent)
         {
             EditorGUILayout.Space();
             EditorGUILayout.BeginHorizontal();
@@ -142,7 +142,7 @@ namespace JacobHomanics.TrickedOutUI.Editor
             }
         }
 
-        private void AddValueComponent<T>() where T : BaseValueComponent
+        protected virtual void AddValueComponent<T>() where T : BaseValueComponent
         {
             var targetComponent = (TMP_TextVector2Component)target;
             var gameObject = targetComponent.gameObject;
@@ -191,7 +191,7 @@ namespace JacobHomanics.TrickedOutUI.Editor
             serializedObject.Update();
         }
 
-        private void DrawFeatureComponentsSection(TMP_TextVector2Component targetComponent)
+        protected virtual void DrawFeatureComponentsSection(TMP_TextVector2Component targetComponent)
         {
             SerializedProperty featureComponentsProp = serializedObject.FindProperty("_featureComponents");
 
@@ -245,63 +245,75 @@ namespace JacobHomanics.TrickedOutUI.Editor
             }
         }
 
-        private void ShowValueComponentMenu()
+        protected virtual string XValueComponentName { get => "X"; }
+        protected virtual string YValueComponentName { get => "Y"; }
+        protected virtual string DifferenceValueComponentName { get => "Difference"; }
+        protected virtual string PercentageValueComponentName { get => "Percentage"; }
+
+        protected virtual void ShowValueComponentMenu()
         {
             GenericMenu menu = new GenericMenu();
-            menu.AddItem(new GUIContent("X"), false, () => AddValueComponent<XValueComponent>());
-            menu.AddItem(new GUIContent("Y"), false, () => AddValueComponent<YValueComponent>());
-            menu.AddItem(new GUIContent("Difference"), false, () => AddValueComponent<DifferenceValueComponent>());
-            menu.AddItem(new GUIContent("Percentage"), false, () => AddValueComponent<PercentageValueComponent>());
+            menu.AddItem(new GUIContent(XValueComponentName), false, () => AddValueComponent<XValueComponent>());
+            menu.AddItem(new GUIContent(YValueComponentName), false, () => AddValueComponent<YValueComponent>());
+            menu.AddItem(new GUIContent(DifferenceValueComponentName), false, () => AddValueComponent<DifferenceValueComponent>());
+            menu.AddItem(new GUIContent(PercentageValueComponentName), false, () => AddValueComponent<PercentageValueComponent>());
             menu.ShowAsContext();
         }
 
-        private void ShowFeatureComponentMenu(TMP_TextVector2Component targetComponent)
+        protected virtual string ClampAtZeroComponentName { get => "Clamp At Zero"; }
+        protected virtual string ClampAtYComponentName { get => "Clamp At Y"; }
+        protected virtual string CeilComponentName { get => "Ceil"; }
+        protected virtual string FloorComponentName { get => "Floor"; }
+        protected virtual string EncloseInBracesComponentName { get => "Enclose In Braces"; }
+        protected virtual string FormatFeatureComponentName { get => "Format"; }
+
+        protected virtual void ShowFeatureComponentMenu(TMP_TextVector2Component targetComponent)
         {
             GenericMenu menu = new GenericMenu();
-            menu.AddItem(new GUIContent("Clamp At Zero"), false, () => AddFeatureComponent<ClampAtZeroComponent>());
-            menu.AddItem(new GUIContent("Clamp At Y"), false, () => AddFeatureComponent<ClampAtMaxComponent>());
-            menu.AddItem(new GUIContent("Ceil"), false, () => AddFeatureComponent<CeilComponent>());
-            menu.AddItem(new GUIContent("Floor"), false, () => AddFeatureComponent<FloorComponent>());
-            menu.AddItem(new GUIContent("Enclose In Braces"), false, () => AddFeatureComponent<EncloseInBracesComponent>());
-            menu.AddItem(new GUIContent("Format"), false, () => AddFeatureComponent<FormatFeatureComponent>());
+            menu.AddItem(new GUIContent(ClampAtZeroComponentName), false, () => AddFeatureComponent<ClampAtZeroComponent>());
+            menu.AddItem(new GUIContent(ClampAtYComponentName), false, () => AddFeatureComponent<ClampAtMaxComponent>());
+            menu.AddItem(new GUIContent(CeilComponentName), false, () => AddFeatureComponent<CeilComponent>());
+            menu.AddItem(new GUIContent(FloorComponentName), false, () => AddFeatureComponent<FloorComponent>());
+            menu.AddItem(new GUIContent(EncloseInBracesComponentName), false, () => AddFeatureComponent<EncloseInBracesComponent>());
+            menu.AddItem(new GUIContent(FormatFeatureComponentName), false, () => AddFeatureComponent<FormatFeatureComponent>());
 
             menu.ShowAsContext();
         }
 
 
-        private string GetValueComponentName(BaseValueComponent component)
+        protected virtual string GetValueComponentName(BaseValueComponent component)
         {
             if (component is XValueComponent)
-                return "X";
+                return XValueComponentName;
             else if (component is YValueComponent)
-                return "Y";
+                return YValueComponentName;
             else if (component is DifferenceValueComponent)
-                return "Difference";
+                return DifferenceValueComponentName;
             else if (component is PercentageValueComponent)
-                return "Percentage";
+                return PercentageValueComponentName;
             else
                 return component.GetType().Name;
         }
 
-        private string GetFeatureComponentName(BaseTextFeatureComponent component)
+        protected virtual string GetFeatureComponentName(BaseTextFeatureComponent component)
         {
             if (component is ClampAtZeroComponent)
-                return "Clamp At Zero";
+                return ClampAtZeroComponentName;
             else if (component is ClampAtMaxComponent)
-                return "Clamp At Y";
+                return ClampAtYComponentName;
             else if (component is CeilComponent)
-                return "Ceil";
+                return CeilComponentName;
             else if (component is FloorComponent)
-                return "Floor";
+                return FloorComponentName;
             else if (component is EncloseInBracesComponent)
-                return "Enclose In Braces";
+                return EncloseInBracesComponentName;
             else if (component is FormatFeatureComponent formatComponent)
-                return $"Format ({formatComponent.format})";
+                return FormatFeatureComponentName;
             else
                 return component.GetType().Name;
         }
 
-        private void AddFeatureComponent<T>() where T : BaseTextFeatureComponent
+        protected virtual void AddFeatureComponent<T>() where T : BaseTextFeatureComponent
         {
             var targetComponent = (TMP_TextVector2Component)target;
             var gameObject = targetComponent.gameObject;
@@ -340,7 +352,7 @@ namespace JacobHomanics.TrickedOutUI.Editor
             serializedObject.Update();
         }
 
-        private void CleanupRemovedFeatureComponents(TMP_TextVector2Component targetComponent, BaseTextFeatureComponent[] previousComponents)
+        protected virtual void CleanupRemovedFeatureComponents(TMP_TextVector2Component targetComponent, BaseTextFeatureComponent[] previousComponents)
         {
             BaseTextFeatureComponent[] currentComponents = targetComponent.featureComponents;
 
@@ -376,7 +388,7 @@ namespace JacobHomanics.TrickedOutUI.Editor
             }
         }
 
-        private void RemoveFeatureComponentAt(int index)
+        protected virtual void RemoveFeatureComponentAt(int index)
         {
             var targetComponent = (TMP_TextVector2Component)target;
 

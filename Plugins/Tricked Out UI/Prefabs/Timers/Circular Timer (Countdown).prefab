@@ -1,5 +1,80 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &341749343646981343
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5366529121413432555}
+  - component: {fileID: 8354503398754904534}
+  - component: {fileID: 4216561657161114523}
+  m_Layer: 5
+  m_Name: Flash (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &5366529121413432555
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 341749343646981343}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7965139543688478897}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &8354503398754904534
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 341749343646981343}
+  m_CullTransparentMesh: 1
+--- !u!114 &4216561657161114523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 341749343646981343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 3
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &701840690165043853
 GameObject:
   m_ObjectHideFlags: 0
@@ -11,8 +86,8 @@ GameObject:
   - component: {fileID: 483775488287758033}
   - component: {fileID: 3472990644013207974}
   - component: {fileID: 4545777213855320359}
-  - component: {fileID: 805875729774926349}
   - component: {fileID: 1997162497297788434}
+  - component: {fileID: 8289653964923836106}
   m_Layer: 5
   m_Name: Fill
   m_TagString: Untagged
@@ -77,19 +152,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &805875729774926349
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 701840690165043853}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1216e4a29f27749d1819db3beb8ddc3c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: trickedoutui::JacobHomanics.UI.FillImageFeatureComponent
-  image: {fileID: 4545777213855320359}
 --- !u!114 &1997162497297788434
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -102,6 +164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd1746e128d0641b0af1373a0ddc178e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vector2Adapter: {fileID: 568712104209698260}
   colorStops:
   - color: {r: 1, g: 0, b: 0, a: 1}
     threshold: 0
@@ -109,6 +172,25 @@ MonoBehaviour:
     threshold: 50
   - color: {r: 0, g: 1, b: 0, a: 1}
     threshold: 100
+  image: {fileID: 4545777213855320359}
+--- !u!114 &8289653964923836106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 701840690165043853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e84d72c88b7a3435bae71d1cb80f904f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vector2Adapter: {fileID: 568712104209698260}
+  properties:
+    animationDurationUp: 0
+    delayUp: 0
+    animationDurationDown: 0
+    delayDown: 0
   image: {fileID: 4545777213855320359}
 --- !u!1 &2531374409544189238
 GameObject:
@@ -202,8 +284,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93bc8f6233b1544ecb271d2388d9bb11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: uitoolkit::JacobHomanics.UI.DefaultConnector
-  currentNum: 5
-  maxNum: 5
+  x: 0
+  y: 5
 --- !u!1 &4551748338903387165
 GameObject:
   m_ObjectHideFlags: 0
@@ -214,10 +296,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7965139543688478897}
   - component: {fileID: 6396164012126498086}
-  - component: {fileID: 8910356476101761100}
   - component: {fileID: 6077669638189148249}
   - component: {fileID: 5649931427061634724}
-  - component: {fileID: 1350151967649920804}
+  - component: {fileID: 491127614588201919}
   m_Layer: 5
   m_Name: Flash
   m_TagString: Untagged
@@ -236,7 +317,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 5366529121413432555}
   m_Father: {fileID: 600801375817338425}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -252,36 +334,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4551748338903387165}
   m_CullTransparentMesh: 1
---- !u!114 &8910356476101761100
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4551748338903387165}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 3
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
 --- !u!114 &6077669638189148249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -296,8 +348,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flashColor1: {r: 1, g: 0, b: 0, a: 1}
   flashColor2: {r: 1, g: 1, b: 1, a: 1}
-  flashSpeed: 15
-  flashImage: {fileID: 8910356476101761100}
+  flashDuration: 0.4
+  image: {fileID: 4216561657161114523}
 --- !u!114 &5649931427061634724
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -310,10 +362,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e18db810856384b4abdf73badf782fdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vector2Adapter: {fileID: 568712104209698260}
   thresholdPercent: 20
   thresholdType: 0
-  monoBehaviour: {fileID: 8910356476101761100}
---- !u!114 &1350151967649920804
+  obj: {fileID: 4216561657161114523}
+--- !u!114 &491127614588201919
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -322,10 +375,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 4551748338903387165}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1216e4a29f27749d1819db3beb8ddc3c, type: 3}
+  m_Script: {fileID: 11500000, guid: e84d72c88b7a3435bae71d1cb80f904f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  image: {fileID: 8910356476101761100}
+  vector2Adapter: {fileID: 568712104209698260}
+  properties:
+    animationDurationUp: 0
+    delayUp: 0
+    animationDurationDown: 0
+    delayDown: 0
+  image: {fileID: 4216561657161114523}
 --- !u!1 &4740359712009844680
 GameObject:
   m_ObjectHideFlags: 0
@@ -479,6 +538,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5766ed0e967344a96904ba236eb952a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vector2Adapter: {fileID: 568712104209698260}
   _valueComponent: {fileID: 4898401522988105152}
   _featureComponents:
   - {fileID: 8303835330519886200}
@@ -622,32 +682,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e84d72c88b7a3435bae71d1cb80f904f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backgroundFillFeature:
-    keepSizeConsistent: 1
-    animationSpeed: 1
-    speedMultiplierCurve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0.3
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 3
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    delay: 1
+  vector2Adapter: {fileID: 568712104209698260}
+  properties:
+    animationDurationUp: 0
+    delayUp: 0
+    animationDurationDown: 0
+    delayDown: 0
   image: {fileID: 3632757878552076220}

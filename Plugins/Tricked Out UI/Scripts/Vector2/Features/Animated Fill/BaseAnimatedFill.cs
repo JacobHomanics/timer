@@ -11,9 +11,15 @@ namespace JacobHomanics.TrickedOutUI
         [System.Serializable]
         public class Properties
         {
-            [Tooltip("Duration in seconds for the animation to complete")]
-            public float animationDuration = 1f;
-            public float delay = 0.5f;
+            [Tooltip("Duration in seconds for the animation to complete when value increases")]
+            public float animationDurationUp = 1f;
+            [Tooltip("Delay in seconds before animation starts when value increases")]
+            public float delayUp = 0.5f;
+            [Tooltip("Duration in seconds for the animation to complete when value decreases")]
+            public float animationDurationDown = 1f;
+
+            [Tooltip("Delay in seconds before animation starts when value decreases")]
+            public float delayDown = 0.5f;
         }
 
         public Properties properties;
@@ -22,12 +28,12 @@ namespace JacobHomanics.TrickedOutUI
 
         protected bool isAnimating = false;
         protected float animationFromValue;
-        protected float animationToValue;
+        public float animationToValue { get; set; }
         protected float animationElapsed;
         protected float animationDuration;
-        protected float animationDelayRemaining;
+        public float animationDelayRemaining { get; set; }
 
-        public float HandleValueChange(float newValue, float fillAmount, ref float previousValue, float max, float delay, float duration)
+        public float HandleValueChange(float newValue, float fillAmount, ref float previousValue, float max)
         {
             if (Mathf.Abs(newValue - previousValue) < 0.001f)
                 return fillAmount;
@@ -39,12 +45,27 @@ namespace JacobHomanics.TrickedOutUI
                 return fillAmount;
             }
 
-            // If already animating (including during delay), use the stored starting value
-            // to avoid recalculating from fillAmount which might have drifted
+            // If already animating, calculate the current animated value to continue from there
             float startValue;
             if (isAnimating)
             {
-                startValue = animationFromValue;
+                // Calculate current value based on animation progress
+                if (animationDelayRemaining > 0f)
+                {
+                    // Still in delay, use the starting value
+                    startValue = animationFromValue;
+                }
+                else if (animationDuration > 0f)
+                {
+                    // Calculate current interpolated value
+                    float t = Mathf.Clamp01(animationElapsed / animationDuration);
+                    startValue = Mathf.Lerp(animationFromValue, animationToValue, t);
+                }
+                else
+                {
+                    // Duration was 0, should be at target
+                    startValue = animationToValue;
+                }
             }
             else
             {
@@ -61,6 +82,11 @@ namespace JacobHomanics.TrickedOutUI
 
                 startValue = currentFillValue;
             }
+
+            // Determine direction and select appropriate duration and delay
+            bool isGoingUp = newValue > startValue;
+            float duration = isGoingUp ? properties.animationDurationUp : properties.animationDurationDown;
+            float delay = isGoingUp ? properties.delayUp : properties.delayDown;
 
             // Set up animation state
             StartAnimation(startValue, newValue, max, delay, duration, ref fillAmount);
@@ -138,6 +164,27 @@ namespace JacobHomanics.TrickedOutUI
         public static float GetFillValue(float fillAmount, float max)
         {
             return fillAmount * max;
+        }
+
+        /// <summary>
+        /// Immediately sets the fill amount to the specified value, bypassing any animation or delay.
+        /// Stops any ongoing animation and updates the previous value.
+        /// </summary>
+        /// <param name="value">The target value to set</param>
+        /// <param name="max">The maximum value used for normalization</param>
+        /// <returns>The normalized fill amount (value / max)</returns>
+        public float SetFillImmediate(float value, float max)
+        {
+            // Stop any ongoing animation
+            isAnimating = false;
+            animationDelayRemaining = 0f;
+            animationElapsed = 0f;
+
+            // Update previous value to match the new value
+            previousValue = value;
+
+            // Return the normalized fill amount
+            return Normalize(value, max);
         }
     }
 }

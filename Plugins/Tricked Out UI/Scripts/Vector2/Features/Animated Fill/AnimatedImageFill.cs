@@ -21,7 +21,7 @@ namespace JacobHomanics.TrickedOutUI
 
         void Update()
         {
-            image.fillAmount = HandleValueChange(X, image.fillAmount, ref previousValue, Y, properties.delay, properties.animationDuration);
+            image.fillAmount = HandleValueChange(X, image.fillAmount, ref previousValue, Y);
             image.fillAmount = UpdateAnimation(image.fillAmount, Y);
         }
 

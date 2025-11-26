@@ -247,7 +247,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 93355377a33094344bbc1ec3aa5cde5a, type: 3}
+  m_Sprite: {fileID: 4966732595609684114, guid: 93355377a33094344bbc1ec3aa5cde5a, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -271,8 +271,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vector2Adapter: {fileID: 7250966379110429820}
   properties:
-    animationDuration: 0
-    delay: 0
+    animationDurationUp: 0
+    delayUp: 0
+    animationDurationDown: 0
+    delayDown: 0
   image: {fileID: 6586396931892974206}
 --- !u!1 &1116554573225037023
 GameObject:
@@ -339,7 +341,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 93355377a33094344bbc1ec3aa5cde5a, type: 3}
+  m_Sprite: {fileID: 4966732595609684114, guid: 93355377a33094344bbc1ec3aa5cde5a, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -417,7 +419,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 93355377a33094344bbc1ec3aa5cde5a, type: 3}
+  m_Sprite: {fileID: 4966732595609684114, guid: 93355377a33094344bbc1ec3aa5cde5a, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -473,8 +475,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vector2Adapter: {fileID: 7250966379110429820}
   properties:
-    animationDuration: 0
-    delay: 0
+    animationDurationUp: 0
+    delayUp: 0
+    animationDurationDown: 0
+    delayDown: 0
   image: {fileID: 924565581739835592}
 --- !u!1 &4733074380815551700
 GameObject:
